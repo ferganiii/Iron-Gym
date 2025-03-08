@@ -2,6 +2,7 @@ import React from 'react'
 import Navebar from '../Navebar/Navebar'
 import bacKGROUND from '../../assets/bacKGROUND.jpeg'
 import imgeHome from '../../assets/imgeHome.jpeg'
+import man1Home from '../../assets/man1Home.png'
 import style from './Home.module.css'  
 
 
@@ -39,10 +40,10 @@ export default function Home() {
       <div className="bg-[rgb(102,102,102,.3)] py-0 sm:py-0 pb-32 relative overflow-hidden">
       <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full ${style.circle}`}></div>
 
-        <div className="container mx-auto px-4 sm:px-8">
+        <div className="container mx-auto px-4 sm:px-8 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
             {/* النص */}
-            <div className="md:w-1/2 space-y-6 md:space-y-8 order-1 md:order-1 ">
+            <div className="md:w-1/2 space-y-6 md:space-y-8 order-1 md:order-1 z-10">
             <h2 className="text-2xl md:text-4xl font-bold">
                 BUILD YOUR BODY & <br />
                 <span className="text-white">SHAPE YOURSELF !</span>
@@ -85,12 +86,14 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
             {/* الصورة */}
-            <div className="md:w-1/2 flex justify-center order-2 md:order-1 mt-10 md:mt-0">
+            <div className="md:w-1/2 flex justify-center order-2 md:order-1 mt-10 md:mt-0 relative overflow-hidden pt-36">
               <img
-                src="https://plus.unsplash.com/premium_photo-1661265933107-85a5dbd815af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fHww"
+                src={man1Home}
                 alt="Calorie Calculator"
-                className="rounded-lg w-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
+                className="z-10 rounded-lg w-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
               />
+                    <div className={`absolute bg-[rgb(102,102,102,.4)]  rounded-full ${style.manCircle}`}></div>
+
             </div>
             {/* النص */}
             <div className="md:w-1/2 space-y-6 md:space-y-8 order-1 md:order-2">

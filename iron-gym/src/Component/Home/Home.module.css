@@ -57,22 +57,22 @@
 
 @media (max-width: 1510px) { 
     .circle1Imge1{
-        top: 3px;
-        right: -20px;
-        width: 300px;
-        height: 300px;
+      top: 14px;
+      right: -27px;
+      width: 300px;
+      height: 300px;
     }
     .circle2Imge1{
         top: 65px;
-        right: 118px;
+        right: 81px;
         width: 226px;
         height: 226px;
     }
     .circle3Imge1{
-        bottom: 61px;
-        right: 31px;
-        width: 80px;
-        height: 80px;
+      bottom: 70px;
+      right: -4px;
+      width: 80px;
+      height: 80px;
     }
     .circle4Imge1{
         bottom: 21px;
@@ -83,14 +83,33 @@
   }
   
   @media (max-width: 768px) { 
-    .dotted-square::before {
-      background-size: 15px 15px; /* تقليل حجم النقاط للشاشات الأصغر */
-    }
+    .circle4Imge1{
+      bottom: 29px;
+      right: 177px;
+      width: 57px;
+      height: 57px;
+  }
+  .dcircle3Imge1 {
+    bottom: 70px;
+    right: -4px;
+    width: 80px;
+    height: 80px;
+  }
   }
   
   @media (max-width: 480px) { 
-    .dotted-square::before {
-      background-size: 10px 10px; /* تصغير أكثر للشاشات الصغيرة */
+    .dcircle3Imge1 {
+      bottom: 70px;
+      right: -4px;
+      width: 80px;
+      height: 80px;
     }
   }
    
+
+  .manCircle{
+    top: -148px;
+    left: -70px;
+    width: 420px;
+    height: 420px;
+  }

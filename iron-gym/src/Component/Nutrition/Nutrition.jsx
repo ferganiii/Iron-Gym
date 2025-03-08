@@ -1,5 +1,16 @@
 import React from "react";
 import background from "../../assets/NutritionBackground.jpeg";
+import carb from "../../assets/CarbProduc.jpeg";
+import protein from "../../assets/ProtienProduc.jpeg";
+import fats from "../../assets/FatsProduc.jpeg";
+import milks from "../../assets/MilkProduc.jpeg";
+
+const nutritionData = [
+  { id: 1, title: "Main Protein Sources", image: protein },
+  { id: 2, title: "Main Carb Sources", image: carb },
+  { id: 3, title: "Main Healthy Fats Sources", image: fats },
+  { id: 4, title: "Dairy and Egg Products", image: milks },
+];
 
 export default function Nutrition() {
   return (
@@ -11,16 +22,74 @@ export default function Nutrition() {
           style={{ backgroundImage: `url(${background})` }}
         ></div>
 
+        {/* طبقة شفافة فوق الخلفية */}
+        <div className="absolute inset-0 bg-gray-600/30"></div>
+
         {/* المحتوى فوق الخلفية */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-5xl font-bold">NUTRITION</h1>
+          <h1 className="text-8xl font-Antic">NUTRITION</h1>
         </div>
 
         {/* الموجة */}
         <div className="absolute bottom-0 left-0 w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#676767a1" fill-opacity="1" d="M0,160L12.6,160C25.3,160,51,160,76,138.7C101.1,117,126,75,152,80C176.8,85,202,139,227,154.7C252.6,171,278,149,303,128C328.4,107,354,85,379,101.3C404.2,117,429,171,455,186.7C480,203,505,181,531,154.7C555.8,128,581,96,606,69.3C631.6,43,657,21,682,48C707.4,75,733,149,758,170.7C783.2,192,808,160,834,133.3C858.9,107,884,85,909,106.7C934.7,128,960,192,985,202.7C1010.5,213,1036,171,1061,160C1086.3,149,1112,171,1137,154.7C1162.1,139,1187,85,1213,90.7C1237.9,96,1263,160,1288,160C1313.7,160,1339,96,1364,101.3C1389.5,107,1415,181,1427,218.7L1440,256L1440,320L1427.4,320C1414.7,320,1389,320,1364,320C1338.9,320,1314,320,1288,320C1263.2,320,1238,320,1213,320C1187.4,320,1162,320,1137,320C1111.6,320,1086,320,1061,320C1035.8,320,1011,320,985,320C960,320,935,320,909,320C884.2,320,859,320,834,320C808.4,320,783,320,758,320C732.6,320,707,320,682,320C656.8,320,632,320,606,320C581.1,320,556,320,531,320C505.3,320,480,320,455,320C429.5,320,404,320,379,320C353.7,320,328,320,303,320C277.9,320,253,320,227,320C202.1,320,177,320,152,320C126.3,320,101,320,76,320C50.5,320,25,320,13,320L0,320Z"></path></svg>
+        <svg id="wave" style={{transform: 'rotate(0deg)', transition: '0.3s'}} viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sw-gradient-0" x1={0} x2={0} y1={1} y2={0}>
+      <stop stopColor="#1F1F1F" offset="0%" />
+      <stop stopColor="#1F1F1F" offset="100%" />
+    </linearGradient>
+  </defs>
+  <path style={{transform: 'translate(0, 0px)', opacity: 1}} fill="url(#sw-gradient-0)" d="M0,0L20,24.5C40,49,80,98,120,147C160,196,200,245,240,220.5C280,196,320,98,360,65.3C400,33,440,65,480,114.3C520,163,560,229,600,285.8C640,343,680,392,720,408.3C760,425,800,408,840,367.5C880,327,920,261,960,245C1000,229,1040,261,1080,236.8C1120,212,1160,131,1200,81.7C1240,33,1280,16,1320,8.2C1360,0,1400,0,1440,24.5C1480,49,1520,98,1560,98C1600,98,1640,49,1680,57.2C1720,65,1760,131,1800,138.8C1840,147,1880,98,1920,89.8C1960,82,2000,114,2040,138.8C2080,163,2120,180,2160,212.3C2200,245,2240,294,2280,318.5C2320,343,2360,343,2400,334.8C2440,327,2480,310,2520,302.2C2560,294,2600,294,2640,261.3C2680,229,2720,163,2760,138.8C2800,114,2840,131,2860,138.8L2880,147L2880,490L0,490Z"/>
+</svg>
+
+<div className="relative">
+  <h2 className="font-archivo text-5xl font- text-left ml-10 absolute top-[-320px]">GUIDES AND PROGRAMS</h2>
+</div>
+
         </div>
+        
       </div>
+
+      {/* قسم NUTRITION GUIDE */}
+      <div className="bg-[rgb(102,102,102,.3)] text-white py-12 px-6 md:px-16">
+
+
+        
+  {/* العنوان الرئيسي في الزاوية اليسرى */}
+  
+
+  {/* عنوان دليل التغذية */}
+  <h2 className="text-5xl font-archivo text-left mb-10">NUTRITION GUIDE</h2>
+
+  {/* عرض الكروت في شبكة */}
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {nutritionData.map((item) => (
+      <div
+        key={item.id}
+        className="bg-black/70 p-6 rounded-[50px] shadow-md flex flex-col items-center"
+      >
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-80 h-80 rounded-xl"
+        />
+        <h2 className="font-alkalami text-center  text-3xl mt-4">
+  {item.title.split(" ").slice(0, 2).join(" ")} <br />
+  {item.title.split(" ").slice(2).join(" ")}
+</h2>
+
+
+      </div>
+
+
+    ))}
+
+  </div>
+
+</div>
+
+
+
     </>
   );
 }
