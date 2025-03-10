@@ -9,7 +9,6 @@
 
 /* إعدادات عامة للصفحة بأكملها */
 body, html {
-    background-color: rgb(10, 10, 10);
     margin: 0;
     padding: 0;
     color: white;
