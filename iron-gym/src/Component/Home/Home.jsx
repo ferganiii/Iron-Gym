@@ -7,6 +7,9 @@ import style from './Home.module.css'
 
 
 export default function Home() {
+
+
+    
   return (
   <>
      <Navebar/>
@@ -36,90 +39,91 @@ export default function Home() {
       </div>
 
 
-      {/* القسم الأول - خلفية رمادية */}
-      <div className="bg-[rgb(102,102,102,.3)] py-0 sm:py-0 pb-32 relative overflow-hidden">
-      <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full ${style.circle}`}></div>
+<section className='bg-[rgb(102,102,102,.3)]'>
 
-        <div className="container mx-auto px-4 sm:px-8 ">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
-            {/* النص */}
-            <div className="md:w-1/2 space-y-6 md:space-y-8 order-1 md:order-1 z-10">
-            <h2 className="text-2xl md:text-4xl font-bold">
-                BUILD YOUR BODY & <br />
-                <span className="text-white">SHAPE YOURSELF !</span>
-              </h2>
-              <p className="text-gray-600 text-lg  text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                malesuada lorem maximus mauris scelerisque.
-              </p>
-              <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
-                EXPLORE EXERCISES
-              </button>
-            </div>
-            {/* الصورة */}
-            
-            <div className="md:w-1/2 flex justify-center order-2 md:order-2 mt-10 md:mt-0 relative pl-24">
-            <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full z-0 ${style.circle1Imge1}`}></div>
-            <div className={`absolute bg-[rgb(182,180,179,0.96)]  rounded-full z-0 ${style.circle2Imge1}`}>
-            <div className=  {` ${style.doted}`}></div>
+<div className="container mx-auto px-4 sm:px-8 py-0 sm:py-0 pb-32 relative overflow-hidden">
+  <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full ${style.circle}`}></div>
 
-            </div>
-            <div className={`absolute bg-[rgb(136,180,143,0.84)]  rounded-full z-0 ${style.circle3Imge1}`}></div>
-            <div className={`absolute bg-[rgb(200,93,1,0.69)]  rounded-full z-0 ${style.circle4Imge1}`}></div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative">
+    {/* النص */}
+    <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left">
+      <h2 className="md:text-4xl text-4xl font-archivo">
+        BUILD YOUR BODY & <br />
+        <span className="text-white">SHAPE YOURSELF!</span>
+      </h2>
+      <p className="text-gray-600 text-lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
+      </p>
+      <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+        EXPLORE EXERCISES
+      </button>
+    </div>
 
-              <img
-                src={imgeHome}
-                alt="Workout"
-                className={`z-10 rounded-[50%]  w-full max-w-md h-64 sm:h-96 object-cover shadow-lg ${style.egg}` }
-                />
-            </div>
-          </div>
-        </div>
+    {/* الصورة */}
+    <div className="relative flex justify-center pl-24">
+      <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full z-0 ${style.circle1Imge1}`}></div>
+      <div className={`absolute bg-[rgb(182,180,179,0.96)] rounded-full z-0 ${style.circle2Imge1}`}>
+        <div className={`${style.doted}`}></div>
       </div>
+      <div className={`absolute bg-[rgb(136,180,143,0.84)] rounded-full z-0 ${style.circle3Imge1}`}></div>
+      <div className={`absolute bg-[rgb(200,93,1,0.69)] rounded-full z-0 ${style.circle4Imge1}`}></div>
+
+      <img
+        src={imgeHome}
+        alt="Workout"
+        className={`z-10 rounded-[50%] w-full max-w-md h-64 sm:h-96 object-cover shadow-lg ${style.egg}`}
+      />
+    </div>
+  </div>
+</div>
+
 
 
 
 
 
       {/* القسم الثاني - خلفية رمادية */}
-      <div className="bg-[rgb(102,102,102,.3)] py-16 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
-            {/* الصورة */}
-            <div className="md:w-1/2 flex justify-center order-2 md:order-1 mt-10 md:mt-0 relative overflow-hidden pt-36">
-              <img
-                src={man1Home}
-                alt="Calorie Calculator"
-                className="z-10 rounded-lg w-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
-              />
-                    <div className={`absolute bg-[rgb(102,102,102,.4)]  rounded-full ${style.manCircle}`}></div>
-
-            </div>
-            {/* النص */}
-            <div className="md:w-1/2 space-y-6 md:space-y-8 order-1 md:order-2">
-              <h2 className="text-2xl md:text-3xl font-semibold">
-                Calculate Your Daily <br />
-                Calorie & Water Needs
-              </h2>
-              <p className="text-gray-600 text-lg text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                malesuada lorem maximus mauris scelerisque.
-              </p>
-              <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
-                CALCULATORS
-              </button>
-            </div>
-          </div>
-        </div>
+      <div className="py-16 sm:py-32 overflow-hidden">
+  <div className="container mx-auto px- sm:px-">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
+      {/* الصورة */}
+      <div className="relative flex justify-center pt-36 overflow-hidden ">
+        <img
+          src={man1Home}
+          alt="Calorie Calculator"
+          className="z-10 rounded-lg w-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
+        />
+        <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full ${style.manCircle}`}></div>
+        <div className={`absolute bg-[rgba(255,131,110,0.31)] rounded-full ${style.manCircleOrange}`}></div>
+        <div className={`absolute ${style.dotedOrange}`}></div>
       </div>
 
+      {/* النص */}
+      <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
+        <div className={`absolute ${style.BgCircle}`}></div>
+        <h2 className="text-4xl font-archivo">
+          Calculate Your Daily <br />
+          Calorie & Water Needs
+        </h2>
+        <p className="text-gray-600 text-lg text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
+        </p>
+        <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+          CALCULATORS
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       {/* القسم الثالث - خلفية رمادية */}
-      <div className="bg-[rgb(102,102,102,.3)] py-16 sm:py-32">
+      <div className=" py-16 sm:py-32 ">
         <div className="container mx-auto px-4 sm:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
             {/* النص */}
             <div className="md:w-1/2 space-y-6 md:space-y-8 order-1 md:order-1">
-              <h2 className="text-2xl md:text-3xl font-semibold">
+              <h2 className="text-4xl  font-archivo md:text-3xl">
                 STEP UP YOUR <br />
                 FITNESS CHALLENGE
               </h2>
@@ -143,8 +147,20 @@ export default function Home() {
         </div>
       </div>
 
+      
+</section>
+
+     
+
       {/* مساحة إضافية في النهاية */}
       <div className="h-16 sm:h-32"></div>
+
+      
+
+
+
+
+      
     </div>
   </>
   )

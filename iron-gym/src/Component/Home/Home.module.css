@@ -108,8 +108,75 @@
    
 
   .manCircle{
-    top: -148px;
-    left: -70px;
-    width: 420px;
-    height: 420px;
+    top: 2px;
+    left: -38px;
+    width: 462px;
+    height: 462px;
   }
+  .manCircleOrange{
+    top: 216px;
+    left: 237px;
+    width: 271px;
+    height: 271px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .manCircle{
+      top: 2px;
+      left: -38px;
+      width: 400px;
+      height: 400px;
+    }
+    .manCircleOrange{
+      top: 226px;
+      left: 141px;
+      width: 248px;
+      height: 248px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .manCircle{
+      top: 2px;
+      left: -38px;
+      width: 354px;
+      height: 354px;
+    }
+    .manCircleOrange{
+      top: 226px;
+      left: 141px;
+      width: 183px;
+      height: 183px;
+    }
+  }
+  
+
+  
+  .dotedOrange::before{
+    content: "";
+  position: absolute;
+  top: 102px;
+    right: 88px;
+    width: 43%;
+    height: 49%;
+  background: radial-gradient(circle, rgba(200,93,1,0.6) 4px, transparent 4px);
+  background-size: 25px 25px; /* زيادة حجم النقاط */
+  z-index: ; /* لضمان أنها تبقى في الخلف */
+  }
+
+  
+  .BgCircle{
+   /* Ellipse 81 */
+
+position: absolute;
+width: 400px;
+height: 403px;
+right: -80px;
+top: 0px;
+border-radius: 50%;
+
+background: #666666;
+z-index: -1;
+
+  }
+
+  
