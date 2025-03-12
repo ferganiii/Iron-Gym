@@ -57,6 +57,11 @@ export default function Home() {
                 <div className={`absolute bg-gray-500 bg-opacity-90 rounded-full ${style.circle2Imge1}`}>
                   <div className={style.doted}></div>
                 </div>
+                <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full z-0 ${style.circle1Imge1}`}></div>
+<div className={`absolute bg-[rgb(182,180,179,0.96)] rounded-full z-0 ${style.circle2Imge1}`}>
+  <div className={`${style.doted}`}></div>
+</div>
+
                 <img
                   src={imgeHome}
                   alt="Workout"
@@ -73,6 +78,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
               {/* الصورة */}
               <div className="relative flex justify-center pt-36 overflow-hidden">
+                
                 <img
                   src={man1Home}
                   alt="Calorie Calculator"
@@ -127,8 +133,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* مساحة إضافية في النهاية */}
-        <div className="py-16 sm:py-32"></div>
+       
       </div>
     </>
   );
