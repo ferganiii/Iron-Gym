@@ -15,7 +15,10 @@ const nutritionData = [
 export default function Nutrition() {
   return (
     <>
-      <div className="relative h-screen w-full">
+<section className="bg-[rgb(102,102,102,.3)]">
+  <div  className=" container mx-auto px-4 sm:px-8 ">
+
+   <div className="relative h-screen w-full ">
         {/* الخلفية */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -27,7 +30,7 @@ export default function Nutrition() {
 
         {/* المحتوى فوق الخلفية */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-8xl font-Antic">NUTRITION</h1>
+          <h1 className="lg:text-8xl font-Antic sm:text-5xl ">NUTRITION</h1>
         </div>
 
         {/* الموجة */}
@@ -40,11 +43,15 @@ export default function Nutrition() {
     </linearGradient>
   </defs>
   <path style={{transform: 'translate(0, 0px)', opacity: 1}} fill="url(#sw-gradient-0)" d="M0,0L20,24.5C40,49,80,98,120,147C160,196,200,245,240,220.5C280,196,320,98,360,65.3C400,33,440,65,480,114.3C520,163,560,229,600,285.8C640,343,680,392,720,408.3C760,425,800,408,840,367.5C880,327,920,261,960,245C1000,229,1040,261,1080,236.8C1120,212,1160,131,1200,81.7C1240,33,1280,16,1320,8.2C1360,0,1400,0,1440,24.5C1480,49,1520,98,1560,98C1600,98,1640,49,1680,57.2C1720,65,1760,131,1800,138.8C1840,147,1880,98,1920,89.8C1960,82,2000,114,2040,138.8C2080,163,2120,180,2160,212.3C2200,245,2240,294,2280,318.5C2320,343,2360,343,2400,334.8C2440,327,2480,310,2520,302.2C2560,294,2600,294,2640,261.3C2680,229,2720,163,2760,138.8C2800,114,2840,131,2860,138.8L2880,147L2880,490L0,490Z"/>
-</svg>
 
+</svg>
+   
 <div className="relative">
-  <h2 className="font-archivo text-5xl font- text-left ml-10 absolute top-[-320px]">GUIDES AND PROGRAMS</h2>
+  <h2 className="font-archivo text-5xl text-left ml-10 absolute top-1/2 transform -translate-y-1/2 sm:-translate-y-32 lg:-translate-y-64">
+    GUIDES AND PROGRAMS
+  </h2>
 </div>
+
 
         </div>
         
@@ -87,6 +94,11 @@ export default function Nutrition() {
   </div>
 
 </div>
+</div>
+</section>
+
+
+     
 
 
 

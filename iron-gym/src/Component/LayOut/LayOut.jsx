@@ -6,12 +6,12 @@ import Footer from '../Footer/Footer'
 export default function LayOut() {
   return (
     <>
-    
-     <Navbar/>
-     <div className='mt-14'>
-      <Outlet/>
-      <Footer/>
-      </div> 
-    </>
+    <Navbar />
+    <div className=" mt-14">
+      <Outlet />
+    </div>
+    <Footer />
+  </>
+  
   )
 }
