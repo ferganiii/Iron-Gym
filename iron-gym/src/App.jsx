@@ -10,22 +10,30 @@ import Exercise from './Component/Exercise/Exercise';
 import AboutUs from './Component/AboutUs/AboutUs';
 import LayOut2 from './Component/LayOut2/LayOut2';
 import NotFound from './Component/NotFound/NotFound';
+import Protein from './Component/protein/protein';
+import CarboHidrates from './Component/CarboHidrates/CarboHidrates';
+import Fats from './Component/Fats/Fats';
+import DairyEgg from './Component/DairyEgg/DairyEgg';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Layout />, // ✅ هذا اللayout خاص بالموقع كله (يحتوي على Navbar و Footer)
+      element: <Layout />, 
       children: [
         { index: true, element: <Home /> },
         { path: 'nutrition', element: <Nutrition /> },
+        { path: 'nutrition/protein', element: <Protein /> }, // ✅ أصبحت صفحة مستقلة
+        { path: 'nutrition/carb', element: <CarboHidrates /> },
+        { path: 'nutrition/fat', element: <Fats /> },
+        { path: 'nutrition/dairyEgg', element: <DairyEgg /> },
         { path: 'exercise', element: <Exercise /> },
         { path: 'aboutus', element: <AboutUs /> },
         { path: '*', element: <NotFound /> },
       ],
     },
     {
-      path: '/auth', // ✅ هذا الجزء خاص بصفحات تسجيل الدخول (بدون Navbar و Footer)
+      path: '/auth',
       element: <LayOut2 />,
       children: [
         { path: 'login', element: <Login /> },
@@ -33,6 +41,7 @@ function App() {
       ],
     },
   ]);
+  
 
   return <RouterProvider router={router} />;
 }

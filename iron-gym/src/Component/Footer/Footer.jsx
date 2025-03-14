@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[rgb(36,37,37,1)] text-white">
-      <div className="max-w-screen-xl mx-auto w-full px-6 pt-10">
+    <footer className="bg-[rgb(36,37,37,1)]  text-white">
+      <div className="container  pt-10 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
           {/* العمود الأول */}
-          <div>
+          <div className="text-center">
             <h2 className="mb-6 font-AlfaSlabOne text-5xl uppercase">IRON GYM</h2>
             <p className="pb-10 font-archivo text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime recusandae reiciendis, in aspernatur exercitationem quasi placeat velit perspiciatis.
