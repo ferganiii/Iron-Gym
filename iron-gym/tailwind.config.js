@@ -9,8 +9,13 @@ export default {
         alkalami: ["'Alkalami'", "sans-serif"],
         Antic: ["'Antic'", "sans-serif"],
         AlfaSlabOne: ["'Alfa Slab One'", "sans-serif"],
+        Andika: ["'Andika'", "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+    require('flowbite/plugin'),
+    require("tailwind-scrollbar")
+  ],
 };

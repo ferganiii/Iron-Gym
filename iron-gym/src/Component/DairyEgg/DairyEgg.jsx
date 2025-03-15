@@ -55,7 +55,7 @@ export default function DairyEgg() {
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-3xl max-sm:text-xl text-gray-700 uppercase bg-gray-50 dark:bg-[rgb(102,102,102,.3)] dark:text-orange-500">
               <tr>
-                <th scope="col" className="px-6 py-5">Name</th>
+                <th scope="col" className="px-6 py-5 text-center">Name</th>
                 <th scope="col" className="px-6 py-5">Calories</th>
                 <th scope="col" className="px-6 py-5">Protein</th>
                 <th scope="col" className="px-6 py-5">Carb</th>
@@ -69,13 +69,13 @@ export default function DairyEgg() {
                     key={index}
                     className="bg-white border-y-[1px] dark:bg-[rgb(102,102,102,.3)] dark:border-orange-600 border-gray-200"
                   >
-                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <th scope="row" className="text-4xl font-Andika text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       {item?.name_ar || ""} {item?.name_en ? `- ${item.name_en}` : ""}
                     </th>
-                    <td className="px-6 py-8">{item?.calories ?? "N/A"} kcal</td>
-                    <td className="px-6 py-8">{item?.protein ?? "N/A"} g</td>
-                    <td className="px-6 py-8">{item?.carbs ?? "N/A"} g</td>
-                    <td className="px-6 py-8">{item?.fat ?? "N/A"} g</td>
+                    <td className="px-6 py-10 text-4xl font-Andika ">{item?.calories ?? "N/A"} kcal</td>
+                    <td className="px-6 py-10 text-4xl font-Andika ">{item?.protein ?? "N/A"} g</td>
+                    <td className="px-6 py-10 text-4xl font-Andika ">{item?.carbs ?? "N/A"} g</td>
+                    <td className="px-6 py-10 text-4xl font-Andika ">{item?.fat ?? "N/A"} g</td>
                   </tr>
                 ))
               ) : (
