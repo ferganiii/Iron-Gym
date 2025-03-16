@@ -30,7 +30,7 @@ const AboutUs = () => {
           </div>
         </div>
         <Card className="bg-[#292929] text-white p-10 w-full md:w-[30%] h-[500px] shadow-lg ml-10 mr-44 rounded-[40px] border-none">
-          <h2 className="text-4xl font-bold mb-10">Mission Statement تماتناىتن:</h2>
+          <h2 className="text-4xl font-bold mb-10">Mission Statement :</h2>
           <p className="text-white-300 text-lg">
             "Our mission is to provide a comprehensive platform that helps individuals improve their fitness by offering personalized training plans, healthy nutrition tips, and the best exercises to achieve their health goals."
           </p>
