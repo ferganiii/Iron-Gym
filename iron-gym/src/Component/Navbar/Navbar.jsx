@@ -16,7 +16,7 @@ export default function Navbar() {
 
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-black">
       <nav className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-20 items-center justify-between">
           {/* اللوجو */}
           <div className="flex items-center">
             <div className="flex flex-col items-center mr-4">
