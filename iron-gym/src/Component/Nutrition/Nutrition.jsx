@@ -110,11 +110,58 @@ export default function Nutrition() {
 
 
     </div>
+
+    
   </section>
+     {/* ################################################33 */}
+           <Supplements/>
+    {/* ################################################33 */}
+         
+<section className='bg-[rgb(102,102,102,.3)] py-7'>
 
 
-  <Supplements/>
+  <div className="container mx-auto relative py-10   bg-white   shadow-sm dark:bg-[rgb(102,102,102,.3)] dark:border-gray-600">
+  
+  <div className="flex justify-center gap-28 w-full flex-wrap">
+  <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] h-[350px]">
+    <Link  to="#">
+      <img className="rounded-t-3xl w-full h-[200px] object-cover" src={milks} alt="" />
+    </Link>
+    <div className="p-5">
+      <Link to="#" >
+<p className=" text-center mb-3 font-normal text-gray-700 dark:text-gray-400">
+Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
 
+  </p>     
+   </Link>
+    </div>
+  </div>
+
+  <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] h-[350px]">
+    <Link to="#">
+      <img className="rounded-t-3xl w-full h-[200px] object-cover" src={milks} alt="" />
+    </Link>
+    <div className="p-5">
+    <Link to="#" >
+<p className=" text-center mb-3 font-normal text-gray-700 dark:text-gray-400">
+Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+
+  </p>     
+   </Link>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+  </div>
+</section>
      
    </>
     
