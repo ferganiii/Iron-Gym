@@ -6,6 +6,9 @@ export default function Supplements() {
   return (
     <section className="bg-[rgb(102,102,102,.3)] py-28 flex justify-center items-center ">
       <div className="container mx-auto p-4 bg-[rgb(102,102,102,.3)] rounded-lg">
+         <h2  className="text-5xl font-archivo text-left mt-10 pb-14">
+                       Supplement GUIDE
+                     </h2>
         <div className=" overflow-x-auto scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800 p-2">
           <motion.div
             className="px-20 flex space-x-6 p-5 cursor-grab"
