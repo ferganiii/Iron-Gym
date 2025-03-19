@@ -1,174 +1,139 @@
-
-// 1 تعديل //////////////////////////////////////////////////////////////////
-
-
-// import aboutBg from "../../assets/about-bg.jpg";
-
-// const AboutUs = () => {
-//   return (
-//     <div
-//       className="relative flex items-center justify-start h-screen bg-cover bg-center"
-//       style={{ backgroundImage: `url(${aboutBg})` }}
-//     >
-//       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-//       <div className="relative z-10 pl-28">
-//         <h1 className="text-white text-4xl font-bold">About Us</h1>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutUs;
-
-
-// 2 تعديل //////////////////////////////////////////////////////////////////
-// import aboutBg from "../../assets/about-bg.jpg";
-// import mission1 from "../../assets/mission1.jpg";
-// import mission2 from "../../assets/mission2.jpg";
-// import mission3 from "../../assets/mission3.jpg";
-// import { Card } from "flowbite-react";
-
-// const AboutUs = () => {
-//   return (
-//     <div
-//       className="relative flex items-center justify-start h-screen bg-cover bg-center"
-//       style={{ backgroundImage: `url(${aboutBg})` }}
-//     >
-//       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-//       <div className="relative z-10 pl-28 text-white">
-//         <h1 className="text-4xl font-bold">About Us</h1>
-//         <p className="mt-4 text-lg max-w-lg">
-//           We are committed to helping individuals achieve their fitness goals through personalized training and nutrition plans.
-//         </p>
-
-//         {/* Cards Section */}
-//         <div className="mt-8 flex gap-6">
-//           <Card className="w-64 bg-gray-800 text-white">
-//             <img src={mission1} alt="Mission 1" className="w-full h-40 object-cover rounded-t-lg" />
-//             <div className="p-4">
-//               <h5 className="text-xl font-bold">Our Mission</h5>
-//               <p>We aim to provide top-notch fitness guidance and training programs.</p>
-//             </div>
-//           </Card>
-
-//           <Card className="w-64 bg-gray-800 text-white">
-//             <img src={mission2} alt="Mission 2" className="w-full h-40 object-cover rounded-t-lg" />
-//             <div className="p-4">
-//               <h5 className="text-xl font-bold">Our Vision</h5>
-//               <p>Helping everyone build a healthier lifestyle through the best fitness strategies.</p>
-//             </div>
-//           </Card>
-
-//           <Card className="w-64 bg-gray-800 text-white">
-//             <img src={mission3} alt="Mission 3" className="w-full h-40 object-cover rounded-t-lg" />
-//             <div className="p-4">
-//               <h5 className="text-xl font-bold">Our Values</h5>
-//               <p>Commitment, excellence, and continuous improvement in fitness.</p>
-//             </div>
-//           </Card>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutUs;
-
-
-
-
-// 3 تعديل //////////////////////////////////////////////////////////////////
-
-
-// import aboutBg from "../../assets/about-bg.jpg";
-// import mission1 from "../../assets/mission1.jpg";
-// import mission2 from "../../assets/mission2.jpg";
-// import mission3 from "../../assets/mission3.jpg";
-// import { Card } from "flowbite-react";
-
-// const AboutUs = () => {
-//   return (
-//     <div>
-//       {/* الخلفية */}
-//       <div
-//         className="relative flex items-center justify-start h-screen bg-cover bg-center"
-//         style={{ backgroundImage: `url(${aboutBg})` }}
-//       >
-//         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-//         <div className="relative z-10 pl-28">
-//           <h1 className="text-white text-4xl font-bold">About Us</h1>
-//         </div>
-//       </div>
-
-//       {/* سكشن 2 */}
-//       <div className="flex flex-col md:flex-row items-center justify-center gap-10 p-10 bg-gray-900 text-white">
-//         {/* الصور على اليسار */}
-//         <div className="grid grid-cols-2 gap-4">
-//           <img src={mission1} alt="Mission 1" className="rounded-lg w-40 h-60 object-cover" />
-//           <img src={mission2} alt="Mission 2" className="rounded-lg w-40 h-60 object-cover" />
-//           <div className="col-span-2 flex justify-center">
-//             <img src={mission3} alt="Mission 3" className="rounded-lg w-40 h-40 object-cover" />
-//           </div>
-//         </div>
-
-//         {/* النص على اليمين */}
-//         <Card className="bg-gray-800 text-white p-6 w-full md:w-1/2 shadow-lg">
-//           <h2 className="text-2xl font-bold mb-4">Mission Statement:</h2>
-//           <p>
-//             "Our mission is to provide a comprehensive platform that helps individuals improve their fitness by offering 
-//             personalized training plans, healthy nutrition tips, and the best exercises to achieve their health goals."
-//           </p>
-//         </Card>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutUs;
-
 import aboutBg from "../../assets/about-bg.jpg";
 import mission1 from "../../assets/mission1.jpg";
 import mission2 from "../../assets/mission2.jpg";
 import mission3 from "../../assets/mission3.jpg";
+import visionBg from "../../assets/vision-bg.jpg";
+import sec4Bg from "../../assets/sec4-bg.jpg";
 import { Card } from "flowbite-react";
+import { motion } from "framer-motion";
+
 
 const AboutUs = () => {
   return (
-    <div>
-      {/* الخلفية */}
-      <div
-        className="relative flex items-center justify-start h-screen bg-cover bg-center"
-        style={{ backgroundImage: `url(${aboutBg})` }}
+       <>
+         <section className="bg-[#1e1e1e]">
+            {/* الخلفية الأساسية */}
+            <div
+      className="relative flex items-center justify-start h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${aboutBg})` }}
+    >
+      {/* تأثير تكبير الخلفية */}
+      <motion.div
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="absolute inset-0 bg-black bg-opacity-50"
+      ></motion.div>
+
+      {/* نص "About Us" بتحريك انزلاق + شفافية */}
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative z-10 pl-10 md:pl-28"
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 pl-28">
-          <h1 className="text-white text-4xl font-bold">About Us</h1>
-        </div>
-      </div>
+        <h1 className="text-white text-4xl md:text-6xl font-bold">
+          About Us
+        </h1>
+      </motion.div>
+    </div>
+         <div className="container mx-auto">
+    
+     
 
       {/* سكشن 2 */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10 px-20 py-16 bg-[#1e1e1e] text-white">
-        {/* الصور على الشمال */}
-        <div className="grid grid-cols-2 gap-4">
-          <img src={mission1} alt="Mission 1" className="rounded-lg w-48 h-64 object-cover" />
-          <img src={mission2} alt="Mission 2" className="rounded-lg w-48 h-64 object-cover" />
-          <div className="col-span-2 flex justify-center">
-            <img src={mission3} alt="Mission 3" className="rounded-lg w-64 h-48 object-cover" />
-          </div>
-        </div>
-
-        {/* النص على اليمين */}
-        <Card className="bg-[#292929] text-white p-10 w-full md:w-[35%] h-96 shadow-lg ml-10 mr-44">
-          <h2 className="text-3xl font-bold mb-10">Mission Statement:</h2>
-          <p className="text-gray-300">
-            "Our mission is to provide a comprehensive platform that helps individuals improve their fitness by offering 
-            personalized training plans, healthy nutrition tips, and the best exercises to achieve their health goals."
-          </p>
-        </Card>
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-28 px-10 md:px-20 py-16 bg-[#1e1e1e] text-white">
+  {/* الصور (تأخذ نصف الشاشة) */}
+  <div className="grid grid-cols-2 gap-4 items-center md:ml-20">
+    <img
+      src={mission1}
+      alt="Mission 1"
+      className="rounded-[40px] w-full h-[500px] object-cover hover:scale-110 hover:-translate-y-2 transition"
+    />
+    <div className="flex flex-col gap-4">
+      <img
+        src={mission2}
+        alt="Mission 2"
+        className="rounded-[40px] w-full h-[360px] object-cover hover:scale-110 hover:-translate-y-2 transition"
+      />
+      <img
+        src={mission3}
+        alt="Mission 3"
+        className="rounded-[40px] w-full h-[120px] object-cover hover:scale-110 hover:-translate-y-2 transition"
+      />
     </div>
+  </div>
+
+  {/* الكارد (يأخذ نصف الشاشة) */}
+  <Card className="break-words text-center bg-[#131212] text-white p-6 sm:p-10 h-auto min-h-[500px] shadow-lg rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10">
+      Mission Statement:
+    </h2>
+    <p className="text-white-300 text-md sm:text-lg break-words">
+      "Our mission is to provide a comprehensive platform that helps individuals improve their fitness by offering personalized training plans, healthy nutrition tips, and the best exercises to achieve their health goals."
+    </p>
+  </Card>
+</div>
+
+
+
+      {/* سكشن 3 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-20 px-6 sm:px-10 md:px-20 py-16 pb-6 bg-[#1e1e1e] text-white">
+  {/* الكروت الثلاثة على اليسار */}
+  <div className="flex flex-col gap-6 w-full">
+    <Card className="bg-[#292929] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-wrap balance">Our Vision:</h2>
+      <p className="text-white-300 text-md sm:text-lg leading-relaxed mt-2">
+        Our vision is to become the leading source for individuals seeking to enhance their physical and mental health through proper training and balanced nutrition.
+      </p>
+    </Card>
+    <Card className="bg-[#3a3327] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-wrap balance">What Makes Us Unique:</h2>
+      <p className="text-white-300 text-md sm:text-lg leading-relaxed mt-2">
+        We offer comprehensive information on nutrition, workouts, and cardio. With regular updates and future development, we stand out as your go-to fitness hub.
+      </p>
+    </Card>
+    <Card className="bg-[#292929] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-wrap balance">Call to Action:</h2>
+      <p className="text-white-300 text-md sm:text-lg leading-relaxed mt-2">
+        Join us now to achieve your fitness goals and gain expert advice!
+      </p>
+    </Card>
+  </div>
+
+  {/* الكارت الكبير على اليمين */}
+  <div
+    className=" relative w-full h-auto min-h-[500px] md:min-h-[690px] bg-cover  bg-center rounded-lg flex items-center justify-center p-6 sm:p-10 hover:scale-105 hover:-translate-y-2 transition"
+    style={{ backgroundImage: `url(${visionBg})` }}
+  >
+    <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm rounded-lg hover:bg-opacity-50 transition"></div>
+    <div className="relative  z-10 text-white text-center max-w-[90%] md:max-w-[80%]">
+      <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-wrap balance leading-tight">
+        Transform Your Body, Elevate Your Life.
+      </h2>
+      <p className="text-white-300 text-md sm:text-lg md:text-xl leading-relaxed mt-8 sm:mt-12">
+        Achieve your fitness goals with expert guidance, personalized workout plans, and balanced nutrition.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+      {/* الخلفية  بعد السكشن 3 */}
+   
+    </div>
+    <div
+        className="relative h-[500px] bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(30,30,30,0.7), rgba(30,30,30,1)), url(${sec4Bg})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm "></div>
+      </div>
+         </section>
+       
+       </>
   );
 };
 
