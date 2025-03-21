@@ -14,6 +14,8 @@ import Protein from './Component/protein/protein';
 import CarboHidrates from './Component/CarboHidrates/CarboHidrates';
 import Fats from './Component/Fats/Fats';
 import DairyEgg from './Component/DairyEgg/DairyEgg';
+import CalcCaloriesMeal from './Component/CalcCaloriesMeal/CalcCaloriesMeal';
+import NutritionProgram from './Component/NutritionProgram/NutritionProgram';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +29,7 @@ function App() {
         { path: 'nutrition/carb', element: <CarboHidrates /> },
         { path: 'nutrition/fat', element: <Fats /> },
         { path: 'nutrition/dairyEgg', element: <DairyEgg /> },
+        { path: 'nutrition/CalcCaloriesMeal', element: <CalcCaloriesMeal /> },
         { path: 'exercise', element: <Exercise /> },
         { path: 'aboutus', element: <AboutUs /> },
         { path: '*', element: <NotFound /> },

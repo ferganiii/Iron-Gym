@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-black text-white min-h-screen w-screen ">
+      <div className="bg-black text-white min-h-screen  ">
         {/* الصورة الرئيسية */}
         <div className="relative w-full h-screen bg-black overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>

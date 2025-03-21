@@ -4,9 +4,14 @@ import carb from "../../assets/CarbProduc.jpeg";
 import protein from "../../assets/ProtienProduc.jpeg";
 import fats from "../../assets/FatsProduc.jpeg";
 import milks from "../../assets/MilkProduc.jpeg";
+import systemNut from "../../assets/systemNut.jpeg";
+import calcClories from "../../assets/cardCalories.webp";
 import { Link } from "react-router-dom";
 import Supplements from "../Supplements/Supplements";
 import { motion } from "framer-motion";
+import NutritionProgram from "../NutritionProgram/NutritionProgram";
+  
+
 
 const nutritionData = [
   { id: 1, title: "Main Protein Sources", image: protein, link: "protein" },
@@ -97,34 +102,9 @@ export default function Nutrition() {
 
       <Supplements />
 
-      <section className="bg-[rgb(102,102,102,.3)] py-7">
-        <div className="container mx-auto relative py-10 bg-white shadow-sm dark:bg-[rgb(102,102,102,.3)] dark:border-gray-600">
-          <div className="flex justify-center gap-28 w-full flex-wrap">
-            {[1, 2].map((index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] h-[350px]"
-              >
-                <Link to="#">
-                  <img
-                    className="rounded-t-3xl w-full h-[200px] object-cover"
-                    src={milks}
-                    alt=""
-                  />
-                </Link>
-                <div className="p-5">
-                  <Link to="#">
-                    <p className="text-center mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of
-                      2021 so far, in reverse chronological order.
-                    </p>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
+{/* سكشن لانظمة الغذاآية */}
+      <NutritionProgram/>
     </>
   );
 }
