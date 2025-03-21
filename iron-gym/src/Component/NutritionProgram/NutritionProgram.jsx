@@ -13,15 +13,15 @@ export default function NutritionProgram() {
       
       
         <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] ">
-          <Link to="">
+          <Link to="MealPlan">
             <img
-              className="rounded-t-3xl w-full h-[300px] object-cover"
+              className="rounded-t-3xl w-full h-[300px] object-cover hover:scale-105 transition-all "
               src={systemNut}
               alt=""
             />
           </Link>
           <div className="p-5">
-            <Link to="NutritionProgram">
+            <Link to="MealPlan">
               <p className="text-center mb-3 font-normal text-gray-700 dark:text-white text-5xl font-archivo">
               Nutritional programmes     </p>
             </Link>
@@ -31,7 +31,7 @@ export default function NutritionProgram() {
         <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] ">
           <Link to="CalcCaloriesMeal">
             <img
-              className="rounded-t-3xl w-full h-[300px] object-cover"
+              className="rounded-t-3xl w-full h-[300px] object-cover hover:scale-105 transition-all "
               src={calcClories}
               alt=""
             />

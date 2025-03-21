@@ -34,41 +34,52 @@ export default function Home() {
         {/* القسم الأول */}
         <section className="bg-[rgb(102,102,102,.3)]  py-16">
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
-            <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle}`}></div>
+            {/* <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle}`}></div> */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative">
-              {/* النص */}
-              <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left">
-                <h2 className="md:text-4xl text-4xl font-archivo">
-                  BUILD YOUR BODY & <br />
-                  <span className="text-white">SHAPE YOURSELF!</span>
-                </h2>
-                <p className="text-gray-400 text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
-                </p>
-                <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
-                  EXPLORE EXERCISES
-                </button>
-              </div>
 
-              {/* الصورة */}
-              <div className="relative flex justify-center pl-24">
-                <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle1Imge1}`}></div>
-                <div className={`absolute bg-gray-500 bg-opacity-90 rounded-full ${style.circle2Imge1}`}>
-                  <div className={style.doted}></div>
-                </div>
-                <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full z-0 ${style.circle1Imge1}`}></div>
-<div className={`absolute bg-[rgb(182,180,179,0.96)] rounded-full z-0 ${style.circle2Imge1}`}>
-  <div className={`${style.doted}`}></div>
+{/* الدائرة تحت النص */}
+<div className={`absolute  transform  z-0 ${style.circle}`}>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 150 150">
+    <circle cx="75" cy="75" r="75" fill="#666666" />
+</svg>
+
+
 </div>
 
-                <img
-                  src={imgeHome}
-                  alt="Workout"
-                  className={`z-10 rounded-full w-full max-w-md h-64 sm:h-96 object-cover shadow-lg ${style.egg}`}
-                />
-              </div>
-            </div>
+{/* النص */}
+<div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
+  <h2 className="md:text-4xl text-4xl font-archivo">
+    BUILD YOUR BODY & <br />
+    <span className="text-white">SHAPE YOURSELF!</span>
+  </h2>
+  <p className="text-gray-400 text-lg">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
+  </p>
+  <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+    EXPLORE EXERCISES
+  </button>
+</div>
+
+{/* الصورة */}
+<div className="relative flex justify-center pl-24">
+  <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle1Imge1}`}></div>
+  <div className={`absolute bg-gray-500 bg-opacity-90 rounded-full ${style.circle2Imge1}`}>
+    <div className={style.doted}></div>
+  </div>
+  <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full z-0 ${style.circle1Imge1}`}></div>
+  <div className={`absolute bg-[rgb(182,180,179,0.96)] rounded-full z-0 ${style.circle2Imge1}`}>
+    <div className={`${style.doted}`}></div>
+  </div>
+
+  <img
+    src={imgeHome}
+    alt="Workout"
+    className={`z-10 rounded-full w-full max-w-md h-64 sm:h-96 object-cover shadow-lg ${style.egg}`}
+  />
+</div>
+</div>
+
           </div>
         </section>
 

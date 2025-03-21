@@ -78,12 +78,12 @@ export default function CalcCaloriesMeal() {
   return (
 <>
    <section className="bg-[rgb(102,102,102,.3)]">
-    <div className="container mx-auto">
+    <div className="w-[50%]  mx-auto">
 
 
-    <div className="p-6">
-    <h1 className="text-2xl font-bold text-center mb-4">Daily Meal Planner 🍽</h1>
-    <div className="space-y-6">
+    <div className="p-6  ">
+    <h1 className="text-4xl font-archivo text-center mt-16">Daily Meal Planner 🍽</h1>
+    <div className="space-y-6 mt-4 mb-16">
       {meals.map((meal, mealIndex) => (
         <div key={mealIndex} className="border-gray-100 p-4 rounded-lg shadow-md bg-[rgb(102,102,102,.3)]">
           <h2 className="text-xl font-semibold text-orange-600">Meal {mealIndex + 1}</h2>
@@ -144,11 +144,11 @@ export default function CalcCaloriesMeal() {
         </div>
       ))}
   
-      <div className="bg-gray-900 border-gray-100 p-4 rounded-lg shadow-md mt-6">
-        <h2 className="text-xl font-bold text-center">Total Nutritional Values</h2>
+      <div className=" bg-orange-500 border-gray-100 p-4 rounded-lg shadow-md mt-6">
+        <h2 className="text-xl font-bold text-center text-black">Total Nutritional Values</h2>
         <table className="w-full border-gray-100 mt-2">
           <tbody>
-            <tr className="text-center bg-[rgb(102,102,102,.3)] font-bold">
+            <tr className="text-center bg-[rgb(102,102,102,.3)] font-bold text-black">
               <td>Calories: {totals.calories}</td>
               <td>Protein: {totals.protein}</td>
               <td>Carbs: {totals.carbs}</td>
