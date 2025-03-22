@@ -17,6 +17,7 @@ import DairyEgg from './Component/DairyEgg/DairyEgg';
 import CalcCaloriesMeal from './Component/CalcCaloriesMeal/CalcCaloriesMeal';
 import NutritionProgram from './Component/NutritionProgram/NutritionProgram';
 import MealPlan from './Component/MealPlan/MealPlan';
+import ContactUs from './Component/ContactUs/ContactUs';
 
 function App() {
   const router = createBrowserRouter([
@@ -34,6 +35,7 @@ function App() {
         { path: 'nutrition/MealPlan', element: <MealPlan /> },
         { path: 'exercise', element: <Exercise /> },
         { path: 'aboutus', element: <AboutUs /> },
+        { path: 'ContactUs', element: <ContactUs /> },
         { path: '*', element: <NotFound /> },
       ],
     },

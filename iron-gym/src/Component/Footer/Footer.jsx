@@ -22,7 +22,7 @@ export default function Footer() {
                 { to: "/exercise", label: "Exercises" },
                 { to: "/nutrition", label: "Nutrition" },
                 { to: "/aboutus", label: "About" },
-                { to: "/contact", label: "Contact Us" },
+                { to: "/ContactUs", label: "Contact Us" },
               ].map(({ to, label }) => (
                 <li key={to} className="w-40">
                   <Link to={to} className="hover:text-orange-500 hover:underline uppercase transition-all duration-300 flex items-center">
