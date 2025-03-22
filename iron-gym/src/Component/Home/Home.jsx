@@ -4,6 +4,7 @@ import bacKGROUND from '../../assets/bacKGROUND.jpeg';
 import imgeHome from '../../assets/imgeHome.jpeg';
 import man1Home from '../../assets/man1Home.png';
 import style from './Home.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-sans">GET FIT</h1>
             <p className="text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-10">TRANSFORM YOUR BODY</p>
             <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
-              Register
+             <Link to="auth/signup"> Register</Link>
             </button>
           </div>
         </div>
