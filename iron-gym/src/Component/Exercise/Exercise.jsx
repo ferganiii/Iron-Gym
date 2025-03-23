@@ -1,11 +1,28 @@
-const Exercise = () => {
-	return (
-	  <div className="p-4">
-		<h1 className="text-2xl font-bold">Exercise Page</h1>
-		<p>Here you will find different exercises to help you stay fit.</p>
-	  </div>
-	);
-  };
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+export default function Exercise() {
+  const [exercises, setExercises] = useState([]) // اسم أوضح
+
+  async function getExercises() {
+
+
+
+
+  }
+    
+
+  useEffect(() => {
+    getExercises();
+  }, []);
+
+  return (
+  <>
   
-  export default Exercise;
   
+  
+  
+  
+  </>
+  );
+}

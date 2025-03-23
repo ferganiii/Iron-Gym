@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import bacKGROUND from '../../assets/bacKGROUND.jpeg';
 import imgeHome from '../../assets/imgeHome.jpeg';
 import man1Home from '../../assets/man1Home.png';
 import style from './Home.module.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+
 
 export default function Home() {
+
+  
+  
+
+
   return (
     <>
       <Navbar />

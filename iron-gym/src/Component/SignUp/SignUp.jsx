@@ -49,7 +49,7 @@ export default function Signup() {
           <div className="w-[400px] sm:w-[450px] bg-opacity-30 backdrop-blur-lg p-8 rounded-xl border border-blue-400 shadow-lg text-white relative">
             
             {/* عنوان التسجيل */}
-            <div className="flex justify-between mb-6 border-b border-gray-500 pb-2">
+            <div className="flex justify-center gap-7 mb-6 border-b border-gray-500 pb-2">
               <button className="text-gray-300">LOG IN</button>
               <button className="text-white border-b-2 border-white">
                 SIGN UP
