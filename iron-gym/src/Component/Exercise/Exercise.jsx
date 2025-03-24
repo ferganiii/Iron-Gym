@@ -6,8 +6,10 @@ export default function Exercise() {
 
   async function getExercises() {
 
+    const res = await axios.get("https://gym-production-8217.up.railway.app/api/carb");
 
-
+console.log(res.data);
+    setExercises(res.data);
 
   }
     

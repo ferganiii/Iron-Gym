@@ -37,6 +37,9 @@ export default function Home() {
             <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
              <Link to="auth/signup"> Register</Link>
             </button>
+            <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
+             <Link to="auth/dashboard"> DASHBOARD</Link>
+            </button>
           </div>
         </div>
 

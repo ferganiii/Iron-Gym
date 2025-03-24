@@ -129,6 +129,9 @@ export default function Navbar() {
           >
             HOME
           </NavLink>
+
+
+          
           <NavLink
             to="/exercises"
             className={({ isActive }) =>
@@ -171,11 +174,14 @@ export default function Navbar() {
               LOG OUT
             </NavLink>
           </div>
+          <div className="pt-2 border-t border-gray-800 mt-2">
+            
+          </div>
         </div>
       </div>
     )}
   </nav>
-</div>ذ
+</div>
     </>
   );
 }
