@@ -1,7 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
-  content: ["./src/**/*.{html,js,jsx,tsx,ts}"],
+  content: [
+    "./src/**/*.{html,js,jsx,tsx,ts}",
+    "node_modules/flowbite/**/*.js" 
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -14,11 +17,7 @@ export default {
     },
   },
   plugins: [
-
-    require('flowbite/plugin'),
-    require("tailwind-scrollbar")
+    require("flowbite/plugin"), 
+    require("tailwind-scrollbar"), 
   ],
 };
-
-
-

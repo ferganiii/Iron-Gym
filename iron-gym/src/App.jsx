@@ -17,6 +17,7 @@ import Signup from './Component/SignUp/SignUp';
 import NotFound from './Component/NotFound/NotFound';
 import Dashboard from './pages/Dashboard'; // ✅ إضافة الداشبورد
 import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
+import UserContextProvider from './Context/UserContext';
 
 function App() {
   const router = createBrowserRouter([
@@ -24,35 +25,37 @@ function App() {
       path: '/',
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> },
-        { path: 'nutrition', element: <Nutrition /> },
-        { path: 'nutrition/protein', element: <Protein /> },
-        { path: 'nutrition/carb', element: <CarboHidrates /> },
-        { path: 'nutrition/fat', element: <Fats /> },
-        { path: 'nutrition/dairyEgg', element: <DairyEgg /> },
-        { path: 'nutrition/CalcCaloriesMeal', element: <CalcCaloriesMeal /> },
-        { path: 'nutrition/MealPlan', element: <MealPlan /> },
-        { path: 'exercise', element: <Exercise /> },
-        { path: 'aboutus', element: <AboutUs /> },
-        { path: 'ContactUs', element: <ContactUs /> },
+        { index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute>},
+        { path: 'nutrition', element:<ProtectedRoute> <Nutrition /></ProtectedRoute> },
+        { path: 'nutrition/protein', element: <ProtectedRoute><Protein /></ProtectedRoute> },
+        { path: 'nutrition/carb', element: <ProtectedRoute><CarboHidrates /> </ProtectedRoute>},
+        { path: 'nutrition/fat', element:<ProtectedRoute> <Fats /></ProtectedRoute> },
+        { path: 'nutrition/dairyEgg', element: <ProtectedRoute><DairyEgg /></ProtectedRoute> },
+        { path: 'nutrition/CalcCaloriesMeal', element: <ProtectedRoute><CalcCaloriesMeal /></ProtectedRoute> },
+        { path: 'nutrition/MealPlan', element: <ProtectedRoute><MealPlan /></ProtectedRoute> },
+        { path: 'exercise', element: <ProtectedRoute><Exercise /></ProtectedRoute> },
+        { path: 'aboutus', element: <ProtectedRoute><AboutUs /></ProtectedRoute> },
+        { path: 'ContactUs', element: <ProtectedRoute><ContactUs /></ProtectedRoute> },
         { path: '*', element: <NotFound /> },
-      ],
-    },
-    {
-      path: '/auth',
-      element: <LayOut2 />,
-      children: [
         { path: 'login', element: <Login /> },
         { path: 'signup', element: <Signup /> },
       ],
     },
+    
     {
       path: '/dashboard',
-      element: <ProtectedRoute><Dashboard /></ProtectedRoute>, // ✅ حماية صفحة الأدمن
+      element: <ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>, // 🔥 الآن محمي للأدمن فقط
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return(
+    <UserContextProvider>
+    <RouterProvider router={router} />
+    </UserContextProvider>
+  )
+  
+    
+   
 }
 
 export default App;

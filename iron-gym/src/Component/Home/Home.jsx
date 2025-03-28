@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import bacKGROUND from '../../assets/bacKGROUND.jpeg';
 import imgeHome from '../../assets/imgeHome.jpeg';
@@ -6,18 +6,20 @@ import man1Home from '../../assets/man1Home.png';
 import style from './Home.module.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from '../../Context/UserContext';
 
 
 
 export default function Home() {
 
+  const {user}= useContext(UserContext);
   
   
 
 
   return (
     <>
-      <Navbar />
+     
       <div className="bg-black text-white min-h-screen  ">
         {/* الصورة الرئيسية */}
         <div className="relative w-full h-screen bg-black overflow-hidden">
@@ -35,11 +37,15 @@ export default function Home() {
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-sans">GET FIT</h1>
             <p className="text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-10">TRANSFORM YOUR BODY</p>
             <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
-             <Link to="auth/signup"> Register</Link>
+             <Link to="/signup"> Register</Link>
             </button>
-            <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
-             <Link to="auth/dashboard"> DASHBOARD</Link>
+         {user && user.role === "admin" &&  
+            <>
+                <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
+             <Link to="/dashboard"> DASHBOARD</Link>
             </button>
+            </>
+         }
           </div>
         </div>
 

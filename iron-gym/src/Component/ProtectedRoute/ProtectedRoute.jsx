@@ -1,8 +1,17 @@
-import { Navigate } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Navigate } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 
-export default function ProtectedRoute({ children }) {
-  const isAuthenticated = localStorage.getItem('token'); // تأكد إذا كان المستخدم مسجل الدخول
+export default function ProtectedRoute({ children, adminOnly = false }) {
+  const { token, user } = useContext(UserContext);
 
-  return isAuthenticated ? children : <Navigate to="/auth/login" replace />;
+  if (!token) {
+    return <Navigate to="/login" />;
+  }
+
+  if (adminOnly && user?.role !== "admin") {
+    return <Navigate to="/" />;
+  }
+
+  return children;
 }
-

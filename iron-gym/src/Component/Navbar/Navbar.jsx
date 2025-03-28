@@ -1,187 +1,121 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/logo.jpeg";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { UserContext } from "../../Context/UserContext";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const { token, setToken } = useContext(UserContext);
+  const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  function logout() {
+    setToken(null);
+    navigate("/login");
+  }
+
+ 
 
   return (
-    <>
-   <div className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-black">
-  <nav className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="relative flex h-20 items-center justify-between">
+    <nav className="bg-white border-gray-200 dark:bg-black">
+    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       {/* اللوجو */}
-      <div className="flex items-center">
-        <div className="flex flex-col items-center mr-4">
-          <img className="h-16 w-auto" src={logo} alt="Iron Gym Logo" />
-          <span className="text-xs font-bold text-orange-500 mt-0.5">
-            IRON GYM
-          </span>
-        </div>
-      </div>
-
-      {/* روابط القائمة - سطح المكتب */}
-      <div className="hidden sm:flex space-x-11">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive
-              ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-              : "text-white text-xl hover:text-orange-500 transition duration-200"
-          }
-        >
-          HOME
-        </NavLink>
-        <NavLink
-          to="/exercise"
-          className={({ isActive }) =>
-            isActive
-              ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-              : "text-white text-xl hover:text-orange-500 transition duration-200"
-          }
-        >
-          EXERCISES
-        </NavLink>
-        <NavLink
-          to="/nutrition"
-          className={({ isActive }) =>
-            isActive
-              ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-              : "text-white text-xl hover:text-orange-500 transition duration-200"
-          }
-        >
-          NUTRITION
-        </NavLink>
-        <NavLink
-          to="/aboutus"
-          className={({ isActive }) =>
-            isActive
-              ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-              : "text-white text-xl hover:text-orange-500 transition duration-200"
-          }
-        >
-          ABOUT US
-        </NavLink>
-        <NavLink
-          to="/contactus"
-          className={({ isActive }) =>
-            isActive
-              ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-              : "text-white text-xl hover:text-orange-500 transition duration-200"
-          }
-        >
-          CONTACT US
-        </NavLink>
-      </div>
-
-      {/* زر تسجيل الخروج - سطح المكتب */}
-      <div className="hidden sm:block">
-        <NavLink
-          to="/auth"
-          className={({ isActive }) =>
-            isActive
-              ? "text-white font-bold"
-              : "text-orange-500 hover:text-white transition duration-200"
-          }
-        >
-          LOG OUT
-        </NavLink>
-      </div>
-
-      {/* زر القائمة الجانبية - الموبايل */}
-      <div className="sm:hidden flex items-center absolute right-4 top-1/2 transform -translate-y-1/2">
-        <button onClick={toggleMenu} className="text-orange-500 focus:outline-none">
-          {/* أيقونة الهامبرجر */}
-          <div className="w-7 flex flex-col space-y-1">
-            <span
-              className={`block h-0.5 w-7 bg-orange-500 transition-transform duration-300 ${
-                isMenuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
-            ></span>
-            <span
-              className={`block h-0.5 w-7 bg-orange-500 transition-opacity duration-300 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}
-            ></span>
-            <span
-              className={`block h-0.5 w-7 bg-orange-500 transition-transform duration-300 ${
-                isMenuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
-            ></span>
-          </div>
-        </button>
-      </div>
-    </div>
-
-    {/* القائمة الجانبية - الموبايل */}
-    {isMenuOpen && (
-      <div className="sm:hidden bg-black border-t border-gray-800 py-2">
-        <div className="flex flex-col space-y-3 px-4 pt-2 pb-4">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-orange-500 font-bold" : "text-white hover:text-orange-500 block py-1"
-            }
-          >
-            HOME
-          </NavLink>
-
-
-          
-          <NavLink
-            to="/exercises"
-            className={({ isActive }) =>
-              isActive ? "text-orange-500 font-bold" : "text-white hover:text-orange-500 block py-1"
-            }
-          >
-            EXERCISES
-          </NavLink>
-          <NavLink
-            to="/nutrition"
-            className={({ isActive }) =>
-              isActive ? "text-orange-500 font-bold" : "text-white hover:text-orange-500 block py-1"
-            }
-          >
-            NUTRITION
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? "text-orange-500 font-bold" : "text-white hover:text-orange-500 block py-1"
-            }
-          >
-            ABOUT US
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? "text-orange-500 font-bold" : "text-white hover:text-orange-500 block py-1"
-            }
-          >
-            CONTACT US
-          </NavLink>
-          <div className="pt-2 border-t border-gray-800 mt-2">
-            <NavLink
-              to="/logout"
-              className={({ isActive }) =>
-                isActive ? "text-white font-bold" : "text-orange-500 hover:text-white block py-1"
-              }
+      <img src={logo} className="h-14 w-20" alt="Logo" />
+  
+      {/* زر القائمة للموبايل */}
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden 
+        hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 
+        dark:focus:ring-gray-600"
+        aria-controls="navbar-default"
+        aria-expanded={isOpen}
+      >
+        <span className="sr-only">Open main menu</span>
+        <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+  
+      {/* القائمة */}
+      <div className={`${isOpen ? "block" : "hidden"} w-full md:flex md:items-center md:justify-center md:w-auto`} id="navbar-default">
+ {token && 
+   <>
+     <ul className="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+          <li>
+            <NavLink to="/" className={({ isActive }) =>
+                      isActive
+                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+                        : "text-white text-xl hover:text-orange-500 transition duration-200"
+                    }>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/exercise" className={({ isActive }) =>
+                      isActive
+                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+                        : "text-white text-xl hover:text-orange-500 transition duration-200"
+                    }>
+              EXERCISES
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/nutrition" className={({ isActive }) =>
+                      isActive
+                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+                        : "text-white text-xl hover:text-orange-500 transition duration-200"
+                    }>
+              NUTRITION
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/aboutus" className={({ isActive }) =>
+                      isActive
+                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+                        : "text-white text-xl hover:text-orange-500 transition duration-200"
+                    }>
+              ABOUT 
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/ContactUs" className={({ isActive }) =>
+                      isActive
+                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+                        : "text-white text-xl hover:text-orange-500 transition duration-200"
+                    }>
+              CONTACT US
+            </NavLink>
+          </li>
+  
+          {/* زر تسجيل الخروج - يظهر داخل القائمة في الموبايل */}
+          <li className="md:hidden mt-4">
+            <button
+              onClick={logout}
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md text-center"
             >
               LOG OUT
-            </NavLink>
-          </div>
-          <div className="pt-2 border-t border-gray-800 mt-2">
-            
-          </div>
-        </div>
+            </button>
+          </li>
+        </ul>
+   </>
+ }        
+ 
       </div>
-    )}
+  
+      {/* زر تسجيل الخروج - يظهر فقط في الشاشات الكبيرة */}
+      {token && (
+        <div className="hidden md:block">
+          <button
+            onClick={logout}
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md"
+          >
+            LOG OUT
+          </button>
+        </div>
+      )}
+    </div>
   </nav>
-</div>
-    </>
+  
   );
 }

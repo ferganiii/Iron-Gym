@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import bacKGROUND from "../../assets/bacKGROUND.jpeg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { FaSpinner } from "react-icons/fa6";
+import { UserContext } from "../../Context/UserContext";
 
 export default function Login() {
-  const [errorMSG, seterrorMSG] = useState('');
+  const [errorMSG, seterrorMSG] = useState("");
   const [isloading, setIsloading] = useState(false);
   const navigate = useNavigate();
+  const { setToken, setUser } = useContext(UserContext); // ✅ إضافة setUser
 
+  // ✅ التحقق من صحة البيانات باستخدام Yup
   const Schema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is not valid"),
     password: Yup.string()
@@ -30,31 +33,31 @@ export default function Login() {
 
   async function handleSubmit(values) {
     setIsloading(true);
-  
+
     try {
       const res = await axios.post("https://gym-production-8217.up.railway.app/api/auth/login", values);
-  
+
       console.log(res.data, "Login Successful ✅");
-  
+
       if (res.data.message === "login success") {
-        navigate("/"); // توجيه المستخدم بعد تسجيل الدخول بنجاح
+        // ✅ حفظ البيانات في localStorage و UserContext
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+
+        setToken(res.data.token);
+        setUser(res.data.user);
+
+        navigate("/");
       } else {
         seterrorMSG("Invalid credentials. Please try again.");
       }
     } catch (error) {
-      if (error.response) {
-        seterrorMSG(error.response.data.message || "An unknown error occurred.");
-      } else {
-        seterrorMSG("Network error. Please try again later.");
-      }
-  
+      seterrorMSG(error.response?.data?.message || "An unknown error occurred.");
       console.log(error.response?.data?.message);
     } finally {
       setIsloading(false);
     }
   }
-  
-  
 
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
@@ -71,9 +74,7 @@ export default function Login() {
       {/* النصوص "GET FIT" و "TRANSFORM YOUR BODY" */}
       <div className="absolute inset-x-0 bottom-10 sm:bottom-24 flex flex-col items-center text-center text-white px-4 pb-10 sm:pb-28 z-20">
         <h1 className="text-5xl sm:text-6xl md:text-8xl font-sans">GET FIT</h1>
-        <p className="text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-10">
-          TRANSFORM YOUR BODY
-        </p>
+        <p className="text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-10">TRANSFORM YOUR BODY</p>
       </div>
 
       {/* نموذج التسجيل */}
@@ -84,7 +85,7 @@ export default function Login() {
             {/* زر تسجيل الدخول */}
             <div className="pt-2 border-t border-gray-800 mt-2">
               <NavLink
-                to="/auth/login"
+                to="/login"
                 className={({ isActive }) =>
                   isActive
                     ? "text-orange-600 font-bold border-b-2 border-orange-600 pb-1 transition duration-300"
@@ -98,7 +99,7 @@ export default function Login() {
             {/* زر تسجيل الحساب */}
             <div className="pt-2 border-t border-gray-800 mt-2">
               <NavLink
-                to="/auth/signup"
+                to="/signup"
                 className={({ isActive }) =>
                   isActive
                     ? "text-orange-600 font-bold border-b-2 border-orange-600 pb-1 transition duration-300"
@@ -115,9 +116,11 @@ export default function Login() {
             <div className="space-y-4">
               {/* Email Input */}
               <div>
-                <label className="text-white" htmlFor="email">E-MAIL *</label>
+                <label className="text-white" htmlFor="email">
+                  E-MAIL *
+                </label>
                 <input
-                  {...formik.getFieldProps('email')}
+                  {...formik.getFieldProps("email")}
                   name="email"
                   id="email"
                   type="email"
@@ -133,9 +136,11 @@ export default function Login() {
 
               {/* Password Input */}
               <div>
-                <label className="text-white" htmlFor="password">Password *</label>
+                <label className="text-white" htmlFor="password">
+                  Password *
+                </label>
                 <input
-                  {...formik.getFieldProps('password')}
+                  {...formik.getFieldProps("password")}
                   name="password"
                   id="password"
                   type="password"
@@ -160,10 +165,17 @@ export default function Login() {
             </button>
           </form>
 
+          {/* عرض رسالة الخطأ */}
+          {errorMSG && (
+            <div className="p-4 mt-4 text-sm text-orange-800 rounded-lg bg-red-500 dark:bg-gray-800 dark:text-orange-400">
+              <span className="font-medium">{errorMSG}</span>
+            </div>
+          )}
+
           {/* رابط تسجيل الحساب */}
           <p className="text-center text-sm mt-4 text-gray-400">
             If you don't have an account{" "}
-            <Link to="/auth/signup" className="text-red-400 hover:underline">
+            <Link to="/signup" className="text-red-400 hover:underline">
               Sign Up Now
             </Link>
           </p>
