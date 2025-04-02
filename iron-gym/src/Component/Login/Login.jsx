@@ -11,9 +11,8 @@ export default function Login() {
   const [errorMSG, seterrorMSG] = useState("");
   const [isloading, setIsloading] = useState(false);
   const navigate = useNavigate();
-  const { setToken, setUser } = useContext(UserContext); // ✅ إضافة setUser
+  const { setToken, setUser } = useContext(UserContext);
 
-  // ✅ التحقق من صحة البيانات باستخدام Yup
   const Schema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is not valid"),
     password: Yup.string()
@@ -37,10 +36,11 @@ export default function Login() {
     try {
       const res = await axios.post("https://gym-production-8217.up.railway.app/api/auth/login", values);
 
-      console.log(res.data, "Login Successful ✅");
 
       if (res.data.message === "login success") {
-        // ✅ حفظ البيانات في localStorage و UserContext
+
+
+
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data.user));
 

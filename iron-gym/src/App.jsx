@@ -15,43 +15,59 @@ import ContactUs from './Component/ContactUs/ContactUs';
 import Login from './Component/Login/Login';
 import Signup from './Component/SignUp/SignUp';
 import NotFound from './Component/NotFound/NotFound';
-import Dashboard from './pages/Dashboard'; // ✅ إضافة الداشبورد
+import Dashboard from './pages/Dashboard/Dashboard'; // ✅ إضافة الداشبورد
 import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
 import UserContextProvider from './Context/UserContext';
+import ProteinsDash from './pages/Dashboard/ProteinsDash';
+import CarbDash from './pages/Dashboard/CarbDash';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import SupplementDetails from './Component/SupplementsDetails/SupplementsDetails';
 
 function App() {
+  const myClinet=new QueryClient();
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Layout />,
       children: [
-        { index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute>},
-        { path: 'nutrition', element:<ProtectedRoute> <Nutrition /></ProtectedRoute> },
-        { path: 'nutrition/protein', element: <ProtectedRoute><Protein /></ProtectedRoute> },
-        { path: 'nutrition/carb', element: <ProtectedRoute><CarboHidrates /> </ProtectedRoute>},
-        { path: 'nutrition/fat', element:<ProtectedRoute> <Fats /></ProtectedRoute> },
-        { path: 'nutrition/dairyEgg', element: <ProtectedRoute><DairyEgg /></ProtectedRoute> },
-        { path: 'nutrition/CalcCaloriesMeal', element: <ProtectedRoute><CalcCaloriesMeal /></ProtectedRoute> },
-        { path: 'nutrition/MealPlan', element: <ProtectedRoute><MealPlan /></ProtectedRoute> },
-        { path: 'exercise', element: <ProtectedRoute><Exercise /></ProtectedRoute> },
-        { path: 'aboutus', element: <ProtectedRoute><AboutUs /></ProtectedRoute> },
-        { path: 'ContactUs', element: <ProtectedRoute><ContactUs /></ProtectedRoute> },
-        { path: '*', element: <NotFound /> },
-        { path: 'login', element: <Login /> },
-        { path: 'signup', element: <Signup /> },
+        { index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+        { path: "nutrition", element: <ProtectedRoute> <Nutrition /> </ProtectedRoute> },
+        { path: "nutrition/protein", element: <Protein /> },
+        { path: "nutrition/carb", element: <CarboHidrates /> },
+        { path: "nutrition/fat", element: <Fats /> },
+        { path: "nutrition/dairyEgg", element: <DairyEgg /> },
+        { path: "nutrition/CalcCaloriesMeal", element: <CalcCaloriesMeal /> },
+        { path: "nutrition/MealPlan", element: <MealPlan /> },
+        { path: "exercise", element: <Exercise /> },
+        { path: "SupplementDetails", element: <SupplementDetails /> },
+        { path: "aboutus", element: <AboutUs /> },
+        { path: "ContactUs", element: <ContactUs /> },
+        { path: "login", element: <Login /> },
+        { path: "signup", element: <Signup /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
-    
+  
+    // ✅ تنظيم مسارات الداشبورد كـ Nested Routes
     {
-      path: '/dashboard',
-      element: <ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>, // 🔥 الآن محمي للأدمن فقط
-    },
+      path: "/dashboard",
+      element: <ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>,
+      children: [
+        { index: true, element: < CarbDash/> }, // عنصر افتراضي
+        { path: "proteins", element: <ProteinsDash /> },       
+      ]
+    }
   ]);
+  
+  
 
   return(
-    <UserContextProvider>
-    <RouterProvider router={router} />
-    </UserContextProvider>
+    <QueryClientProvider client={myClinet}>
+        <UserContextProvider>
+        <RouterProvider router={router} />
+        </UserContextProvider>
+    </QueryClientProvider>
+   
   )
   
     

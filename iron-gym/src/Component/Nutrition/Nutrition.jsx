@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import Supplements from "../Supplements/Supplements";
 import { motion } from "framer-motion";
 import NutritionProgram from "../NutritionProgram/NutritionProgram";
+import NutritionTable from "../NutritionTable/NutritionTable";
   
 
 

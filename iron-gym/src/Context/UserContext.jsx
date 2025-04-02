@@ -1,27 +1,33 @@
 import React, { createContext, useEffect, useState } from "react";
 
-export const UserContext = createContext(null); // ✅ تأكد من التصدير الصحيح
+export const UserContext = createContext(null);
 
-export default function UserContextProvider(props) {
-  const [token, setToken] =useState(localStorage.getItem('token') || null);
-  const [user, setUser] =useState(localStorage.getItem('User') || null);
-  
+export default function UserContextProvider({ children }) {
+  const [token, setToken] = useState(localStorage.getItem("token") || null);
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
 
+  const role = user?.role || "User"; // تحديد الدور بناءً على بيانات المستخدم
 
   useEffect(() => {
- 
     if (token) {
-      localStorage.setItem('token', token);
+      localStorage.setItem("token", token);
+    } else {
+      localStorage.removeItem("token");
+    }
+
+    if (user) {
       localStorage.setItem("user", JSON.stringify(user));
     } else {
-      localStorage.removeItem('token');
       localStorage.removeItem("user");
     }
-  }, [token ,user ]);
+  }, [token, user]);
 
   return (
-    <UserContext.Provider value={{ token, setToken , user, setUser }}>
-      {props.children}
+    <UserContext.Provider value={{ token, setToken, user, setUser, role }}>
+      {children}
     </UserContext.Provider>
   );
 }
