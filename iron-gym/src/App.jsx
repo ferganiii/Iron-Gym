@@ -40,7 +40,7 @@ function App() {
         { path: "nutrition/CalcCaloriesMeal", element: <CalcCaloriesMeal /> },
         { path: "nutrition/MealPlan", element: <MealPlan /> },
         { path: "exercise", element: <Exercise /> },
-        { path: "SupplementDetails", element: <SupplementDetails /> },
+        { path: "SupplementDetails/:id", element: <SupplementDetails /> },
         { path: "aboutus", element: <AboutUs /> },
         { path: "ContactUs", element: <ContactUs /> },
         { path: "Calculators", element: <Calculators /> },
