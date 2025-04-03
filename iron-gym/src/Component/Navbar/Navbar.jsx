@@ -120,6 +120,20 @@ export default function Navbar() {
                   </NavLink>
                 </li>
 
+                <li>
+                  <NavLink
+                    to="/Calculators"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+                        : "text-white text-xl hover:text-orange-500 transition duration-200"
+                    }
+                  >
+                    CALCULATORS
+                  </NavLink>
+                </li>
+
+
                 {/* زر تسجيل الخروج - يظهر داخل القائمة في الموبايل */}
                 <li className="md:hidden mt-4">
                   <button

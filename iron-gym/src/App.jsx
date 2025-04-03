@@ -22,6 +22,7 @@ import ProteinsDash from './pages/Dashboard/ProteinsDash';
 import CarbDash from './pages/Dashboard/CarbDash';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SupplementDetails from './Component/SupplementsDetails/SupplementsDetails';
+import Calculators from './Component/Calculators/Calculators';
 
 function App() {
   const myClinet=new QueryClient();
@@ -42,6 +43,7 @@ function App() {
         { path: "SupplementDetails", element: <SupplementDetails /> },
         { path: "aboutus", element: <AboutUs /> },
         { path: "ContactUs", element: <ContactUs /> },
+        { path: "Calculators", element: <Calculators /> },
         { path: "login", element: <Login /> },
         { path: "signup", element: <Signup /> },
         { path: "*", element: <NotFound /> },
