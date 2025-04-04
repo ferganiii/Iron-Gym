@@ -188,14 +188,19 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
                 <th className="px-6 py-5">Protein</th>
                 <th className="px-6 py-5">Carb</th>
                 <th className="px-6 py-5">Fats</th>
-                <th className="px-6 py-5">Actions</th>
-                <th className="px-6 py-5">Actions</th>
+                {role === "admin" && (
+  <>
+    <th className="px-6 py-5">Actions</th>
+    <th className="px-6 py-5">Actions</th>
+  </>
+)}
+
               </tr>
             </thead>
             <tbody className="text-3xl max-sm:text-xl text-center">
               {data.length ? (
                 data.map((item) => (
-                  <tr key={item._id} className="bg-white border-y-[1px] dark:bg-[rgb(102,102,102,.3)] dark:border-orange-600 border-gray-200">
+                  <tr key={item._id} className="hover:bg-gray-800 transition-all duration-500 bg-white border-y-[1px] dark:bg-[rgb(102,102,102,.3)] dark:border-orange-600 border-gray-200">
                     <td className="px-6 py-10 text-4xl font-Andika">{item?.name || "N/A"}</td>
                     <td className="px-6 py-10 text-4xl font-Andika">{item?.sthermal ?? "N/A"} kcal</td>
                     <td className="px-6 py-10 text-4xl font-Andika">{item?.protein ?? "N/A"} g</td>
