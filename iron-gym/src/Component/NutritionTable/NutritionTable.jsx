@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { UserContext } from "../../context/UserContext";
+import { LifeLine } from "react-loading-indicators";
+import Loading from "../Loading/Loading";
 
 export default function NutritionTable({ title, bgImage, apiUrl }) {
   const [data, setData] = useState([]);
@@ -236,9 +238,10 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
               ) : (
                 <tr>
                   <td colSpan="6" className="text-center py-4">
-                  lodiong............
-                  </td>
-                </tr>
+                
+
+    <Loading/>                  </td>
+                </tr> 
               )}
             </tbody>
           </table>

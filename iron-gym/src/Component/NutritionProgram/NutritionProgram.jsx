@@ -5,6 +5,9 @@ import calcClories from "../../assets/cardCalories.webp";
 
 
 export default function NutritionProgram() {
+
+
+  
   return (
     <>
          <section className="bg-[rgb(102,102,102,.3)] py-7">
