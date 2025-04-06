@@ -1,74 +1,144 @@
 import React from 'react'
 import background from '../../assets/bg_exercise.png'
 import shape5 from '../../assets/shape-5.png'
-import sup1 from '../../assets/sup1.jpeg'
+import man1Exercise from '../../assets/man1Exercise.png'
+
 import style from "./Exercise.module.css"
+import { Link } from 'react-router-dom'
+
 export default function Exercise() {
   return (
     <>
-    <section className='bg-[rgb(102,102,102,.3)] relative'>
-  <div
-    className="h-screen bg-cover bg-center relative flex flex-col justify-center items-start text-center"
-    style={{ backgroundImage: `url(${background})` }}
-  >
-    <h2 className='ms-60 text-5xl font-[Montserrat] mb-5'>BE FIT , </h2>
-    <h2
-      className='ms-60 text-5xl font-[Montserrat] text-orange-500 font-bold'
-      style={{ textShadow: '6px 5px 1px rgba(249,115,22,0.5)' }}
-    >
-      BE STRONG 💪💪
-    </h2>
-  </div>
+      <section className='bg-[rgb(102,102,102,.3)] relative'>
+        {/* Hero Section */}
+        <div
+          className="h-screen bg-cover bg-center relative flex flex-col justify-center items-start text-center"
+          style={{ backgroundImage: `url(${background})` }}
+        >
+          <h2 className='text-3xl md:text-5xl font-[Montserrat] mb-5 ms-8'>BE FIT , </h2>
+          <h2
+            className='text-3xl md:text-5xl font-[Montserrat] text-orange-500 font-bold ms-8'
+            style={{ textShadow: '6px 5px 1px rgba(249,115,22,0.5)' }}
+          >
+            BE STRONG 💪💪
+          </h2>
+        </div>
 
-  <div className='container mx-auto mt-20 bg-gray-900 relative  overflow-hidden'> 
- 
-  <div className="flex gap-6 p-4">
-  {/* العنصر الأول */}
-  <div className="relative w-[320px] h-[280px]">
-    {/* الشكل */}
-    <div className="w-full h-full bg-[#666666] clip-custom-1"></div>
+        <div className='container mx-auto mt-20 relative overflow-hidden'> 
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4'>
+            {/* القسم الأول */}
+            <div>
+              <div className="flex">
+                <div className="relative">
+                  <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
+                  <div className="text-orange-500 ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold ">
+                    Exercise Guide
+                  </div>
+                </div>
+                <div className="relative w-[200px] h-[200px]">
+                  <div className={`w-full h-full absolute top-1/2 -left-9 ${style['clip-custom-2']}`}></div>
+                </div>
+              </div>
 
-    {/* الكتابة فوق الشكل */}
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold text-center px-4">
-      يييييييييييييييييييييييييييييييييييييينص فوق الشكل 💬
-    </div>
-  </div>
+              <div className="flex items-center gap-4 mt-4">
+                <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
+                  <img src={man1Exercise} alt="" className="object-cover w-full h-full" />
+                </div>
+                <Link to="/MuscleMap">
+                <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                  Explore Muscles group >>
+                </button>
+                  </Link>
+              </div>
+            </div>
 
-  {/* العنصر الثاني */}
-  <div className="relative w-[200px] h-[200px]">
-    <div className="w-full h-full bg-[#999999] clip-custom-2"></div>
+            {/* القسم الثاني */}
+            <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
+              <div className={`relative ${style['clip-msls']}`}>
+                <div className={`absolute top-1/4 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
+                    build your body with the perfect Exercise Guide
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-lg font-semibold text-center px-4">
-      كلام فوق الشكل التاني 🔥
-    </div>
-  </div>
-</div>
+          {/* القسمين الإضافيين */}
+          
+          {/* القسم الثالث */}
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 mt-20'>
+            <div>
+              <div className="flex">
+                <div className="relative">
+                  <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
+                  <div className="text-orange-500 ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold  ">
+                  Exercise System
+                  </div>
+                </div>
+                <div className="relative w-[200px] h-[200px]">
+                  <div className={`w-full h-full absolute top-1/2 -left-9 ${style['clip-custom-2']}`}></div>
+                </div>
+              </div>
 
+              <div className="flex items-center gap-4 mt-4">
+                <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
+                  <img src={man1Exercise} alt="Nutrition" className="object-cover w-full h-full" />
+                </div>
+                <button className=" z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                  Explore System >>
+                </button>
+              </div>
+            </div>
 
+            <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
+              <div className={`relative ${style['clip-msls']}`}>
+                <div className={`absolute top-1/4 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="uppercase mb-3 font-Angkor text-center lg:text-5xl text-2xl text-gray-700 dark:text-white">
+                    Fuel your body with the right nutrition
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          {/* القسم الرابع */}
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 mt-20'>
+            <div>
+              <div className="flex">
+                <div className="relative">
+                  <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
+                  <div className="text-orange-500 ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold  ">
+                  Cardio
+                  </div>
+                </div>
+                <div className="relative w-[200px] h-[200px]">
+                  <div className={`w-full h-full absolute top-1/2 -left-9 ${style['clip-custom-2']}`}></div>
+                </div>
+              </div>
 
-<div
-    style={{
-      clipPath: 'polygon(0 0, 55% 0, 83% 52%, 55% 100%, 0 100%, 0 46%)',
-      backgroundColor: '#666666', 
-      width: '320px',
-      height: '280px',
-    }}
-  >
-    <img src={sup1} alt="" className='object-cover w-full h-full' />
+              <div className="flex items-center gap-4 mt-4">
+                <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
+                  <img src={man1Exercise} alt="Workout" className="object-cover w-full h-full" />
+                </div>
+                <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                Explore Cardio >>
+                </button>
+              </div>
+            </div>
 
-  </div>
-
-
-
-
-
-  </div>
-  
-</section>
-
-
+            <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
+              <div className={`relative ${style['clip-msls']}`}>
+                <div className={`absolute top-1/4 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="uppercase mb-3 font-Angkor text-center lg:text-5xl text-2xl text-gray-700 dark:text-white">
+                    Cardio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
-

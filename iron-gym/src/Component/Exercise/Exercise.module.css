@@ -1,6 +1,29 @@
-.clip_hexagon {
-    top: -17%;
-    left: -5%;
-    transform: rotate(90deg);
+.clip-custom-1 {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 79% 100%, 0% 100%);
+  background-color: rgba(102, 102, 102, .37);
+}
+.clip-custom-2 {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 54%, 75% 100%, 25% 100%, 0 55%);
+  background-color: rgba(102, 102, 102, .17);
+
+}
+
+  .clip-msls {
+    width: 0;
+    height: 0;
+    border-top: 203px solid transparent;
+    border-right: 413px solid rgba(102, 102, 102, .37);
+    border-bottom: 223px solid transparent;
   }
-  
+
+  .bord::after{
+    position: absolute;
+    content: '';
+    width: 212%;
+    height: 10px;
+    left: 15%;
+    top: 99%;
+
+   background-color: rgba(232, 103, 33, 0.42);
+   
+  }

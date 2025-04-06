@@ -16,6 +16,7 @@ export default {
         Angkor: ["'Angkor'", "sans-serif"],
         Anta: ["'Anta'", "sans-serif"],
         Montserrat: ["'Montserrat'", "sans-serif"],
+ 
       },
     },
   },
@@ -24,3 +25,4 @@ export default {
     require("tailwind-scrollbar"), 
   ],
 };
+

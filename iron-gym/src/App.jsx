@@ -23,6 +23,10 @@ import CarbDash from './pages/Dashboard/CarbDash';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SupplementDetails from './Component/SupplementsDetails/SupplementsDetails';
 import Calculators from './Component/Calculators/Calculators';
+import ExerciseGuide from './Component/ExerciseGuide/ExerciseGuide';
+import MuscleMap from './Component/MuscleMap/MuscleMap';
+import { MuscleProvider } from './Context/MuscleContext';
+import ExerciseDetails from './Component/ExerciseDetails/ExerciseDetails';
 
 function App() {
   const myClinet=new QueryClient();
@@ -40,6 +44,9 @@ function App() {
         { path: "nutrition/CalcCaloriesMeal", element: <CalcCaloriesMeal /> },
         { path: "nutrition/MealPlan", element: <MealPlan /> },
         { path: "exercise", element: <Exercise /> },
+        { path: "exercise/:muscleName", element: <ExerciseGuide /> },
+        { path: 'exercise/details/:id', element: <ExerciseDetails /> },
+        { path: "MuscleMap", element: <MuscleMap /> },
         { path: "SupplementDetails/:id", element: <SupplementDetails /> },
         { path: "aboutus", element: <AboutUs /> },
         { path: "ContactUs", element: <ContactUs /> },
@@ -64,11 +71,13 @@ function App() {
   
 
   return(
-    <QueryClientProvider client={myClinet}>
+
         <UserContextProvider>
-        <RouterProvider router={router} />
+       <MuscleProvider>
+         <RouterProvider router={router} />
+       </MuscleProvider>
         </UserContextProvider>
-    </QueryClientProvider>
+       
    
   )
   
