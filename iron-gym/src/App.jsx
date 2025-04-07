@@ -27,6 +27,7 @@ import ExerciseGuide from './Component/ExerciseGuide/ExerciseGuide';
 import MuscleMap from './Component/MuscleMap/MuscleMap';
 import { MuscleProvider } from './Context/MuscleContext';
 import ExerciseDetails from './Component/ExerciseDetails/ExerciseDetails';
+import CalorieResultPage from "./Component/CalorieResultPage/CalorieResultPage"; // تأكد من المسار الصحيح
 
 function App() {
   const myClinet=new QueryClient();
@@ -51,6 +52,7 @@ function App() {
         { path: "aboutus", element: <AboutUs /> },
         { path: "ContactUs", element: <ContactUs /> },
         { path: "Calculators", element: <Calculators /> },
+        { path: "/result", element: <CalorieResultPage /> },
         { path: "login", element: <Login /> },
         { path: "signup", element: <Signup /> },
         { path: "*", element: <NotFound /> },
