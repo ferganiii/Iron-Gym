@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import chest from '../../assets/chest.jpeg';
 import aps from '../../assets/aps.png';
 import adductors from '../../assets/adductors.jpeg';
-import adductors2 from '../../assets/adductors2.jpeg';
 import Bicps from '../../assets/Bicps.png';
 import calves from '../../assets/calves.jpeg';
 import glats from '../../assets/glats.png';
@@ -16,7 +15,8 @@ import sholder from '../../assets/sholder.png';
 import trapizes from '../../assets/trapizes.png';
 import tricps from '../../assets/tricps.png';
 import forearms from '../../assets/forearms.jpeg';
-import background_hexagon from '../../assets/background_hexagon.avif';
+import background_hexagon from '../../assets/background_hexagon.jpg';
+import MuchaTseBle from '../../assets/MuchaTseBle.jpg';
 export default function MuscleMap() {
     const muscleImages = [
         { name: 'Triceps', image: tricps },
@@ -44,7 +44,7 @@ export default function MuscleMap() {
     speed: 500,
     slidesToScroll: 3,
     arrows:false,
-    slidesToShow: 5,
+    slidesToShow: 6,
     
     responsive: [
         {
@@ -73,23 +73,41 @@ export default function MuscleMap() {
 
   return (
 
-    <>
+  
    
       
-      <section>
-      
-<div
-          className="h-screen bg-cover bg-center relative flex flex-col justify-center items-start text-center"
-          style={{ backgroundImage: `url(${background_hexagon})` }}
-        >
-          
-        </div>
+      <section className='bg-[rgb(102,102,102,.3)]'>
+   <div className="relative w-full h-screen overflow-hidden mb-12">
+  {/* الصورة */}
+  <img
+    src={MuchaTseBle}
+    alt="background"
+    className="absolute top-0 left-0 w-full h-full object-cover object-left"
+  />
+
+  {/* الـ Overlay للنص */}
+  <div className="absolute inset-0 bg-black/15 flex flex-col justify-center items-start px-8 sm:px-16 md:px-24">
+    <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+      Exercise&nbsp;&nbsp;Guides And Videos
+    </h1>
+    <p className="text-xl sm:text-2xl text-white mb-6">
+      Explore by muscle groups
+    </p>
+    <h2 className="text-5xl sm:text-7xl font-extrabold text-white leading-tight tracking-wider">
+      BREATH,<br />
+      TRAIN,<br />
+      ACHIEVE.
+    </h2>
+  </div>
+</div>
 
 
 
 
 
-       <Slider {...settings}>
+
+  <div className='container mx-auto '>
+  <Slider {...settings}>
 {muscleImages.map((muscle, index) =>(
 
 <Link to="" onClick={() => handleMuscleClick(muscle.name)}>
@@ -108,10 +126,13 @@ export default function MuscleMap() {
 
 
 </Slider> 
+  </div>
+
+      
       </section>
 
 
-    </>
+    
     
   );
 }
