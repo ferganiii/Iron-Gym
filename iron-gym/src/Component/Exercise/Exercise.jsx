@@ -31,7 +31,7 @@ export default function Exercise() {
               <div className="flex">
                 <div className="relative">
                   <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
-                  <div className="text-orange-500 ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold ">
+                  <div className="text-orange-500 lg:ms-60 ms-20 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold ">
                     Exercise Guide
                   </div>
                 </div>
@@ -55,8 +55,8 @@ export default function Exercise() {
             {/* القسم الثاني */}
             <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
               <div className={`relative ${style['clip-msls']}`}>
-                <div className={`absolute top-1/4 lg:-top-40 left-2/4 ${style.bord}`}>
-                  <p className="uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
+                <div className={`absolute -top-32 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="ms-16 uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
                     build your body with the perfect Exercise Guide
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export default function Exercise() {
               <div className="flex">
                 <div className="relative">
                   <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
-                  <div className="text-orange-500 ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold  ">
+                  <div className="text-orange-500 ms-20 lg:ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold  ">
                   Exercise System
                   </div>
                 </div>
@@ -93,9 +93,9 @@ export default function Exercise() {
 
             <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
               <div className={`relative ${style['clip-msls']}`}>
-                <div className={`absolute top-1/4 lg:-top-40 left-2/4 ${style.bord}`}>
-                  <p className="uppercase mb-3 font-Angkor text-center lg:text-5xl text-2xl text-gray-700 dark:text-white">
-                    Fuel your body with the right nutrition
+                <div className={`absolute -top-32 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="ms-16 uppercase lg:mt-28 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
+                    EVERY DAY IS A GYM DAY
                   </p>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function Exercise() {
               <div className="flex">
                 <div className="relative">
                   <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
-                  <div className="text-orange-500 ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold  ">
+                  <div className="text-orange-500 ms-36 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold  ">
                   Cardio
                   </div>
                 </div>
@@ -129,9 +129,9 @@ export default function Exercise() {
 
             <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
               <div className={`relative ${style['clip-msls']}`}>
-                <div className={`absolute top-1/4 lg:-top-40 left-2/4 ${style.bord}`}>
-                  <p className="uppercase mb-3 font-Angkor text-center lg:text-5xl text-2xl text-gray-700 dark:text-white">
-                    Cardio
+                <div className={`absolute -top-20 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="ms-16 uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
+                    ELEVANTE YOUR WORKOUT WITH SOME CARDIO
                   </p>
                 </div>
               </div>

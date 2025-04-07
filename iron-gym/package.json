@@ -27,8 +27,10 @@
     "react-router-dom": "^7.3.0",
     "react-scrollbars-custom": "^4.1.1",
     "react-slick": "^0.30.3",
+    "react-tsparticles": "^2.12.2",
     "slick-carousel": "^1.8.1",
     "tailwind-scrollbar": "^3.0.2",
+    "tsparticles": "^3.8.1",
     "yup": "^1.6.1"
   },
   "devDependencies": {

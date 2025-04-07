@@ -42,6 +42,7 @@ export default function ExerciseDetails() {
       <p><strong>Secondary Muscles:</strong> {exercise.secondaryMuscle?.join(', ')}</p>
       <p><strong>Target Muscles:</strong> {exercise.targetMuscle?.join(', ')}</p>
       <p><strong>Description:</strong> {exercise.description}</p>
+      <video src={exercise.video}></video>
     </div>
   );
 }

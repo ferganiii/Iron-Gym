@@ -19,8 +19,8 @@
   .bord::after{
     position: absolute;
     content: '';
-    width: 212%;
-    height: 10px;
+    width: 292%;
+    height: 26px;
     left: 15%;
     top: 99%;
 
