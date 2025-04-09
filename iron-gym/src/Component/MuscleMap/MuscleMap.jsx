@@ -15,7 +15,7 @@ import sholder from '../../assets/sholder.png';
 import trapizes from '../../assets/trapizes.png';
 import tricps from '../../assets/tricps.png';
 import forearms from '../../assets/forearms.jpeg';
-import background_hexagon from '../../assets/background_hexagon.jpg';
+import bg from '../../assets/bg.jpg';
 import MuchaTseBle from '../../assets/MuchaTseBle.jpg';
 export default function MuscleMap() {
     const muscleImages = [
@@ -39,34 +39,44 @@ export default function MuscleMap() {
   const navigate = useNavigate();
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToScroll: 3,
-    arrows:false,
+    arrows: false,
+    slidesToScroll: 2,
     slidesToShow: 6,
-    
+  
     responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1
-          }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '0px',
         }
-      ]
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '0px',
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '0px',
+        }
+      }
+    ]
   };
+  
   const handleMuscleClick = (muscleName) => {
     navigate(`/exercise/${muscleName}`); // التنقل إلى صفحة التمارين للعضلة
   };
@@ -80,11 +90,19 @@ export default function MuscleMap() {
    <div className="relative w-full h-screen overflow-hidden mb-12">
   {/* الصورة */}
   <img
-    src={MuchaTseBle}
+    src={bg}
     alt="background"
     className="absolute top-0 left-0 w-full h-full object-cover object-left"
   />
-
+  <div className="absolute bottom-0 left-0 w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#273036"
+              fillOpacity="0.7"
+              d="M0,128L18.5,128C36.9,128,74,128,111,112C147.7,96,185,64,222,74.7C258.5,85,295,139,332,176C369.2,213,406,235,443,229.3C480,224,517,192,554,192C590.8,192,628,224,665,229.3C701.5,235,738,213,775,213.3C812.3,213,849,235,886,234.7C923.1,235,960,213,997,176C1033.8,139,1071,85,1108,64C1144.6,43,1182,53,1218,74.7C1255.4,96,1292,128,1329,117.3C1366.2,107,1403,53,1422,26.7L1440,0L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
   {/* الـ Overlay للنص */}
   <div className="absolute inset-0 bg-black/15 flex flex-col justify-center items-start px-8 sm:px-16 md:px-24">
     <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
@@ -107,25 +125,25 @@ export default function MuscleMap() {
 
 
   <div className='container mx-auto '>
-  <Slider {...settings}>
-{muscleImages.map((muscle, index) =>(
+  <div className="flex justify-center w-full">
+  <div className="w-full sm:w-11/12 px-2">
+    <Slider {...settings}>
+      {muscleImages.map((muscle, index) => (
+        <div key={index} className="flex justify-center">
+          <Link to="" onClick={() => handleMuscleClick(muscle.name)}>
+            <img
+              src={muscle.image}
+              alt=""
+              className="w-44 h-44 object-cover rounded-full hover:scale-110 transition-transform duration-300"
+            />
+          </Link>
+        </div>
+      ))}
+    </Slider>
+  </div>
+</div>
 
-<Link to="" onClick={() => handleMuscleClick(muscle.name)}>
-             
-             <div className="m-4">
-                
-             <img  src={muscle.image}
-                  alt=''
-                  className=" w-56 h-56 object-cover rounded-full hover:scale-110 transition-transform duration-300"/>
-              </div>  
-              </Link>
 
-
-))
- }
-
-
-</Slider> 
   </div>
 
       

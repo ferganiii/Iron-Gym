@@ -12,7 +12,7 @@ export default function Supplements() {
   const { token } = useContext(UserContext);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToScroll: 3,
@@ -35,7 +35,7 @@ export default function Supplements() {
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 2
           }
         }
       ]
@@ -69,7 +69,10 @@ export default function Supplements() {
         <h2 className="text-5xl font-archivo text-left mt-10 pb-14">Supplement GUIDE</h2>
         <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800 p-2">
      <div>
-   <Slider {...settings}>
+  
+<div className="flex justify-center w-full">
+  <div className="w-full sm:w-11/12 px-2">
+     <Slider {...settings} className="">
         {supplement.map((sup) => (
               <Link key={sup._id} to={`/SupplementDetails/${sup._id}`}>
              
@@ -82,7 +85,8 @@ export default function Supplements() {
               </Link>
             ))}
     </Slider>
-
+  </div>
+</div>
      </div>
         </div>
       </div>

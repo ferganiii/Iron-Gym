@@ -28,6 +28,7 @@ import MuscleMap from './Component/MuscleMap/MuscleMap';
 import { MuscleProvider } from './Context/MuscleContext';
 import ExerciseDetails from './Component/ExerciseDetails/ExerciseDetails';
 import CalorieResultPage from "./Component/CalorieResultPage/CalorieResultPage"; // تأكد من المسار الصحيح
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 function App() {
   const myClinet=new QueryClient();
@@ -73,12 +74,16 @@ function App() {
   
 
   return(
-
-        <UserContextProvider>
+<QueryClientProvider client={myClinet}>
+    <UserContextProvider>
        <MuscleProvider>
          <RouterProvider router={router} />
        </MuscleProvider>
         </UserContextProvider>
+       
+        <ReactQueryDevtools />
+</QueryClientProvider>
+      
        
    
   )

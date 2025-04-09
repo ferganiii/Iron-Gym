@@ -10,6 +10,9 @@ export default function Loading() {
     mobileSize={"100px"}
     className="text-center"
   />
+
+
+  
 </div>
   )
 }
