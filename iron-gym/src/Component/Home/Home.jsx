@@ -4,7 +4,7 @@ import bacKGROUND from '../../assets/bacKGROUND.jpeg';
 import imgeHome from '../../assets/imgeHome.jpeg';
 import man1Home from '../../assets/man1Home.png';
 import style from './Home.module.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../Context/UserContext';
 
@@ -75,7 +75,7 @@ export default function Home() {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
   </p>
   <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
-    EXPLORE EXERCISES
+  <Link to="/exercise">EXPLORE EXERCISES</Link>  
   </button>
 </div>
 
@@ -126,7 +126,7 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
                 </p>
                 <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300" >
-                  CALCULATORS
+                 <Link to="/Calculators">CALCULATORS</Link> 
                 </button>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
                 </p>
                 <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
-                  NUTRITIONS
+                   <Link to="/nutrition">NUTRITIONS</Link> 
                 </button>
               </div>
               {/* الصورة */}
