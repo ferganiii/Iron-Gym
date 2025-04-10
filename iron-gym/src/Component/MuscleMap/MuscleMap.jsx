@@ -17,6 +17,7 @@ import tricps from '../../assets/tricps.png';
 import forearms from '../../assets/forearms.jpeg';
 import bg from '../../assets/bg.jpg';
 import MuchaTseBle from '../../assets/MuchaTseBle.jpg';
+import Top10exercise from '../Top10exercise/Top10exercise';
 export default function MuscleMap() {
     const muscleImages = [
         { name: 'Triceps', image: tricps },
@@ -143,9 +144,10 @@ export default function MuscleMap() {
   </div>
 </div>
 
-
+<Top10exercise/>
   </div>
 
+  
       
       </section>
 

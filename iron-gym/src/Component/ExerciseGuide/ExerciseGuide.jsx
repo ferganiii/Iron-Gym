@@ -23,6 +23,7 @@ export default function ExerciseGuide() {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        
       });
 
       const muscleLower = muscleName.toLowerCase();

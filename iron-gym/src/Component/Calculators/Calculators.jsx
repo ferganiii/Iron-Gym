@@ -1,4 +1,3 @@
-
 import bg from "../../assets/bg.jpg"; 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -27,8 +26,23 @@ const Calculators = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
-    setLoading(true); 
-
+    setLoading(true);
+  
+    // التحقق من الحقول المطلوبة
+    if (!formData.gender || !formData.age || !formData.weight || !formData.height || !formData.bodyFat || !formData.goal || !formData.proteinQuantity || !formData.activityLevel) {
+      setError("Please fill in all required fields.");
+      setLoading(false);
+      return;
+    }
+  
+    // التحقق من قيمة bodyFat
+    const bodyFatValue = Number(formData.bodyFat);
+    if (bodyFatValue < 5 || bodyFatValue > 50) {
+      setError("Body fat percentage must be between 5% and 50%");
+      setLoading(false);
+      return;
+    }
+  
     const preparedData = {
       gender: formData.gender,
       age: Number(formData.age),
@@ -45,10 +59,10 @@ const Calculators = () => {
       activityLevel: formData.activityLevel,
       stepsNumber: formData.steps ? Number(formData.steps) : 0,
     };
-
+  
     try {
       const token = localStorage.getItem("token");
-
+  
       const res = await fetch(
         "https://gym-production-8217.up.railway.app/api/calculate",
         {
@@ -60,26 +74,27 @@ const Calculators = () => {
           body: JSON.stringify(preparedData),
         }
       );
-
+  
       const data = await res.json();
-
+  
       if (!res.ok) {
         if (res.status === 401) {
           setError("Unauthorized: Please login first.");
         } else {
           setError(data.message || "Something went wrong.");
         }
-        setLoading(false); 
+        setLoading(false);
         return;
       }
-
+  
       navigate("/result", { state: data });
     } catch (err) {
       setError("An error occurred. Please try again.");
-      setLoading(false); 
+      setLoading(false);
       console.error("Error:", err);
     }
   };
+  
 
   return (
     <div
@@ -118,7 +133,7 @@ const Calculators = () => {
                 type="button"
                 onClick={() => setFormData({ ...formData, gender: "male" })}
                 className={`px-20 py-4 rounded-2xl text-base ${
-                  formData.gender === "male" ? "bg-orange-500" : "bg-gray-700"
+                  formData.gender === "male" ? "bg-orange-500" : "bg-[rgb(102,102,102,.7)]"
                 }`}
               >
                 Male
@@ -127,9 +142,7 @@ const Calculators = () => {
                 type="button"
                 onClick={() => setFormData({ ...formData, gender: "female" })}
                 className={`px-20 py-4 rounded-2xl text-base ${
-                  formData.gender === "female"
-                    ? "bg-orange-500"
-                    : "bg-gray-700"
+                  formData.gender === "female" ? "bg-orange-500" : "bg-[rgb(102,102,102,.7)]"
                 }`}
               >
                 Female
@@ -144,7 +157,7 @@ const Calculators = () => {
               type="number"
               name="age"
               onChange={handleChange}
-              className="w-full p-4 text-base bg-gray-800 rounded-2xl"
+              className="w-full p-4 text-base bg-[rgb(102,102,102,.3)] border-none rounded-2xl"
             />
           </div>
 
@@ -155,7 +168,7 @@ const Calculators = () => {
               type="number"
               name="weight"
               onChange={handleChange}
-              className="w-full p-4 text-base bg-gray-800 rounded-2xl"
+              className="w-full p-4 text-base bg-[rgb(102,102,102,.3)] border-none rounded-2xl"
             />
           </div>
 
@@ -166,7 +179,7 @@ const Calculators = () => {
               type="number"
               name="height"
               onChange={handleChange}
-              className="w-full p-4 text-base bg-gray-800 rounded-2xl"
+              className="w-full p-4 text-base bg-[rgb(102,102,102,.3)] border-none rounded-2xl"
             />
           </div>
 
@@ -177,8 +190,9 @@ const Calculators = () => {
               type="number"
               name="bodyFat"
               onChange={handleChange}
-              className="w-full p-4 text-base mb-5 bg-gray-800 rounded-2xl"
+              className="w-full p-4 text-base  bg-[rgb(102,102,102,.3)] border-none rounded-2xl"
             />
+              {error && <div className="mt-6 mb-5 text-red-500 text-center">{error}</div>}
             <p className="text-orange-500 text-xl font-bold">
               "You can find out your body fat percentage through an InBody analysis test"
             </p>
@@ -199,7 +213,7 @@ const Calculators = () => {
                   type="button"
                   onClick={() => setFormData({ ...formData, goal: g })}
                   className={`px-12 py-4 rounded-2xl text-base ${
-                    formData.goal === g ? "bg-orange-500" : "bg-gray-700"
+                    formData.goal === g ? "bg-orange-500" : "bg-[rgb(102,102,102,.7)]"
                   }`}
                 >
                   {g}
@@ -216,7 +230,7 @@ const Calculators = () => {
                 type="button"
                 onClick={() => setFormData({ ...formData, proteinQuantity: "high" })}
                 className={`px-20 py-4 rounded-2xl text-base ${
-                  formData.proteinQuantity === "high" ? "bg-orange-500" : "bg-gray-700"
+                  formData.proteinQuantity === "high" ? "bg-orange-500" : "bg-[rgb(102,102,102,.7)]"
                 }`}
               >
                 High
@@ -225,7 +239,7 @@ const Calculators = () => {
                 type="button"
                 onClick={() => setFormData({ ...formData, proteinQuantity: "low" })}
                 className={`px-20 py-4 rounded-2xl text-base ${
-                  formData.proteinQuantity === "low" ? "bg-orange-500" : "bg-gray-700"
+                  formData.proteinQuantity === "low" ? "bg-orange-500" : "bg-[rgb(102,102,102,.7)]"
                 }`}
               >
                 Low
@@ -243,7 +257,7 @@ const Calculators = () => {
                   type="button"
                   onClick={() => setFormData({ ...formData, activityLevel: level })}
                   className={`px-12 py-4 rounded-2xl text-base ${
-                    formData.activityLevel === level ? "bg-orange-500" : "bg-gray-700"
+                    formData.activityLevel === level ? "bg-orange-500" : "bg-[rgb(102,102,102,.7)]"
                   }`}
                 >
                   {level}
@@ -259,7 +273,7 @@ const Calculators = () => {
               type="number"
               name="steps"
               onChange={handleChange}
-              className="w-full p-4 text-base mb-4 bg-gray-800 rounded-2xl"
+              className="w-full p-4 text-base mb-4 bg-[rgb(102,102,102,.3)] border-none rounded-2xl"
             />
             <p className="text-orange-500 text-xl font-bold">
               *You can find out the number of steps from your health app on your phone or from the sports watch to determine your activity level."
@@ -283,7 +297,7 @@ const Calculators = () => {
       </form>
 
       {/* Error */}
-      {error && <div className="mt-6 text-red-500 text-center">{error}</div>}
+    
     </div>
   );
 };

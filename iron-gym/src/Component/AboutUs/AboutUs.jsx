@@ -65,8 +65,8 @@ const AboutUs = () => {
   </div>
 
   {/* الكارد (يأخذ نصف الشاشة) */}
-  <Card className="break-words text-center bg-[#131212] text-white p-6 sm:p-10 h-auto min-h-[500px] shadow-lg rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10">
+  <Card className="break-words text-center dark:bg-[rgb(102,102,102,.3)] text-white p-6 sm:p-10 h-auto min-h-[500px] shadow-lg rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-10 ">
       Mission Statement:
     </h2>
     <p className="text-white-300 text-md sm:text-lg break-words">
@@ -81,19 +81,19 @@ const AboutUs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-20 px-6 sm:px-10 md:px-20 py-16 pb-6 bg-[#1e1e1e] text-white">
   {/* الكروت الثلاثة على اليسار */}
   <div className="flex flex-col gap-6 w-full">
-    <Card className="bg-[#292929] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+    <Card className="dark:bg-[rgb(102,102,102,.3)] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-wrap balance">Our Vision:</h2>
       <p className="text-white-300 text-md sm:text-lg leading-relaxed mt-2">
         Our vision is to become the leading source for individuals seeking to enhance their physical and mental health through proper training and balanced nutrition.
       </p>
     </Card>
-    <Card className="bg-[#3a3327] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+    <Card className="dark:bg-[rgb(102,102,102,.3)] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-wrap balance">What Makes Us Unique:</h2>
       <p className="text-white-300 text-md sm:text-lg leading-relaxed mt-2">
         We offer comprehensive information on nutrition, workouts, and cardio. With regular updates and future development, we stand out as your go-to fitness hub.
       </p>
     </Card>
-    <Card className="bg-[#292929] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
+    <Card className="dark:bg-[rgb(102,102,102,.3)] text-white p-4 sm:p-6 shadow-lg w-full h-auto min-h-[225px] rounded-[40px] border-none hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-wrap balance">Call to Action:</h2>
       <p className="text-white-300 text-md sm:text-lg leading-relaxed mt-2">
         Join us now to achieve your fitness goals and gain expert advice!

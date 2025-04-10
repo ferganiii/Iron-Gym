@@ -20,27 +20,27 @@ const CalorieResultPage = () => {
       <h3 className="text-4xl font-bold text-orange-600 text-center mb-28 relative mt-32">Your Daily Results</h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto text-lg relative">
-        <div className="bg-gray-800 p-16 rounded-3xl shadow-lg">
+        <div className="bg-[rgb(102,102,102,.3)] p-16 rounded-3xl shadow-lg">
           <div className="font-semi-bold text-2xl mb-6"><strong>Needed Calories:</strong></div>
           <div className="text-3xl font-alkalami text-orange-600">{result.neededCalories} kcal</div>
         </div>
-        <div className="bg-gray-800 p-16 rounded-3xl shadow-lg">
+        <div className="bg-[rgb(102,102,102,.3)] p-16 rounded-3xl shadow-lg">
           <div className="font-semi-bold text-2xl mb-6"><strong>Calories:</strong></div>
           <div className="text-3xl font-alkalami text-orange-600">{result.calories} kcal</div>
         </div>
-        <div className="bg-gray-800 p-16 rounded-3xl shadow-lg">
+        <div className="bg-[rgb(102,102,102,.3)] p-16 rounded-3xl shadow-lg">
           <div className="font-semi-bold text-2xl mb-6"><strong>Needed Water:</strong></div>
           <div className="text-3xl font-alkalami text-orange-600">{result.neededWater} L</div>
         </div>
-        <div className="bg-gray-800 p-16 rounded-3xl shadow-lg">
+        <div className="bg-[rgb(102,102,102,.3)] p-16 rounded-3xl shadow-lg">
           <div className="font-semi-bold text-2xl mb-6"><strong>Protein:</strong></div>
           <div className="text-3xl font-alkalami text-orange-600">{result.protein} g</div>
         </div>
-        <div className="bg-gray-800 p-16 rounded-3xl shadow-lg">
+        <div className="bg-[rgb(102,102,102,.3)] p-16 rounded-3xl shadow-lg">
           <div className="font-semi-bold text-2xl mb-6"><strong>Carbohydrates:</strong></div>
           <div className="text-3xl font-alkalami text-orange-600">{result.carbohydrates} g</div>
         </div>
-        <div className="bg-gray-800 p-16 rounded-3xl shadow-lg">
+        <div className="bg-[rgb(102,102,102,.3)] p-16 rounded-3xl shadow-lg">
           <div className="font-semi-bold text-2xl mb-6"><strong>Fats:</strong></div>
           <div className="text-3xl font-alkalami text-orange-600">{result.fats} g</div>
         </div>
