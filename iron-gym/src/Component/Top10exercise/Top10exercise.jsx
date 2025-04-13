@@ -4,6 +4,7 @@ import { UserContext } from '../../Context/UserContext';
 import Loading from '../Loading/Loading';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
+import ExercisePPL from '../ExercisePPL/ExercisePPL';
 
 export default function Top10exercise() {
   const { token } = useContext(UserContext);
@@ -52,7 +53,7 @@ export default function Top10exercise() {
       <Link to={`/exercise/details/${exercise._id}`}>
       <h1>  {index + 1}. {exercise.name}</h1>
         <img
-          className="m-auto p-3 rounded-3xl w-72 h-52 object-cover"
+          className="m-auto p-3 rounded-3xl w-72 h-52 object-cover hover:scale-105 transition-transform duration-300"
           src={exercise.image}
           alt={exercise.name}
         />
@@ -65,6 +66,7 @@ export default function Top10exercise() {
 
         </div>
       )}
+      <ExercisePPL/>
     </section>
   );
 }
