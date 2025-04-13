@@ -17,17 +17,25 @@
 //   )
 // }
 
-// src/Component/Loading/Loading.jsx
-
-
-
-
+// Loading.jsx
 import React from "react";
+import { CirclesWithBar } from "react-loader-spinner";
 
 export default function Loading() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white">
-      <div className="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
-    </div>
-  );
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[rgb(102,102,102,.3)] bg-opacity-70 z-50">
+      <CirclesWithBar
+        height="100"
+        width="100"
+        color="#f97316"
+        outerCircleColor="#f97316"
+        innerCircleColor="#f97316"
+        barColor="#f97316"
+        ariaLabel="circles-with-bar-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
+    </div>
+  );
 }
