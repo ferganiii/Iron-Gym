@@ -121,9 +121,11 @@ export default function Exercise() {
                 <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
                   <img src={man1Exercise} alt="Workout" className="object-cover w-full h-full" />
                 </div>
+                <Link to="/Cardio">
                 <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
                 Explore Cardio >>
                 </button>
+                </Link>
               </div>
             </div>
 

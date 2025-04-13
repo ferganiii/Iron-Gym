@@ -29,6 +29,8 @@ import { MuscleProvider } from './Context/MuscleContext';
 import ExerciseDetails from './Component/ExerciseDetails/ExerciseDetails';
 import CalorieResultPage from "./Component/CalorieResultPage/CalorieResultPage"; // تأكد من المسار الصحيح
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import Cardio from './Component/Cardio/Cardio';  
+
 
 function App() {
   const myClinet=new QueryClient();
@@ -56,6 +58,7 @@ function App() {
         { path: "/result", element: <CalorieResultPage /> },
         { path: "login", element: <Login /> },
         { path: "signup", element: <Signup /> },
+        { path: "cardio", element: <Cardio /> },
         { path: "*", element: <NotFound /> },
       ],
     },
