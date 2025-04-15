@@ -37,7 +37,7 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
       },
     })
     .then((res) => {
-      console.log("✅ API Response:", res.data);
+      console.log("✅ API Response:", res.data.docs);
       if (Array.isArray(res.data.docs)) {
         setData(res.data.docs);
       } else {
@@ -77,8 +77,9 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
     }
   };
 
-  // ✅ حذف عنصر
+ 
   const handleDelete = async (id) => {
+
     try {
       if (!token) {
         console.error("❌ No token found! User might not be authenticated.");
@@ -181,71 +182,68 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
 )}
 
 
-        <div className="relative overflow-x-auto">
-          <table className="w-full text-left text-gray-500 dark:text-gray-400">
-            <thead className="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-orange-500">
-              <tr>
-                <th className="px-6 py-5 text-center">Name</th>
-                <th className="px-6 py-5">Calories</th>
-                <th className="px-6 py-5">Protein</th>
-                <th className="px-6 py-5">Carb</th>
-                <th className="px-6 py-5">Fats</th>
-                {role === "admin" && (
-  <>
-    <th className="px-6 py-5">Actions</th>
-    <th className="px-6 py-5">Actions</th>
-  </>
-)}
+<div className="relative w-full overflow-x-auto">
+  <table className="min-w-full text-left text-gray-500 dark:text-gray-400 table-auto">
+    <thead className="text-sm sm:text-base md:text-lg lg:text-3xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-orange-500">
+      <tr>
+        <th className="px-2 py-3 text-center">Name</th>
+        <th className="px-2 py-3">Calories</th>
+        <th className="px-2 py-3">Protein</th>
+        <th className="px-2 py-3">Carb</th>
+        <th className="px-2 py-3">Fats</th>
+        {role === "admin" && (
+          <>
+            <th className="px-2 py-3">Edit</th>
+            <th className="px-2 py-3">Delete</th>
+          </>
+        )}
+      </tr>
+    </thead>
+    <tbody className="text-xs sm:text-sm md:text-base lg:text-4xl text-center">
+      {data.length ? (
+        data.map((item) => (
+          <tr key={item._id} className="hover:bg-gray-800 transition-all duration-500 bg-white border-y-[1px] dark:bg-[rgb(102,102,102,.3)] dark:border-orange-600 border-gray-200">
+            <td className="px-2 py-5 font-Andika">{item?.name || "N/A"}</td>
+            <td className="px-2 py-5 font-Andika">{item?.sthermal ?? "N/A"} kcal</td>
+            <td className="px-2 py-5 font-Andika">{item?.protein ?? "N/A"} g</td>
+            <td className="px-2 py-5 font-Andika">{item?.carb ?? "N/A"} g</td>
+            <td className="px-2 py-5 font-Andika">{item?.fat ?? "N/A"} g</td>
 
-              </tr>
-            </thead>
-            <tbody className="text-3xl max-sm:text-xl text-center">
-              {data.length ? (
-                data.map((item) => (
-                  <tr key={item._id} className="hover:bg-gray-800 transition-all duration-500 bg-white border-y-[1px] dark:bg-[rgb(102,102,102,.3)] dark:border-orange-600 border-gray-200">
-                    <td className="px-6 py-10 text-4xl font-Andika">{item?.name || "N/A"}</td>
-                    <td className="px-6 py-10 text-4xl font-Andika">{item?.sthermal ?? "N/A"} kcal</td>
-                    <td className="px-6 py-10 text-4xl font-Andika">{item?.protein ?? "N/A"} g</td>
-                    <td className="px-6 py-10 text-4xl font-Andika">{item?.carb ?? "N/A"} g</td>
-                    <td className="px-6 py-10 text-4xl font-Andika">{item?.fat ?? "N/A"} g</td>
-                  {role === "admin" && 
-                    <td className="px-6 py-10 text-4xl font-Andika">
-                    <button
-                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
-                      onClick={() => handleEditClick(item)}
-                    >
-                      Edit
-                    </button>
-                   
-                  </td>
-                  }
-
-              {role === "admin" &&
-               <td className="px-6 py-10 text-4xl font-Andika">
+            {role === "admin" && (
+              <td className="px-2 py-5 font-Andika">
                 <button
-               className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700"
-               onClick={() => handleDelete(item._id)}
-             >
-               Delete
-             </button>
-              
-             </td>
-              
-              }
+                  className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-700"
+                  onClick={() => handleEditClick(item)}
+                >
+                  Edit
+                </button>
+              </td>
+            )}
 
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="6" className="text-center py-4">
-                
+            {role === "admin" && (
+              <td className="px-2 py-5 font-Andika">
+                <button
+                  className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-700"
+                  onClick={() => handleDelete(item._id)}
+                >
+                  Delete
+                </button>
+              </td>
+            )}
+          </tr>
+        ))
+      ) : (
+        <tr>
+          <td colSpan="7" className="text-center py-4">
+            <Loading />
+          </td>
+        </tr>
+      )}
+    </tbody>
+  </table>
+</div>
 
-    <Loading/>                  </td>
-                </tr> 
-              )}
-            </tbody>
-          </table>
-        </div>
+
       </div>
 
       {/* ✅ فورم التعديل والإضافة */}
