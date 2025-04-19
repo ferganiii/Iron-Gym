@@ -1,7 +1,38 @@
-import React from 'react'
-
+import React, { useContext, useEffect, useState } from 'react'
+import FatsProduc from "../../assets/FatsProduc.jpeg"
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { UserContext } from '../../Context/UserContext'
 export default function MealPlan() {
+ const [mealplane, setMealplane] = useState([])
+   const { token } = useContext(UserContext);
  
+
+  async function getMealPlane (){
+    
+   try {
+         const {data} = await axios.get("https://gym-production-8217.up.railway.app/api/cutting", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              
+            },
+          })
+          setMealplane(data.docs)
+          console.log(data.docs);
+          
+    } catch (error) {
+    
+   }
+
+  }
+   
+  useEffect(() => {
+    getMealPlane()
+    
+  }
+  
+   , [])
+  
 
   return (
     <>
@@ -10,30 +41,76 @@ export default function MealPlan() {
          <div className='container mx-auto'>
                  <div className='grid grid-cols-2'>
 
-{/* هبدا اعمل سكشنين للبلكينج و الكتينج   */}
-                   <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                   <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
 
-    <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    </div>
+          <Link to="/">
+          <img src={FatsProduc} alt="" />
+          </Link>
+    <p className='p-4 text-2xl'>Lorem ipsum dolor sit amet.</p>
                     </div>
-{/* ظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظ */}
                 
+   
 
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+       
                  </div>
          </div>
+
+
+
+         {mealplane[0]?.meals.map((meal, mealIndex) => (
+  <div key={mealIndex} className="mb-10 border rounded-lg overflow-hidden shadow-lg">
+    
+    {/* Title */}
+    <div className="bg-orange-600 py-4 text-center">
+      <h2 className="text-white text-2xl italic font-semibold">{meal.name.toUpperCase()}</h2>
+    </div>
+
+    {/* Table */}
+    <table className="w-full bg-black text-white text-center text-lg">
+      <thead className="border-b border-orange-400">
+        <tr>
+          <th className="p-3">ITEM</th>
+          <th className="p-3">AMOUNT</th>
+          <th className="p-3">S THERMAL</th>
+          <th className="p-3">PROTEIN</th>
+          <th className="p-3">CARB</th>
+          <th className="p-3">FAT</th>
+        </tr>
+      </thead>
+      <tbody>
+        {meal.items.map((food, foodIndex) => (
+          <tr key={foodIndex} className="border-b border-orange-400">
+            <td className="py-3">{food.name}</td>
+            <td className="py-3">{food.amount ?? 'N/A'}</td>
+            <td className="py-3">{food.sthermal ?? 'N/A'}</td>
+            <td className="py-3">{food.protien ?? 'N/A'}</td>
+            <td className="py-3">{food.carb ?? 'N/A'}</td>
+            <td className="py-3">{food.fat ?? 'N/A'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+))}
+
+
     </section>
     
     </>
