@@ -2,7 +2,7 @@ import React from 'react'
 import background from '../../assets/bg_exercise.png'
 import shape5 from '../../assets/shape-5.png'
 import man1Exercise from '../../assets/man1Exercise.png'
-
+import { motion } from "framer-motion";
 import style from "./Exercise.module.css"
 import { Link } from 'react-router-dom'
 
@@ -12,17 +12,44 @@ export default function Exercise() {
       <section className='bg-[rgb(102,102,102,.3)] relative'>
         {/* Hero Section */}
         <div
-          className="h-screen bg-cover bg-center relative flex flex-col justify-center items-start text-center"
-          style={{ backgroundImage: `url(${background})` }}
-        >
-          <h2 className='text-3xl md:text-5xl font-[Montserrat] mb-5 ms-8'>BE FIT , </h2>
-          <h2
-            className='text-3xl md:text-5xl font-[Montserrat] text-orange-500 font-bold ms-8'
-            style={{ textShadow: '6px 5px 1px rgba(249,115,22,0.5)' }}
-          >
-            BE STRONG 💪💪
-          </h2>
-        </div>
+  className="h-screen bg-cover bg-center relative flex flex-col justify-center items-start text-center"
+  style={{ backgroundImage: `url(${background})` }}
+>
+  {/* BE FIT Animation */}
+  <motion.h2
+    className="text-3xl md:text-5xl font-[Montserrat] mb-5 ms-8"
+    initial={{ opacity: 0, scale: 0.3, rotate: -90 }}
+    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+    transition={{
+      duration: 1,
+      ease: "easeOut",
+      delay: 0.3,
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    }}
+  >
+    BE FIT ,
+  </motion.h2>
+
+  {/* BE STRONG Animation */}
+  <motion.h2
+    className="text-3xl md:text-5xl font-[Montserrat] text-orange-500 font-bold ms-8"
+    style={{ textShadow: "6px 5px 1px rgba(249,115,22,0.5)" }}
+    initial={{ x: -500, opacity: 0, skew: 20 }}
+    animate={{ x: 0, opacity: 1, skew: 0 }}
+    transition={{
+      duration: 1.3,
+      ease: "easeOut",
+      delay: 1,
+      type: "spring",
+      stiffness: 400,
+      damping: 15,
+    }}
+  >
+    BE STRONG
+  </motion.h2>
+</div>
 
         <div className='container mx-auto mt-20 relative overflow-hidden'> 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4'>

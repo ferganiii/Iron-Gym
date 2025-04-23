@@ -4,40 +4,7 @@
     width: 100%;
     height: 100%;
 }
-.circle1Imge1{
-    top: 3px;
-    right: 94px;
-    width: 300px;
-    height: 300px;
-}
-.egg{
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-   
-   clip-path: polygon(42% 0, 62% 0, 100% 38%, 100% 67%, 65% 90%, 47% 98%, 34% 86%, 25% 77%, 12% 40%, 18% 0);
 
-
-
-}
-
-.circle2Imge1{
-    top: 65px;
-    right: 228px;
-    width: 226px;
-    height: 226px;
-}
-.doted::before{
-    content: "";
-  position: absolute;
-  top: -14px;
-  left: -60px;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgb(217, 217, 217,.51) 4px, transparent 4px);
-  background-size: 25px 25px; /* زيادة حجم النقاط */
-  z-index: -1; /* لضمان أنها تبقى في الخلف */
-}
 
 
 .circle3Imge1{
@@ -56,18 +23,7 @@
 
 
 @media (max-width: 1510px) { 
-    .circle1Imge1{
-      top: 14px;
-      right: -27px;
-      width: 300px;
-      height: 300px;
-    }
-    .circle2Imge1{
-        top: 65px;
-        right: 81px;
-        width: 226px;
-        height: 226px;
-    }
+
     .circle3Imge1{
       bottom: 70px;
       right: -4px;
@@ -180,16 +136,6 @@ z-index: -1;
   }
 
   
-/* 
-  <div className="relative flex justify-center pl-24">
-  <img
-    src={imgeHome}
-    alt="Workout"
-    className={`z-10 rounded-[50%] w-full max-w-md h-64 sm:h-96 object-cover shadow-lg ${style.egg}`}
-  />
-</div> */
-
-
 
 
 

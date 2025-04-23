@@ -66,7 +66,6 @@ export default function Top10exercise() {
 
         </div>
       )}
-      <ExercisePPL/>
     </section>
   );
 }

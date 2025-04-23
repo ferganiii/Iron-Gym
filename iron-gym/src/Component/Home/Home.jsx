@@ -7,6 +7,7 @@ import style from './Home.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../Context/UserContext';
+import calcClories from "../../assets/cardCalories.webp";
 
 
 
@@ -54,7 +55,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
             {/* <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle}`}></div> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-28 md:gap-16 items-center relative">
 
 {/* الدائرة تحت النص */}
 <div className={`absolute  transform  z-0 ${style.circle}`}>
@@ -74,27 +75,25 @@ export default function Home() {
   <p className="text-gray-400 text-lg">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
   </p>
-  <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+  <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
   <Link to="/exercise">EXPLORE EXERCISES</Link>  
   </button>
 </div>
 
 {/* الصورة */}
-<div className="relative flex justify-center pl-24">
-  <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle1Imge1}`}></div>
-  <div className={`absolute bg-gray-500 bg-opacity-90 rounded-full ${style.circle2Imge1}`}>
-    <div className={style.doted}></div>
-  </div>
-  <div className={`absolute bg-[rgb(102,102,102,.4)] rounded-full z-0 ${style.circle1Imge1}`}></div>
-  <div className={`absolute bg-[rgb(182,180,179,0.96)] rounded-full z-0 ${style.circle2Imge1}`}>
-    <div className={`${style.doted}`}></div>
-  </div>
+<div className="relative flex justify-center pl-24 me-11">
+ 
+<Link to="/exercise">
 
-  <img
+
+<img
     src={imgeHome}
     alt="Workout"
-    className={`z-10 rounded-full w-full max-w-md h-64 sm:h-96 object-cover shadow-lg ${style.egg}`}
+    className={`hover:scale-105 transition-all duration-500 z-10 rounded-full w-80 max-w-md h-80 sm:h- object-cover shadow-lg `}
   />
+</Link>  
+
+ 
 </div>
 </div>
 
@@ -125,7 +124,7 @@ export default function Home() {
                 <p className="text-gray-400 text-lg text-center">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
                 </p>
-                <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300" >
+                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300" >
                  <Link to="/Calculators">CALCULATORS</Link> 
                 </button>
               </div>
@@ -146,17 +145,20 @@ export default function Home() {
                 <p className="text-gray-400 text-lg text-center">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
                 </p>
-                <button className="border text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
                    <Link to="/nutrition">NUTRITIONS</Link> 
                 </button>
               </div>
               {/* الصورة */}
               <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1661265933107-85a5dbd815af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fHww"
-                  alt="Fitness Challenge"
-                  className="rounded-lg w-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
+              <Link to="/nutrition">
+              
+              <img
+                        src={calcClories}   alt="Fitness Challenge"
+                  className="hover:scale-105 transition-all duration-500 w-full rounded-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
                 />
+              </Link> 
+
               </div>
             </div>
           </div>

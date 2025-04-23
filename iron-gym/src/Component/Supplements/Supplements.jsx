@@ -11,6 +11,13 @@ export default function Supplements() {
   const [supplement, setSupplement] = useState(null); // مصفوفة فارغة
   const { token } = useContext(UserContext);
 
+
+
+
+
+
+
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -40,6 +47,11 @@ export default function Supplements() {
         }
       ]
   };
+
+
+
+
+
 
   async function getSupplement() {
     try {
