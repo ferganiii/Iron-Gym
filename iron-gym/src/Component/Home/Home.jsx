@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import bacKGROUND from '../../assets/bacKGROUND.jpeg';
 import imgeHome from '../../assets/imgeHome.jpeg';
 import man1Home from '../../assets/man1Home.png';
+import FatsProduc from '../../assets/FatsProduc.jpeg';
 import style from './Home.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
@@ -119,7 +120,14 @@ export default function Home() {
 
               {/* النص */}
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
-                <div className={style.BgCircle}></div>
+                <div className={style.BgCircle}>
+                     <Link to="/Calculators">
+                     <img
+                        src={calcClories}   alt="Fitness Challenge"
+                  className="hover:scale-105 transition-all duration-500 w-full rounded-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
+                />
+                     </Link>
+                </div>
                 <h2 className="text-4xl font-archivo">Calculate Your Daily <br /> Calorie & Water Needs</h2>
                 <p className="text-gray-400 text-lg text-center">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
@@ -154,8 +162,8 @@ export default function Home() {
               <Link to="/nutrition">
               
               <img
-                        src={calcClories}   alt="Fitness Challenge"
-                  className="hover:scale-105 transition-all duration-500 w-full rounded-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
+                        src={FatsProduc}   alt="Fitness Challenge"
+                  className="hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
                 />
               </Link> 
 

@@ -2,6 +2,8 @@ import React from 'react'
 import background from '../../assets/bg_exercise.png'
 import shape5 from '../../assets/shape-5.png'
 import man1Exercise from '../../assets/man1Exercise.png'
+import image3Cardio from '../../assets/image3Cardio.png'
+import img2Exercise from '../../assets/img2Exercise.png'
 import { motion } from "framer-motion";
 import style from "./Exercise.module.css"
 import { Link } from 'react-router-dom'
@@ -110,7 +112,7 @@ export default function Exercise() {
 
               <div className="flex items-center gap-4 mt-4">
                 <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
-                  <img src={man1Exercise} alt="Nutrition" className="object-cover w-full h-full" />
+                  <img src={img2Exercise} alt="Nutrition" className="object-cover w-full h-full" />
                 </div>
                 <button className=" z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
                  <Link to="/ExerciseSystem">
@@ -148,7 +150,7 @@ export default function Exercise() {
 
               <div className="flex items-center gap-4 mt-4">
                 <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
-                  <img src={man1Exercise} alt="Workout" className="object-cover w-full h-full" />
+                  <img src={image3Cardio} alt="Workout" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/Cardio">
                 <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
