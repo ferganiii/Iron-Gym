@@ -19,7 +19,7 @@ const ProteinsDash = () => {
   useEffect(() => {
     if (!token) return;
     getProteinsDash();
-  }, [token]);
+  }, [token]);  
 
   const getProteinsDash = async () => {
     try {
