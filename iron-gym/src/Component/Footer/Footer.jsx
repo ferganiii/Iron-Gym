@@ -10,17 +10,17 @@ export default function Footer() {
           {/* العمود الأول */}
           <div className="text-center">
             <h2 className="mb-6 font-AlfaSlabOne text-5xl uppercase">IRON GYM</h2>
-            <p className="pb-10 font-archivo text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime recusandae reiciendis, in aspernatur exercitationem quasi placeat velit perspiciatis.
-            </p>
+            <p className="pb-10 font-archivo text-gray-200 font-bold">
+              "At Iron Gym, we are committed to helping you achieve your fitness goals through expert guidance and continuous motivation. With specialized training programs, personalized nutrition tips, and unlimited support, we work together to achieve noticeable results and elevate your fitness to new heights."           </p>
           </div>
 
           {/* العمود الثاني - الروابط */}
           <div className="text-center">
-            <ul className="text-2xl flex flex-col items-center space-y-2">
+            <ul className="text-2xl flex flex-col font-semibold items-center space-y-2">
               {[
                 { to: "/exercise", label: "Exercises" },
                 { to: "/nutrition", label: "Nutrition" },
+                { to: "/Calculators", label: "Calculators" },
                 { to: "/aboutus", label: "About" },
                 { to: "/ContactUs", label: "Contact Us" },
               ].map(({ to, label }) => (
@@ -40,10 +40,10 @@ export default function Footer() {
         </div>
 
         {/* الحقوق */}
-        <div className="flex justify-center sm:justify-between bg-orange-600 p-6 mt-10 text-gray-900">
+        <div className="flex justify-center sm:justify-between te bg-orange-600 text-center p-6 mt-10 text-gray-900 ">
           <span className="text-base">
             © {new Date().getFullYear()}{" "}
-            <Link to="/" className="hover:underline">
+            <Link to="/" className="hover:underline ">
               Iron Gym™
             </Link>
             . All Rights Reserved.

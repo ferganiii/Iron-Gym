@@ -68,12 +68,12 @@ export default function Home() {
 
 {/* النص */}
 <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
-  <h2 className="md:text-4xl text-4xl font-archivo">
+  <h2 className="md:text-4xl text-4xl font-archivo font-bold">
     BUILD YOUR BODY & <br />
     <span className="text-white">SHAPE YOURSELF!</span>
   </h2>
-  <p className="text-gray-400 text-lg">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
+  <p className="text-gray-200 text-lg font-bold">
+  "Achieve your fitness goals with powerful workouts and expert guidance. Start your transformation today!"
   </p>
   <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
   <Link to="/exercise">EXPLORE EXERCISES</Link>  
@@ -120,9 +120,9 @@ export default function Home() {
               {/* النص */}
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className={style.BgCircle}></div>
-                <h2 className="text-4xl font-archivo">Calculate Your Daily <br /> Calorie & Water Needs</h2>
-                <p className="text-gray-400 text-lg text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
+                <h2 className="text-4xl font-archivo font-bold">Calculate Your Daily <br /> Calorie & Water Needs</h2>
+                <p className="text-gray-200 text-lg font-bold ">
+                "Stay on track! Calculate your daily calorie intake and hydration needs with our smart tools."
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300" >
                  <Link to="/Calculators">CALCULATORS</Link> 
@@ -138,12 +138,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
               {/* النص */}
               <div className="md:w-1/2 space-y-6 md:space-y-8">
-                <h2 className="text-4xl font-archivo md:text-3xl">
+                <h2 className="text-4xl font-bold font-archivo md:text-3xl">
                   STEP UP YOUR <br />
                   FITNESS CHALLENGE
                 </h2>
-                <p className="text-gray-400 text-lg text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque.
+                <p className="text-gray-200 text-lg font-bold">
+                "Fuel your body with the right nutrition and unlock your full potential!"
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
                    <Link to="/nutrition">NUTRITIONS</Link> 
