@@ -103,7 +103,16 @@ export default function Home() {
 
               {/* النص */}
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
-                <div className={style.BgCircle}></div>
+                <div className={style.BgCircle}>
+                <Link to="/calculators">
+                  <img
+                    src={calcClories}   
+                    alt="Fitness Challenge"
+                    className="z-10 hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
+                  />
+                </Link> 
+                
+                </div>
                 <h2 className="text-4xl font-archivo font-bold">Calculate Your Daily <br /> Calorie & Water Needs</h2>
                 <p className="text-gray-200 text-lg font-bold ">
                   "Stay on track! Calculate your daily calorie intake and hydration needs with our smart tools."
