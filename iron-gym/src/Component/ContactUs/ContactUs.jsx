@@ -366,7 +366,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">How can I contact support?</h4>
             <p className="text-gray-200 font-semibold">•  You can contact us through the contact form on this page or by email at contact@irongym.com.</p>
@@ -376,7 +376,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">Do you offer a free trial?</h4>
             <p className="text-gray-200 font-semibold">•  Yes, we offer a 7-day free trial for new users. Sign up today and experience our services.</p>
@@ -386,7 +386,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">What services do you provide?</h4>
             <p className="text-gray-200 font-semibold">•  We provide a wide range of fitness services including personal training, group classes, and nutrition guidance. Visit our services page for more details.</p>
@@ -396,7 +396,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">How do I access the workout plans on the website?</h4>
             <p className="text-gray-200 font-semibold">•	You can find a wide variety of workout plans under the "Workouts" section. Browse by category (e.g., strength training, cardio, etc.) and start your fitness journey today.</p>
@@ -406,7 +406,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">What type of exercises are included in the workout plans?</h4>
             <p className="text-gray-200 font-semibold">•	Our workout plans include a mix of strength training, cardio exercises, flexibility, and endurance workouts designed for all fitness levels.</p>
@@ -416,7 +416,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">How can I use the calorie calculator on the site?</h4>
             <p className="text-gray-200 font-semibold">•	Simply go to the "Calculators" section, enter your personal details such as age, gender, weight, and activity level, and the calculator will help estimate your daily calorie needs.</p>
@@ -426,7 +426,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">Do you offer personalized meal and workout plans?</h4>
             <p className="text-gray-200 font-semibold">•	Yes! We provide personalized plans based on your fitness goals, such as weight loss, muscle gain, or improving endurance. You can create a custom plan in the "Personalized Plans" section.</p>
@@ -436,7 +436,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">How do I calculate my BMI using the website?</h4>
             <p className="text-gray-200 font-semibold">•	You can calculate your BMI easily by visiting our BMI Calculator page. Just input your weight and height, and the calculator will provide your Body Mass Index.</p>
@@ -446,7 +446,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">Can I track my progress using your tools?</h4>
             <p className="text-gray-200 font-semibold">•	Yes, we offer a progress tracker that allows you to log your workouts, monitor your diet, and track changes in your body measurements.</p>
@@ -456,7 +456,7 @@ export default function ContactUs() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="p-6 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
           >
             <h4 className="text-2xl font-bold text-white mb-4">What are the different types of fitness equipment available in the gym section?</h4>
             <p className="text-gray-200 font-semibold">•	Our website offers a detailed section about various fitness equipment such as cardio machines, strength machines, free weights, and functional training equipment to help you choose the best for your workouts.</p>
@@ -502,7 +502,7 @@ export default function ContactUs() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 hover:scale-105 transition-all duration-300">
+          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
             <h4 className="text-2xl font-bold text-white mb-4">30-Day Fitness Challenge</h4>
             <p className="text-gray-200 font-semibold">
               A 30-day challenge designed to improve strength and stamina. Get access to daily exercises and track your progress.
@@ -517,7 +517,7 @@ export default function ContactUs() {
             </a>
           </div>
 
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 hover:scale-105 transition-all duration-300">
+          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
             <h4 className="text-2xl font-bold text-white mb-4">Fat Loss Challenge</h4>
             <p className="text-gray-200 font-semibold">
               Join our fat loss challenge and get personalized workout plans and nutritional advice to help you burn fat effectively.
@@ -547,7 +547,7 @@ export default function ContactUs() {
           Stay informed with the latest tips and articles on nutrition, workouts, health advice, and updates in the fitness world!
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 hover:scale-105 transition-all duration-300">
+          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
             <h4 className="text-2xl font-bold text-white mb-4">Nutrition Tips for Building Muscle</h4>
             <p className="text-gray-200 font-semibold">
               Learn about the best nutrition strategies to fuel muscle growth, including protein intake and meal timing.
@@ -558,7 +558,7 @@ export default function ContactUs() {
               </button>
             </a>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 hover:scale-105 transition-all duration-300">
+          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
             <h4 className="text-2xl font-bold text-white mb-4">5 Essential Cardio Exercises</h4>
             <p className="text-gray-200 font-semibold">
               Discover the top cardio exercises for fat loss and improving cardiovascular health, with tips on how to incorporate them into your routine.
