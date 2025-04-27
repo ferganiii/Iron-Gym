@@ -38,7 +38,7 @@ export default function SupplementDetails() {
           <img
             src={supplementDetails.image || "https://via.placeholder.com/300"}
             alt={supplementDetails.name}
-            className="border-2 border-orange-500 w-full max-w-md mx-auto rounded-full"
+            className="hover:scale-105 transition-all duration-500 border-2 border-orange-500 w-full max-w-md mx-auto rounded-full"
           />
         </div>
 
@@ -90,9 +90,15 @@ export default function SupplementDetails() {
           )}
           {supplementDetails.whoAvoid && (
             <Card
-              title="-Who Should Avoid Whey Proteins"
-              content={supplementDetails.whoAvoid}
-            />
+            title={
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <i className="fa-solid fa-triangle-exclamation m-2" style={{ color: "#ff0000" }} />
+                <i className="fa-solid fa-triangle-exclamation m-2" style={{ color: "#ff0000" }} />
+                <span>Who Should Avoid Whey Proteins</span>
+              </div>
+            }
+            content={supplementDetails.whoAvoid}
+          />
           )}
         </div>
       </div>

@@ -3,24 +3,19 @@ import Navbar from '../Navbar/Navbar';
 import bacKGROUND from '../../assets/bacKGROUND.jpeg';
 import imgeHome from '../../assets/imgeHome.jpeg';
 import man1Home from '../../assets/man1Home.png';
+import FatsProduc from '../../assets/FatsProduc.jpeg';
 import style from './Home.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../Context/UserContext';
 import calcClories from "../../assets/cardCalories.webp";
 
-
-
 export default function Home() {
 
   const {user}= useContext(UserContext);
-  
-  
-
 
   return (
     <>
-     
       <div className="bg-black text-white min-h-screen  ">
         {/* الصورة الرئيسية */}
         <div className="relative w-full h-screen bg-black overflow-hidden">
@@ -40,63 +35,53 @@ export default function Home() {
             <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
              <Link to="/signup"> Register</Link>
             </button>
-         {user && user.role === "admin" &&  
-            <>
+            {user && user.role === "admin" &&  
+              <>
                 <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
-             <Link to="/dashboard"> DASHBOARD</Link>
-            </button>
-            </>
-         }
+                  <Link to="/dashboard"> DASHBOARD</Link>
+                </button>
+              </>
+            }
           </div>
         </div>
 
         {/* القسم الأول */}
         <section className="bg-[rgb(102,102,102,.3)]  py-16">
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
-            {/* <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.circle}`}></div> */}
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-28 md:gap-16 items-center relative">
 
-{/* الدائرة تحت النص */}
-<div className={`absolute  transform  z-0 ${style.circle}`}>
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 150 150">
-    <circle cx="75" cy="75" r="75" fill="#666666" />
-</svg>
+              {/* الدائرة تحت النص */}
+              <div className={`absolute  transform  z-0 ${style.circle}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 150 150">
+                  <circle cx="75" cy="75" r="75" fill="#666666" />
+                </svg>
+              </div>
 
+              {/* النص */}
+              <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
+                <h2 className="md:text-4xl text-4xl font-archivo font-bold">
+                  BUILD YOUR BODY & <br />
+                  <span className="text-white">SHAPE YOURSELF!</span>
+                </h2>
+                <p className="text-gray-200 text-lg font-bold">
+                  "Achieve your fitness goals with powerful workouts and expert guidance. Start your transformation today!"
+                </p>
+                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+                  <Link to="/exercise">EXPLORE EXERCISES</Link>  
+                </button>
+              </div>
 
-</div>
-
-{/* النص */}
-<div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
-  <h2 className="md:text-4xl text-4xl font-archivo font-bold">
-    BUILD YOUR BODY & <br />
-    <span className="text-white">SHAPE YOURSELF!</span>
-  </h2>
-  <p className="text-gray-200 text-lg font-bold">
-  "Achieve your fitness goals with powerful workouts and expert guidance. Start your transformation today!"
-  </p>
-  <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
-  <Link to="/exercise">EXPLORE EXERCISES</Link>  
-  </button>
-</div>
-
-{/* الصورة */}
-<div className="relative flex justify-center pl-24 me-11">
- 
-<Link to="/exercise">
-
-
-<img
-    src={imgeHome}
-    alt="Workout"
-    className={`hover:scale-105 transition-all duration-500 z-10 rounded-full w-80 max-w-md h-80 sm:h- object-cover shadow-lg `}
-  />
-</Link>  
-
- 
-</div>
-</div>
-
+              {/* الصورة */}
+              <div className="relative flex justify-center pl-24 me-11">
+                <Link to="/exercise">
+                  <img
+                    src={imgeHome}
+                    alt="Workout"
+                    className={`hover:scale-105 transition-all duration-500 z-10 rounded-full w-80 max-w-md h-80 sm:h- object-cover shadow-lg `}
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -106,7 +91,6 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
               {/* الصورة */}
               <div className="relative flex justify-center pt-36 overflow-hidden">
-                
                 <img
                   src={man1Home}
                   alt="Calorie Calculator"
@@ -119,13 +103,22 @@ export default function Home() {
 
               {/* النص */}
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
-                <div className={style.BgCircle}></div>
+                <div className={style.BgCircle}>
+                <Link to="/calculators">
+                  <img
+                    src={calcClories}   
+                    alt="Fitness Challenge"
+                    className="z-10 hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
+                  />
+                </Link> 
+                
+                </div>
                 <h2 className="text-4xl font-archivo font-bold">Calculate Your Daily <br /> Calorie & Water Needs</h2>
                 <p className="text-gray-200 text-lg font-bold ">
-                "Stay on track! Calculate your daily calorie intake and hydration needs with our smart tools."
+                  "Stay on track! Calculate your daily calorie intake and hydration needs with our smart tools."
                 </p>
-                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300" >
-                 <Link to="/Calculators">CALCULATORS</Link> 
+                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+                  <Link to="/Calculators">CALCULATORS</Link> 
                 </button>
               </div>
             </div>
@@ -143,28 +136,26 @@ export default function Home() {
                   FITNESS CHALLENGE
                 </h2>
                 <p className="text-gray-200 text-lg font-bold">
-                "Fuel your body with the right nutrition and unlock your full potential!"
+                  "Fuel your body with the right nutrition and unlock your full potential!"
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
                    <Link to="/nutrition">NUTRITIONS</Link> 
                 </button>
               </div>
+
               {/* الصورة */}
               <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-              <Link to="/nutrition">
-              
-              <img
-                        src={calcClories}   alt="Fitness Challenge"
-                  className="hover:scale-105 transition-all duration-500 w-full rounded-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
-                />
-              </Link> 
-
+                <Link to="/nutrition">
+                  <img
+                    src={FatsProduc}   
+                    alt="Fitness Challenge"
+                    className="hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
+                  />
+                </Link> 
               </div>
             </div>
           </div>
         </section>
-
-       
       </div>
     </>
   );

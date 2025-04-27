@@ -21,7 +21,7 @@ export default function Navbar() {
       <nav className="bg-white border-gray-200 dark:bg-black fixed top-0 left-0 w-full z-50 shadow-md">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           {/* Logo */}
-          <img src={logo} className="h-14 w-20" alt="Logo" />
+          <img src={logo} className="h-20 w-20" alt="Logo" />
 
           {/* زر القائمة للموبايل */}
           <button
