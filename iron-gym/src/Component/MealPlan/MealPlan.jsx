@@ -18,7 +18,7 @@ export default function MealPlan() {
   });
   const { token } = useContext(UserContext);
 
-  const api = "https://gym-production-8217.up.railway.app/api/cutting";
+  const api = "https://gym-production-8217.up.railway.app/api/bulk";
 
   // Fetch Meal Plans
   async function getMealPlans() {
@@ -205,41 +205,54 @@ export default function MealPlan() {
 
         {/* Add Section */}
         <div className="mt-10 p-6 bg-gray-500 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold mb-4">➕ Add New Meal Plan</h2>
-          <form onSubmit={(e) => { e.preventDefault(); AddMealPlan(); }}>
-            <input
-              type="text"
-              name="name"
-              value={newMealPlan.name}
-              onChange={handlePlanChange}
-              className="w-full p-3 mb-4 border rounded"
-              placeholder="Meal Plan Name"
-              required
-            />
-            {newMealPlan.meals.map((meal, mIdx) => (
-              <div key={mIdx} className="mb-4">
-                <h3 className="text-lg font-semibold">{meal.name}</h3>
-                {meal.items.map((item, iIdx) => (
-                  <div key={iIdx} className="flex gap-2 mb-2">
-                    {['name', 'amount', 'sthermal', 'protien'].map((key) => (
-                      <input
-                        key={key}
-                        type="text"
-                        name={key}
-                        value={item[key]}
-                        onChange={(e) => handleMealItemChange(setNewMealPlan, newMealPlan, mIdx, iIdx, e)}
-                        placeholder={key}
-                        className="p-2 border rounded w-full"
-                      />
-                    ))}
-                  </div>
-                ))}
-                <button type="button" onClick={() => handleAddMealItem(setNewMealPlan, newMealPlan, mIdx)} className="bg-blue-600 text-white px-3 py-1 rounded">Add Item</button>
+  <h2 className="text-2xl font-bold mb-4">➕ Add New Meal Plan</h2>
+  <form onSubmit={(e) => { e.preventDefault(); AddMealPlan(); }}>
+    <input
+      type="text"
+      name="name"
+      value={newMealPlan.name}
+      onChange={handlePlanChange}
+      className="w-full p-3 mb-4 border rounded text-black"
+      placeholder="Meal Plan Name"
+      required
+    />
+    {newMealPlan.meals.map((meal, mIdx) => (
+      <div key={mIdx} className="mb-6">
+        <h3 className="text-lg font-semibold mb-2">{meal.name}</h3>
+        {meal.items.map((item, iIdx) => (
+          <div key={iIdx} className="mb-4 p-4 bg-gray-400 rounded-lg">
+            {['name', 'amount', 'sthermal', 'protien'].map((key) => (
+              <div key={key} className="mb-3">
+                <label className="block text-white font-medium mb-1 capitalize">
+                  {key}
+                </label>
+                <input
+                  type="text"
+                  name={key}
+                  value={item[key]}
+                  onChange={(e) => handleMealItemChange(setNewMealPlan, newMealPlan, mIdx, iIdx, e)}
+                  placeholder={`Enter ${key}`}
+                  className="text-black p-2 border rounded w-full"
+                />
               </div>
             ))}
-            <button type="submit" className="mt-4 py-2 px-6 bg-green-600 text-white rounded-lg">Save Meal Plan</button>
-          </form>
-        </div>
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={() => handleAddMealItem(setNewMealPlan, newMealPlan, mIdx)}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          ➕ Add Item
+        </button>
+      </div>
+    ))}
+    <button type="submit" className="mt-6 py-3 px-8 bg-green-600 text-white rounded-lg hover:bg-green-700">
+      ✅ Save Meal Plan
+    </button>
+  </form>
+</div>
+
       </div>
     </section>
   );

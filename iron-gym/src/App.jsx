@@ -33,6 +33,8 @@ import Cardio from './Component/Cardio/Cardio';
 import ExercisePPL from './Component/ExercisePPL/ExercisePPL';
 import ExerciseSystem from './Component/ExerciseSystem/ExerciseSystem';
 import CreateSystemModal from './Component/CreateSystemModal/CreateSystemModal';
+import Questions from './Component/Questions/Questions';
+import Challenges from './Component/Challenges/Challenges';
 
 
 function App() {
@@ -65,6 +67,8 @@ function App() {
         { path: "login", element: <Login /> },
         { path: "signup", element: <Signup /> },
         { path: "cardio", element: <Cardio /> },
+        { path: "Questions", element: <Questions /> },
+        { path: "Challenges", element: <Challenges /> },
         { path: "*", element: <NotFound /> },
       ],
     },

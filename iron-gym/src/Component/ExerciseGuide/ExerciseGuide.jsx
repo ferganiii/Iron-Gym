@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../Context/UserContext';
 import Loading from '../Loading/Loading';
-import bg from '../../assets/bg.jpg';
+import bg from '../../assets/bg1111.jpg';
 import bg_dmbl from '../../assets/bg_dmbl.jpg';
 import { useQuery } from '@tanstack/react-query';
 

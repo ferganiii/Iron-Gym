@@ -170,6 +170,44 @@ export default function Exercise() {
               </div>
             </div>
           </div>
+
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 mt-20'>
+            <div>
+              <div className="flex">
+                <div className="relative">
+                  <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
+                  <div className="text-orange-500 ms-36 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold  ">
+               Challenges
+                  </div>
+                </div>
+                <div className="relative w-[200px] h-[200px]">
+                  <div className={`w-full h-full absolute top-1/2 -left-9 ${style['clip-custom-2']}`}></div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 mt-4">
+                <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
+                  <img src={image3Cardio} alt="Workout" className="object-cover w-full h-full" />
+                </div>
+                <Link to="/Challenges">
+                <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                Explore Challenges >>
+                </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
+              <div className={`relative ${style['clip-msls']}`}>
+                <div className={`absolute -top-20 lg:-top-40 left-2/4 ${style.bord}`}>
+                  <p className="ms-16 uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
+                    ELEVANTE YOUR WORKOUT WITH SOME CARDIO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

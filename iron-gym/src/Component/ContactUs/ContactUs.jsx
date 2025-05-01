@@ -1,180 +1,3 @@
-// import { Mail, Phone, MapPin } from "lucide-react";
-// import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
-// import { useState } from "react";
-// import { motion } from "framer-motion"; // أضفنا ده
-// import cnt from "../../assets/cnt.jpg";
-
-// export default function ContactUs() {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     subject: "",
-//     message: "",
-//   });
-
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const sendToEmail = (e) => {
-//     e.preventDefault();
-//     const { name, email, subject, message } = formData;
-//     const recipientEmail = "memoasker2003@gmail.com";    
-//     const emailBody = `Hello,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`;
-//     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-
-//     window.location.href = mailtoLink;
-
-//     setFormData({
-//       name: "",
-//       email: "",
-//       subject: "",
-//       message: "",
-//     });
-//   };
-
-//   return (
-//     <div
-//       className="flex flex-col items-center justify-center min-h-screen p-6 bg-cover bg-center"
-//       style={{ backgroundImage: `url(${cnt})` }}
-//     >
-//       <motion.div 
-//         initial={{ opacity: 0, scale: 0.9 }} 
-//         animate={{ opacity: 1, scale: 1 }}
-//         transition={{ duration: 0.8, ease: "easeOut" }}
-//         className="w-full max-w-3xl shadow-lg p-20 bg-black border-4 border-gray-700 rounded-lg"
-//       >
-//         <motion.h2 
-//           initial={{ opacity: 0, y: -50 }} 
-//           animate={{ opacity: 1, y: 0 }} 
-//           transition={{ duration: 1 }}
-//           className="text-4xl font-extrabold text-center mb-4 text-orange-600"
-//         >
-//           Contact Us
-//         </motion.h2>
-
-//         <motion.p
-//           initial={{ opacity: 0, y: -50 }} 
-//           animate={{ opacity: 1, y: 0 }} 
-//           transition={{ duration: 1, delay: 0.2 }} 
-//           className="text-center text-gray-400 mb-6"
-//         >
-//           Feel free to reach out to us for any inquiries or support.
-//         </motion.p>
-
-//         <div className="grid md:grid-cols-2 gap-6">
-//           <motion.div
-//             initial={{ x: -100, opacity: 0 }}
-//             animate={{ x: 0, opacity: 1 }}
-//             transition={{ duration: 1 }}
-//           >
-//             <form className="space-y-4" onSubmit={sendToEmail}>
-//               <input
-//                 type="text"
-//                 name="name"
-//                 placeholder="Your Name"
-//                 value={formData.name}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 required
-//               />
-//               <input
-//                 type="email"
-//                 name="email"
-//                 placeholder="Your Email"
-//                 value={formData.email}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 required
-//               />
-//               <input
-//                 type="text"
-//                 name="subject"
-//                 placeholder="Subject"
-//                 value={formData.subject}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 required
-//               />
-//               <textarea
-//                 name="message"
-//                 placeholder="Your Message"
-//                 value={formData.message}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 rows={4}
-//                 required
-//               />
-//               <button
-//                 type="submit"
-//                 className="w-full bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-//               >
-//                 Send Message
-//               </button>
-//             </form>
-//           </motion.div>
-
-//           <motion.div
-//             initial={{ x: 100, opacity: 0 }}
-//             animate={{ x: 0, opacity: 1 }}
-//             transition={{ duration: 1 }}
-//             className="flex flex-col space-y-4 text-white mb-20"
-//           >
-//             <div className="flex items-center gap-2">
-//               <Mail className="text-orange-600" />
-//               <span>contact@irongym.com</span>
-//             </div>
-//             <div className="flex items-center gap-2">
-//               <Phone className="text-orange-600" />
-//               <span>+01044724761</span>
-//             </div>
-//             <div className="flex items-center gap-2">
-//               <MapPin className="text-orange-600" />
-//               <span>123 Iron Street, Damanhour, Egypt</span>
-//             </div>
-//             <div className="flex items-center gap-4">
-//               <FaFacebook className="text-orange-600" />
-//               <span>IRON-GYM Official Community</span>
-//             </div>
-
-//             <br />
-//             <br />
-//             <div className="grid grid-cols-4 place-items-start">
-//               <a
-//                 href="https://www.facebook.com/share/g/12BzL5xEDqV/"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <FaFacebook className="text-blue-600 hover:text-blue-700 w-10 h-10" />
-//               </a>
-//               <a
-//                 href="https://wa.me/201044724761"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <FaWhatsapp className="text-green-500 hover:text-green-600 w-10 h-10" />
-//               </a>
-//               <a
-//                 href="https://x.com/mohamed72217275?t=KlM3cQeCp5lDSBGLInbfIQ&s=09"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <FaTwitter className="text-blue-400 hover:text-blue-500 w-10 h-10" />
-//               </a>
-//             </div>
-//           </motion.div>
-//         </div>
-//       </motion.div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
 
 
 import { FaTwitter } from 'react-icons/fa';
@@ -184,6 +7,9 @@ import { FaFacebook } from "react-icons/fa";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import cnt from "../../assets/cnt.jpg";
+import Questions from '../Questions/Questions.jsx';
+import Challenges from '../Challenges/Challenges.jsx';
+import { Link } from "react-router-dom";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -192,6 +18,7 @@ export default function ContactUs() {
     subject: "",
     message: "",
   });
+  const [showFAQ, setShowFAQ] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -251,7 +78,7 @@ export default function ContactUs() {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
+                className="w-full p-2 border-none rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
                 required
               />
               <input
@@ -260,7 +87,7 @@ export default function ContactUs() {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
+                className="w-full p-2 border-none rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
                 required
               />
               <input
@@ -269,7 +96,7 @@ export default function ContactUs() {
                 placeholder="Subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
+                className="w-full p-2 border-none rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
                 required
               />
               <textarea
@@ -277,7 +104,7 @@ export default function ContactUs() {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
+                className="w-full p-2 border-none rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
                 rows={4}
                 required
               />
@@ -287,6 +114,12 @@ export default function ContactUs() {
               >
                 Send Message
               </button>
+              <div className='m'>
+                             
+              <Link to="/Questions" className=' text-xl '> common questions about our services >></Link>                
+              </div>
+                             
+
             </form>
           </motion.div>
 
@@ -318,151 +151,40 @@ export default function ContactUs() {
               <br />
               <br />
               <div className="grid grid-cols-5 place-items-start">
-                <a
-                  href="https://www.facebook.com/share/g/12BzL5xEDqV/"
+                <Link
+                  to="https://www.facebook.com/share/g/12BzL5xEDqV/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaFacebook className="text-blue-600 hover:text-blue-700 w-10 h-10" />
-                </a>
-                <a
-                  href="https://wa.me/201044724761"
+                </Link>
+                <Link
+                  to="https://wa.me/201044724761"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaWhatsapp className="text-green-500 hover:text-green-600 w-10 h-10" />
-                </a>
-                <a
-                  href="https://x.com/mohamed72217275?t=KlM3cQeCp5lDSBGLInbfIQ&s=09"
+                </Link>
+                <Link
+                  to="https://x.com/mohamed72217275?t=KlM3cQeCp5lDSBGLInbfIQ&s=09"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaTwitter className="text-blue-400 hover:text-blue-500 w-10 h-10" />
-                </a>
+                </Link>
+
               </div>
             </div>
           </motion.div>
         </div>
+        
       </motion.div>
 
-      {/* FAQ Section */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="w-full max-w-7xl shadow-lg p-10 mb-10 bg-black border-4 border-gray-700 rounded-lg"
-      >
-        <h2 className="text-4xl font-extrabold text-center mb-6 text-orange-600">Frequently Asked Questions</h2>
-        <motion.p
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center text-gray-100 font-bold mb-20"
-        >
-          "Find answers to common questions about our services, workout plans, calculators, and more. <br /> If you have any further inquiries, feel free to reach out to us."
-        </motion.p>
-        <div className="space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">How can I contact support?</h4>
-            <p className="text-gray-200 font-semibold">•  You can contact us through the contact form on this page or by email at contact@irongym.com.</p>
-          </motion.div>
+      
+     
 
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">Do you offer a free trial?</h4>
-            <p className="text-gray-200 font-semibold">•  Yes, we offer a 7-day free trial for new users. Sign up today and experience our services.</p>
-          </motion.div>
+       
 
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">What services do you provide?</h4>
-            <p className="text-gray-200 font-semibold">•  We provide a wide range of fitness services including personal training, group classes, and nutrition guidance. Visit our services page for more details.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">How do I access the workout plans on the website?</h4>
-            <p className="text-gray-200 font-semibold">•	You can find a wide variety of workout plans under the "Workouts" section. Browse by category (e.g., strength training, cardio, etc.) and start your fitness journey today.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">What type of exercises are included in the workout plans?</h4>
-            <p className="text-gray-200 font-semibold">•	Our workout plans include a mix of strength training, cardio exercises, flexibility, and endurance workouts designed for all fitness levels.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">How can I use the calorie calculator on the site?</h4>
-            <p className="text-gray-200 font-semibold">•	Simply go to the "Calculators" section, enter your personal details such as age, gender, weight, and activity level, and the calculator will help estimate your daily calorie needs.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">Do you offer personalized meal and workout plans?</h4>
-            <p className="text-gray-200 font-semibold">•	Yes! We provide personalized plans based on your fitness goals, such as weight loss, muscle gain, or improving endurance. You can create a custom plan in the "Personalized Plans" section.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">How do I calculate my BMI using the website?</h4>
-            <p className="text-gray-200 font-semibold">•	You can calculate your BMI easily by visiting our BMI Calculator page. Just input your weight and height, and the calculator will provide your Body Mass Index.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">Can I track my progress using your tools?</h4>
-            <p className="text-gray-200 font-semibold">•	Yes, we offer a progress tracker that allows you to log your workouts, monitor your diet, and track changes in your body measurements.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="p-6 bg-[rgb(102,102,102,.3)] rounded-lg shadow-md transition-all duration-300 hover:bg-[rgb(102,102,102,.6)] hover:scale-105"
-          >
-            <h4 className="text-2xl font-bold text-white mb-4">What are the different types of fitness equipment available in the gym section?</h4>
-            <p className="text-gray-200 font-semibold">•	Our website offers a detailed section about various fitness equipment such as cardio machines, strength machines, free weights, and functional training equipment to help you choose the best for your workouts.</p>
-          </motion.div>
-        </div>
-      </motion.div>
 
       {/* Newsletter */}
       <motion.div
@@ -483,57 +205,16 @@ export default function ContactUs() {
           />
           <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l7 7 7-7"></path></svg>
           <button className="bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md">
-            Subscribe
+            Subscribe 
           </button>
+       
+          
         </form>
       </motion.div>
 
 
-      {/* Challenges Section */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="w-full max-w-7xl shadow-lg p-6 mb-10 bg-black border-4 border-gray-700 rounded-lg"
-      >
-        <h3 className="text-4xl font-extrabold text-center mb-6 text-orange-600">Join Our Fitness Challenges</h3>
-        <p className="text-center font-semibold text-gray-200 mb-6">
-          Take part in our fitness challenges like the "30-day fitness challenge" or "Fat loss challenge". Track your progress and push your limits!
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
-            <h4 className="text-2xl font-bold text-white mb-4">30-Day Fitness Challenge</h4>
-            <p className="text-gray-200 font-semibold">
-              A 30-day challenge designed to improve strength and stamina. Get access to daily exercises and track your progress.
-            </p>
-            <a
-              href="/pdf/30 DAY.pdf"
-              download
-            >
-              <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105">
-              Download Challenge
-              </button>
-            </a>
-          </div>
-
-          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
-            <h4 className="text-2xl font-bold text-white mb-4">Fat Loss Challenge</h4>
-            <p className="text-gray-200 font-semibold">
-              Join our fat loss challenge and get personalized workout plans and nutritional advice to help you burn fat effectively.
-            </p>
-            <a
-              href="/pdf/Fat Loss Challenge.pdf"
-              download
-            >
-              <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105">
-                Download Challenge
-              </button>
-            </a>
-          </div>
-        </div>
-      </motion.div>
-
+      
+   
 
       {/* Blog Section */}
       <motion.div
@@ -552,18 +233,18 @@ export default function ContactUs() {
             <p className="text-gray-200 font-semibold">
               Learn about the best nutrition strategies to fuel muscle growth, including protein intake and meal timing.
             </p>
-            <a href="/pdf/Nutrition Tips.pdf" open>
+            <Link to="/pdf/Nutrition Tips.pdf" open>
               <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105">
                 Read Article
               </button>
-            </a>
+            </Link>
           </div>
           <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
             <h4 className="text-2xl font-bold text-white mb-4">5 Essential Cardio Exercises</h4>
             <p className="text-gray-200 font-semibold">
               Discover the top cardio exercises for fat loss and improving cardiovascular health, with tips on how to incorporate them into your routine.
             </p>
-            <a href="/pdf/Cardio Exercises.pdf" download>
+            <a to="/pdf/Cardio Exercises.pdf" download>
               <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105">
                 Read Article
               </button>
@@ -573,357 +254,7 @@ export default function ContactUs() {
       </motion.div>
 
 
-
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  الكود الأصلي قبل الانيميشن ////////////////////////////////////55//////////////////////////////////////////.......
-
-
-
-
-// import { Card } from "flowbite-react";
-// import { Mail, Phone, MapPin } from "lucide-react";
-// import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
-// import { useState } from "react";
-// import cnt from "../../assets/cnt.jpg";
-
-// export default function ContactUs() {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     subject: "",
-//     message: "",
-//   });
-
-//   const handleChange = (e) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const sendToEmail = (e) => {
-//     e.preventDefault();
-
-//     const { name, email, subject, message } = formData;
-//     const recipientEmail = "memoasker2003@gmail.com";
-
-//     const emailBody = `Hello,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`;
-//     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
-//       subject
-//     )}&body=${encodeURIComponent(emailBody)}`;
-
-//     window.location.href = mailtoLink;
-
-//     setFormData({
-//       name: "",
-//       email: "",
-//       subject: "",
-//       message: "",
-//     });
-//   };
-
-//   return (
-//     <div
-//       className="flex flex-col items-center justify-center min-h-screen p-6 bg-cover bg-center "
-//       style={{ backgroundImage: `url(${cnt})` }}
-//     >
-// <div className="w-full max-w-3xl shadow-lg p-20 bg-black border-4 border-gray-700 rounded-lg">
-// <h2 className="text-4xl font-extrabold text-center mb-4 text-orange-600">
-//           Contact Us
-//         </h2>
-//         <p className="text-center text-gray-400 mb-6">
-//           Feel free to reach out to us for any inquiries or support.
-//         </p>
-
-//         <div className="grid md:grid-cols-2 gap-6">
-//           <div>
-//             <form className="space-y-4" onSubmit={sendToEmail}>
-//               <input
-//                 type="text"
-//                 name="name"
-//                 placeholder="Your Name"
-//                 value={formData.name}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 required
-//               />
-//               <input
-//                 type="email"
-//                 name="email"
-//                 placeholder="Your Email"
-//                 value={formData.email}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 required
-//               />
-//               <input
-//                 type="text"
-//                 name="subject"
-//                 placeholder="Subject"
-//                 value={formData.subject}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 required
-//               />
-//               <textarea
-//                 name="message"
-//                 placeholder="Your Message"
-//                 value={formData.message}
-//                 onChange={handleChange}
-//                 className="w-full p-2 border border-gray-700 rounded-md bg-black text-white focus:ring-2 focus:ring-orange-600"
-//                 rows={4}
-//                 required
-//               />
-//               <button
-//   type="submit"
-//   className="w-full bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 rounded-md transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-// >
-//   Send Message
-// </button>
-
-//             </form>
-//           </div>
-
-//           <div className="flex flex-col space-y-4 text-white mb-20 ">
-//             <div className="flex items-center gap-2">
-//               <Mail className="text-orange-600" />
-//               <span>contact@irongym.com</span>
-//             </div>
-//             <div className="flex items-center gap-2">
-//               <Phone className="text-orange-600" />
-//               <span>+01044724761</span>
-//             </div>
-//             <div className="flex items-center gap-2">
-//               <MapPin className="text-orange-600" />
-//               <span>123 Iron Street, Damanhour, Egypt</span>
-//             </div>
-//             <div className="flex items-center gap-4">
-//               <FaFacebook className="text-orange-600" />
-//               <span>IRON-GYM Official Community</span>
-//             </div>
-
-//             <br />
-//             <br />
-//             <div className="grid grid-cols-4 place-items-start">
-//               <a
-//                 href="https://www.facebook.com/share/g/12BzL5xEDqV/"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <FaFacebook className="text-blue-600 hover:text-blue-700 w-10 h-10" />
-//               </a>
-//               <a
-//                 href="https://wa.me/201044724761"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <FaWhatsapp className="text-green-500 hover:text-green-600 w-10 h-10" />
-//               </a>
-//               <a
-//                 href="https://x.com/mohamed72217275?t=KlM3cQeCp5lDSBGLInbfIQ&s=09"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//               >
-//                 <FaTwitter className="text-blue-400 hover:text-blue-500 w-10 h-10" />
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
