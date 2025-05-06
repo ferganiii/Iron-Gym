@@ -201,6 +201,53 @@ export default function ContactUs() {
           </motion.div>
         </div>
       </motion.div>
+
+      
+     
+
+       
+
+
+      {/* Newsletter */}
+           {/* Blog Section */}
+           <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="w-full max-w-7xl shadow-lg p-6 mb-10 bg-black border-4 border-gray-700 rounded-lg"
+      >
+        <h3 className="text-4xl font-extrabold text-center mb-6 text-orange-600">Fitness Blog</h3>
+        <p className="text-center font-semibold text-gray-200 mb-6">
+          Stay informed with the latest tips and articles on nutrition, workouts, health advice, and updates in the fitness world!
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
+            <h4 className="text-2xl font-bold text-white mb-4">Nutrition Tips for Building Muscle</h4>
+            <p className="text-gray-200 font-semibold">
+              Learn about the best nutrition strategies to fuel muscle growth, including protein intake and meal timing.
+            </p>
+            <Link to="/pdf/Nutrition Tips.pdf">
+              <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105">
+                Read Article
+              </button>
+            </Link>
+          </div>
+          <div className="bg-[rgb(102,102,102,.3)] p-4 rounded-lg shadow-md hover:bg-[rgb(102,102,102,.6)] hover:scale-105 transition-all duration-300">
+            <h4 className="text-2xl font-bold text-white mb-4">5 Essential Cardio Exercises</h4>
+            <p className="text-gray-200 font-semibold">
+              Discover the top cardio exercises for fat loss and improving cardiovascular health, with tips on how to incorporate them into your routine.
+            </p>
+            <Link to="/pdf/Cardio Exercises.pdf">
+              <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105">
+                Read Article
+              </button>
+            </Link>
+          </div>
+        </div>
+      </motion.div>
+
+
+
     </div>
   );
 }

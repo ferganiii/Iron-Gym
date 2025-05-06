@@ -1,17 +1,16 @@
-// src/components/ExercisesPage/ExercisesPage.jsx
 import React from 'react';
 import ExerciseGuide from '../ExerciseGuide/ExerciseGuide';
 import MuscleMap from '../MuscleMap/MuscleMap';
 import { useMuscleContext } from '../../Context/MuscleContext';
 
 export default function ExercisesPage() {
-  const { selectedMuscle } = useMuscleContext(); // استخدام الـ selectedMuscle من الـ Context
+  const { selectedMuscle } = useMuscleContext(); 
 
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">Choose a Muscle Group</h1>
       
-      <MuscleMap /> {/* هنا سيتلقى MuscleMap الدالة من الـ Context */}
+      <MuscleMap /> 
 
       {selectedMuscle && (
         <>

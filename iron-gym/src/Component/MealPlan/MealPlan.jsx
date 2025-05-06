@@ -18,7 +18,7 @@ export default function MealPlan() {
   });
   const { token } = useContext(UserContext);
 
-  const api = "https://gym-production-8217.up.railway.app/api/bulk";
+  const api = "https://gym-production-8217.up.railway.app/api/cutting";
 
   // Fetch Meal Plans
   async function getMealPlans() {
