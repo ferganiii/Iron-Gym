@@ -71,7 +71,7 @@ export default function Nutrition() {
 
         <div className="container mx-auto relative">
           <div className="mt-10 py-10">
-            <h2 className="text-5xl font-archivo text-left">NUTRITION GUIDE</h2>
+            <h2 className="lg:text-5xl text-2xl ms-2 font-archivo text-left">NUTRITION GUIDE</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 max-sm:grid-cols-1 gap-6">
@@ -84,7 +84,7 @@ export default function Nutrition() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-80 hover:scale-105 transition-all duration-500 border border-gray-400 rounded-lg"
+                    className="lg:w-full lg:h-80 w-64 hover:scale-105 transition-all duration-500 border border-gray-400 rounded-lg "
                   />
                 </Link>
                 <div className="p-5">

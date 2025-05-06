@@ -15,7 +15,7 @@ export default function NutritionProgram() {
               <div className="flex justify-center gap-28 w-full flex-wrap">
       
       
-        <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] ">
+        <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 lg:w-[350px] w-[250px] ">
           <Link to="MealPlan">
             <img
               className="rounded-t-3xl w-full h-[300px] object-cover hover:scale-105 transition-all "
@@ -25,13 +25,13 @@ export default function NutritionProgram() {
           </Link>
           <div className="p-5">
             <Link to="MealPlan">
-              <p className="text-center mb-3 font-normal text-gray-700 dark:text-white text-5xl font-archivo">
+              <p className="text-center mb-3 font-normal text-gray-700 dark:text-white lg:text-5xl text-2xl font-archivo">
               Nutritional programmes     </p>
             </Link>
           </div>
         </div>
       
-        <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 w-[350px] ">
+        <div className="bg-white border border-gray-200 rounded-3xl shadow-sm dark:bg-black/55 dark:border-gray-700 lg:w-[350px] w-[250px]">
           <Link to="CalcCaloriesMeal">
             <img
               className="rounded-t-3xl w-full h-[300px] object-cover hover:scale-105 transition-all "
@@ -41,7 +41,7 @@ export default function NutritionProgram() {
           </Link>
           <div className="p-5">
             <Link to="CalcCaloriesMeal">
-              <p className="text-center mb-3 font-normal text-gray-700 dark:text-white text-5xl font-archivo">
+              <p className="text-center mb-3 font-normal text-gray-700 dark:text-white lg:text-5xl text-2xl font-archivo">
               Calculate your meal Calaroies        </p>
             </Link>
           </div>
