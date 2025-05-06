@@ -217,7 +217,9 @@ export default function ContactUs() {
    
 
       {/* Blog Section */}
-      <motion.div
+
+      
+      {/* <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -251,7 +253,7 @@ export default function ContactUs() {
             </a>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
 
     </div>

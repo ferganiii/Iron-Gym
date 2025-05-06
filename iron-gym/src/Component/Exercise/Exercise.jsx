@@ -14,7 +14,7 @@ export default function Exercise() {
       <section className='bg-[rgb(102,102,102,.3)] relative'>
         {/* Hero Section */}
         <div
-  className="h-screen bg-cover bg-center relative flex flex-col justify-center items-start text-center"
+  className="h-scree h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
   style={{ backgroundImage: `url(${background})` }}
 >
   {/* BE FIT Animation */}
@@ -70,7 +70,7 @@ export default function Exercise() {
               </div>
 
               <div className="flex items-center gap-4 mt-4">
-                <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
+                <div className={`w-48 h-48  bg-[#666666] ${style['clip-custom-1']}`}>
                   <img src={man1Exercise} alt="" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/MuscleMap">

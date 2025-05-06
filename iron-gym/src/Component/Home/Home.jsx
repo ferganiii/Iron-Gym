@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-4xl font-archivo font-bold">Calculate Your Daily <br /> Calorie & Water Needs</h2>
                 <p className="text-gray-200 text-lg font-bold ">
-                  "Stay on track! Calculate your daily calorie intake and hydration needs with our smart tools."
+                  "Stay on track! Calculate your daily calorienpmm intake and hydration needs with our smart tools."
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
                   <Link to="/Calculators">CALCULATORS</Link> 
