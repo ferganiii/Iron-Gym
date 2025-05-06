@@ -9,6 +9,7 @@ import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../Context/UserContext';
 import calcClories from "../../assets/cardCalories.webp";
+import bg from '../../assets/bg1111.jpg';
 
 export default function Home() {
 
@@ -16,7 +17,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-black text-white min-h-screen  ">
+      <div className="bg-black text-white min-h-screen  "
+          style={{ backgroundImage: `url(${bg})` }}>
         {/* الصورة الرئيسية */}
         <div className="relative w-full h-screen bg-black overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
@@ -32,9 +34,7 @@ export default function Home() {
           <div className="absolute inset-x-0 bottom-10 sm:bottom-24 flex flex-col items-center text-center text-white px-4 pb-10 sm:pb-28 z-20">
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-sans">GET FIT</h1>
             <p className="text-xl sm:text-2xl md:text-3xl mt-4 sm:mt-10">TRANSFORM YOUR BODY</p>
-            <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
-             <Link to="/signup"> Register</Link>
-            </button>
+         
             {user && user.role === "admin" &&  
               <>
                 <button className="mt-6 sm:mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-xl sm:text-2xl md:text-3xl font-semibold transition-transform duration-300 transform hover:scale-105">
@@ -59,11 +59,11 @@ export default function Home() {
 
               {/* النص */}
               <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
-                <h2 className="md:text-4xl text-4xl font-archivo font-bold">
+                <h2 className="lg:text-4xl text-xl font-archivo font-bold">
                   BUILD YOUR BODY & <br />
-                  <span className="text-white">SHAPE YOURSELF!</span>
+                  <span className="text-orange-500">SHAPE YOURSELF!</span>
                 </h2>
-                <p className="text-gray-200 text-lg font-bold">
+                <p className="text-gray-200 text-sm font-bold">
                   "Achieve your fitness goals with powerful workouts and expert guidance. Start your transformation today!"
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
@@ -72,12 +72,12 @@ export default function Home() {
               </div>
 
               {/* الصورة */}
-              <div className="relative flex justify-center pl-24 me-11">
+              <div className="relative flex justify-center pl-24 me-11 mt-16">
                 <Link to="/exercise">
                   <img
                     src={imgeHome}
                     alt="Workout"
-                    className={`hover:scale-105 transition-all duration-500 z-10 rounded-full w-80 max-w-md h-80 sm:h- object-cover shadow-lg `}
+                    className={`hover:scale-105 transition-all duration-500 z-10 rounded-full lg:w-80 max-w-md lg:h-80  w-60 h-60 object-cover shadow-lg `}
                   />
                 </Link>
               </div>
@@ -108,13 +108,13 @@ export default function Home() {
                   <img
                     src={calcClories}   
                     alt="Fitness Challenge"
-                    className=" hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
+                    className=" hover:scale-105 transition-all duration-500 lg:w-96 rounded-full lg:h-96  w-60 h-60 object-cover shadow-lg  ms-auto "
                   />
                 </Link> 
                 
                 </div>
-                <h2 className="text-4xl font-archivo font-bold">Calculate Your Daily <br /> Calorie & Water Needs</h2>
-                <p className="text-gray-300 text-lg font-bold ">
+                <h2 className="lg:text-4xl text-2xl lg:text-gray-200 text-orange-500 font-alkalami ">Calculate Your Daily <br /> Calorie & Water Needs</h2>
+                <p className="text-gray-200 lg:text-lg font-bold ">
                   "Stay on track! Calculate your daily calorienpmm intake and hydration needs with our smart tools."
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
@@ -131,7 +131,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
               {/* النص */}
               <div className="md:w-1/2 space-y-6 md:space-y-8">
-                <h2 className="text-4xl font-bold font-archivo md:text-3xl">
+                <h2 className="lg:text-4xl text-2xl font-bold font-archivo md:text-3xl">
                   STEP UP YOUR <br />
                   FITNESS CHALLENGE
                 </h2>
@@ -149,7 +149,7 @@ export default function Home() {
                   <img
                     src={FatsProduc}   
                     alt="Fitness Challenge"
-                    className="hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
+                    className="hover:scale-105 transition-all duration-500 lg:w-96 rounded-full lg:h-96 w-60 h-60 object-cover shadow-lg"
                   />
                 </Link> 
               </div>

@@ -14,7 +14,7 @@ const AboutUs = () => {
          <section className="bg-[#1e1e1e]">
             {/* الخلفية الأساسية */}
             <div
-      className="relative flex items-center justify-start h-screen bg-cover bg-center"
+      className="relative flex items-center justify-start h-[60vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${aboutBg})` }}
     >
       {/* تأثير تكبير الخلفية */}

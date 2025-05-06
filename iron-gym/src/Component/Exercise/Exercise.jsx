@@ -14,7 +14,7 @@ export default function Exercise() {
       <section className='bg-[rgb(102,102,102,.3)] relative'>
         {/* Hero Section */}
         <div
-  className="h-scree h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
+  className=" h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
   style={{ backgroundImage: `url(${background})` }}
 >
   {/* BE FIT Animation */}
