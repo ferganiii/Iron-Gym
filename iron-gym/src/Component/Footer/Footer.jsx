@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[rgb(36,37,37,1)]  text-white">
+    <footer className="bg-[rgb(36,37,37,1)]  text-white ">
       <div className="container  pt-10 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
           {/* العمود الأول */}
           <div className="text-center">
-            <h2 className="mb-6 font-AlfaSlabOne text-5xl uppercase">IRON GYM</h2>
-            <p className="pb-10 font-archivo text-gray-200 font-bold">
+            <h2 className="mb-6 font-AlfaSlabOne text-3xl lg:text-5xl uppercase">IRON GYM</h2>
+            <p className="pb-10 font-archivo text-gray-200 font-bold text-sm lg:text-lg">
               "At Iron Gym, we are committed to helping you achieve your fitness goals through expert guidance and continuous motivation. With specialized training programs, personalized nutrition tips, and unlimited support, we work together to achieve noticeable results and elevate your fitness to new heights."           </p>
           </div>
 
           {/* العمود الثاني - الروابط */}
           <div className="text-center">
-            <ul className="text-2xl flex flex-col font-semibold items-center space-y-2">
+            <ul className="lg:text-2xl text-sm flex flex-col font-semibold items-center space-y-2">
               {[
                 { to: "/exercise", label: "Exercises" },
                 { to: "/nutrition", label: "Nutrition" },
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* العمود الثالث - الصورة */}
           <div className="flex justify-end">
-            <img className="h-52 object-contain" src={logo} alt="Iron Gym Logo" />
+            <img className="lg:h-52 h-20 object-contain" src={logo} alt="Iron Gym Logo" />
           </div>
         </div>
 
