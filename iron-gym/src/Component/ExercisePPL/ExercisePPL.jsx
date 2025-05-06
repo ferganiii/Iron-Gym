@@ -11,7 +11,7 @@ import CreateSystemModal from '../CreateSystemModal/CreateSystemModal';
 export default function ExercisePPL() {
   const { token } = useContext(UserContext);
   const [systems, setSystems] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false); // حالة لتخزين حالة عرض الـ Modal
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const { id } = useParams();
 
   const settings = {
@@ -43,7 +43,6 @@ export default function ExercisePPL() {
       ]
   };
 
-  // جلب الأنظمة من الـ backend
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['systems'],
     queryFn: async () => {
@@ -61,7 +60,6 @@ export default function ExercisePPL() {
     if (data) {
       setSystems(data);
       console.log(data);
-       // تخزين الأنظمة بعد الجلب
     }
   }, [data]);
 

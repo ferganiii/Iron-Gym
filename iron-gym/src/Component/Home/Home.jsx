@@ -108,13 +108,13 @@ export default function Home() {
                   <img
                     src={calcClories}   
                     alt="Fitness Challenge"
-                    className="z-10 hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
+                    className=" hover:scale-105 transition-all duration-500 w-96 rounded-full h-96 object-cover shadow-lg"
                   />
                 </Link> 
                 
                 </div>
                 <h2 className="text-4xl font-archivo font-bold">Calculate Your Daily <br /> Calorie & Water Needs</h2>
-                <p className="text-gray-200 text-lg font-bold ">
+                <p className="text-gray-300 text-lg font-bold ">
                   "Stay on track! Calculate your daily calorienpmm intake and hydration needs with our smart tools."
                 </p>
                 <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">

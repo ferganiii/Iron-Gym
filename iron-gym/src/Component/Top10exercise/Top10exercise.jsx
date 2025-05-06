@@ -30,7 +30,7 @@ export default function Top10exercise() {
   return (
     <section className=" min-h-screen  py-64">
       <div className='ms-10 mb-10'>
-      <h2 className="text-4xl border-b-2 border-orange-500 dark:text-white mb-7 font-mono inline-block">
+      <h2 className="lg:text-4xl text-2xl border-b-2 border-orange-500 dark:text-white mb-7 font-mono inline-block">
   The Top 10 Most Popular Exercises
 </h2>
          <p className='text-xl '><span className='text-3xl mx-2'><i className="fa-solid fa-ranking-star" style={{color: '#e7700d'}} />

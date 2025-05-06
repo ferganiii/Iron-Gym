@@ -15,7 +15,7 @@ import sholder from '../../assets/sholder.png';
 import trapizes from '../../assets/trapizes.png';
 import tricps from '../../assets/tricps.png';
 import forearms from '../../assets/forearms.jpeg';
-import bg from '../../assets/bg.jpg';
+import bg from '../../assets/bg1111.jpg';
 import MuchaTseBle from '../../assets/MuchaTseBle.jpg';
 import Top10exercise from '../Top10exercise/Top10exercise';
 export default function MuscleMap() {
@@ -60,7 +60,7 @@ export default function MuscleMap() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           centerMode: true,
           centerPadding: '0px',
@@ -69,7 +69,7 @@ export default function MuscleMap() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           centerMode: true,
           centerPadding: '0px',
@@ -106,13 +106,13 @@ export default function MuscleMap() {
         </div>
   {/* الـ Overlay للنص */}
   <div className="absolute inset-0 bg-black/15 flex flex-col justify-center items-start px-8 sm:px-16 md:px-24">
-    <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+    <h1 className="lg:text-4xl text-3xl font-semibold text-white mb-4">
       Exercise&nbsp;&nbsp;Guides And Videos
     </h1>
     <p className="text-xl sm:text-2xl text-white mb-6">
       Explore by muscle groups
     </p>
-    <h2 className="text-5xl sm:text-7xl font-extrabold text-white leading-tight tracking-wider">
+    <h2 className="lg:text-5xl text-3xl font-extrabold text-white leading-tight tracking-wider">
       BREATH,<br />
       TRAIN,<br />
       ACHIEVE.
@@ -135,7 +135,8 @@ export default function MuscleMap() {
             <img
               src={muscle.image}
               alt=""
-              className="w-44 h-44 object-cover rounded-full hover:scale-110 transition-transform duration-300"
+              className="lg:w-44 lg:h-44 w-20 pb-3
+               object-cover rounded-full hover:scale-110 transition-transform duration-300"
             />
           </Link>
         </div>
