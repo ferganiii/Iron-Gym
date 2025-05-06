@@ -3,17 +3,34 @@ import logo from "../../assets/logo.jpeg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../Context/UserContext";
 
+const navLinks = [
+  { path: "/", label: "Home" },
+  { path: "/exercise", label: "EXERCISES" },
+  { path: "/nutrition", label: "NUTRITION" },
+  { path: "/aboutus", label: "ABOUT" },
+  { path: "/ContactUs", label: "CONTACT US" }
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { token, setToken } = useContext(UserContext);
   const navigate = useNavigate();
 
-  function logout() {
-    setToken(null);
-    navigate("/login");
-  }
+  const handleLogout = () => {
+    try {
+      setToken(null);
+      // Clear any other user-related data if needed
+      navigate("/login");
+    } catch (error) {
+      console.error("Error during logout:", error);
+      // You might want to show an error message to the user here
+    }
+  };
 
- 
+  const getNavLinkClass = (isActive) =>
+    isActive
+      ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
+      : "text-white text-xl hover:text-orange-500 transition duration-200";
 
   return (
     <>
@@ -59,74 +76,21 @@ export default function Navbar() {
           >
             {token && (
               <ul className="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-                        : "text-white text-xl hover:text-orange-500 transition duration-200"
-                    }
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/exercise"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-                        : "text-white text-xl hover:text-orange-500 transition duration-200"
-                    }
-                  >
-                    EXERCISES
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/nutrition"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-                        : "text-white text-xl hover:text-orange-500 transition duration-200"
-                    }
-                  >
-                    NUTRITION
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/aboutus"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-                        : "text-white text-xl hover:text-orange-500 transition duration-200"
-                    }
-                  >
-                    ABOUT
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/ContactUs"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-orange-500 text-xl font-bold border-b-2 border-orange-500 transition duration-200"
-                        : "text-white text-xl hover:text-orange-500 transition duration-200"
-                    }
-                  >
-                    CONTACT US
-                  </NavLink>
-                </li>
-
-             
-
+                {navLinks.map((link) => (
+                  <li key={link.path}>
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) => getNavLinkClass(isActive)}
+                    >
+                      {link.label}
+                    </NavLink>
+                  </li>
+                ))}
 
                 {/* زر تسجيل الخروج - يظهر داخل القائمة في الموبايل */}
                 <li className="md:hidden mt-4">
                   <button
-                    onClick={logout}
+                    onClick={handleLogout}
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md text-center"
                   >
                     LOG OUT
@@ -140,7 +104,7 @@ export default function Navbar() {
           {token && (
             <div className="hidden md:block">
               <button
-                onClick={logout}
+                onClick={handleLogout}
                 className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md"
               >
                 LOG OUT
@@ -153,6 +117,5 @@ export default function Navbar() {
       {/* تعويض ارتفاع الـ Navbar حتى لا يغطي المحتوى */}
       <div className="pt-20"></div>
     </>
-  
   );
 }

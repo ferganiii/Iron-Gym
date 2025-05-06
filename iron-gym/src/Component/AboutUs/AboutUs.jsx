@@ -47,18 +47,21 @@ const AboutUs = () => {
   <div className="grid grid-cols-2 gap-4 items-center md:ml-20">
     <img
       src={mission1}
-      alt="Mission 1"
+      alt="Iron Gym member performing a workout exercise"
+      loading="lazy"
       className="rounded-[40px] w-full h-[500px] object-cover hover:scale-110 hover:-translate-y-2 transition"
     />
     <div className="flex flex-col gap-4">
       <img
         src={mission2}
-        alt="Mission 2"
+        alt="Iron Gym fitness equipment and training area"
+        loading="lazy"
         className="rounded-[40px] w-full h-[360px] object-cover hover:scale-110 hover:-translate-y-2 transition"
       />
       <img
         src={mission3}
-        alt="Mission 3"
+        alt="Iron Gym professional trainers"
+        loading="lazy"
         className="rounded-[40px] w-full h-[120px] object-cover hover:scale-110 hover:-translate-y-2 transition"
       />
     </div>
@@ -128,6 +131,7 @@ const AboutUs = () => {
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(30,30,30,0.7), rgba(30,30,30,1)), url(${sec4Bg})`,
         }}
+        aria-label="Background section with gradient overlay"
       >
         <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm "></div>
       </div>
