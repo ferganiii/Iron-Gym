@@ -28,7 +28,6 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center"
           >
-            <h3 className="text-xl font-bold mb-4 text-orange-500 uppercase hidden sm:block">Quick Links</h3>
             <ul className="text-xs sm:text-sm lg:text-xl flex flex-col font-semibold items-center space-y-1 sm:space-y-2">
               {[
                 { to: "/exercise", label: "Exercises" },
