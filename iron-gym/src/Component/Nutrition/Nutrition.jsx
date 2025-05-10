@@ -104,7 +104,6 @@ export default function Nutrition() {
       <Supplements />
 
 
-{/* سكشن لانظمة الغذاآية */}
       <NutritionProgram/>
     </>
   );

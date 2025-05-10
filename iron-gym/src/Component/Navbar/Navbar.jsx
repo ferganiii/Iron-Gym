@@ -19,11 +19,9 @@ export default function Navbar() {
   const handleLogout = () => {
     try {
       setToken(null);
-      // Clear any other user-related data if needed
       navigate("/login");
     } catch (error) {
       console.error("Error during logout:", error);
-      // You might want to show an error message to the user here
     }
   };
 
@@ -34,13 +32,10 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <nav className="bg-white border-gray-200 dark:bg-black fixed top-0 left-0 w-full z-50 shadow-md">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          {/* Logo */}
           <img src={logo} className="h-20 w-20" alt="Logo" />
 
-          {/* زر القائمة للموبايل */}
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
@@ -67,7 +62,6 @@ export default function Navbar() {
             </svg>
           </button>
 
-          {/* القائمة */}
           <div
             className={`${
               isOpen ? "block" : "hidden"
@@ -87,7 +81,6 @@ export default function Navbar() {
                   </li>
                 ))}
 
-                {/* زر تسجيل الخروج - يظهر داخل القائمة في الموبايل */}
                 <li className="md:hidden mt-4">
                   <button
                     onClick={handleLogout}
@@ -100,7 +93,6 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* زر تسجيل الخروج - يظهر فقط في الشاشات الكبيرة */}
           {token && (
             <div className="hidden md:block">
               <button
@@ -114,7 +106,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* تعويض ارتفاع الـ Navbar حتى لا يغطي المحتوى */}
       <div className="pt-20"></div>
     </>
   );

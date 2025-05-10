@@ -24,7 +24,7 @@ export default function SupplementDetails() {
       return res.data.docs;
     },
     staleTime: 1000 * 60 * 5,
-    enabled: !!id && !!token, // عشان ميتنفذش قبل ما التوكن يوصل
+    enabled: !!id && !!token, 
   });
 
   if (isLoading) return <Loading />;
@@ -33,7 +33,6 @@ export default function SupplementDetails() {
   return (
     <section className="bg-[rgb(102,102,102,.3)]">
       <div className="container mx-auto p-4">
-        {/* صورة المكمل */}
         <div className="p-4 flex justify-center items-center">
           <img
             src={supplementDetails.image }
@@ -42,21 +41,18 @@ export default function SupplementDetails() {
           />
         </div>
 
-        {/* اسم المكمل */}
         <div className="mb-16">
           <h2 className="text-xl lg:text-4xl font-bold text-center my-6 font-[Angkor]">
             {supplementDetails.name}
           </h2>
         </div>
 
-        {/* تعريف المكمل */}
         <div className="border-2 border-orange-500 w-full mx-auto rounded-2xl mb-8 shadow-md p-4">
           <h2 className="text-xl lg:text-4xl font-bold text-center my-6 font-[Angkor]">
             {supplementDetails.Definition}
           </h2>
         </div>
 
-        {/* التفاصيل الأخرى */}
       <div className="text-xl grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg shadow-md">
   {supplementDetails.dailyRequirement && (
     <div className="text-lg lg:text-4xl">

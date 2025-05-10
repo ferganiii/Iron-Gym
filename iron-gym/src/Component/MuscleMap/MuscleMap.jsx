@@ -19,24 +19,24 @@ import bg from '../../assets/bg1111.jpg';
 import MuchaTseBle from '../../assets/MuchaTseBle.jpg';
 import Top10exercise from '../Top10exercise/Top10exercise';
 export default function MuscleMap() {
-    const muscleImages = [
-        { name: 'Triceps', image: tricps },
-        { name: 'Chest', image: chest },
-        { name: 'Biceps', image: Bicps },
-        { name: 'Hamstrings', image: leg },
-        { name: 'Back', image: back },
-        { name: 'Quads', image: qads },
-        { name: 'Trapezius', image: trapizes },
-        { name: 'Shoulders', image: sholder },
-        { name: 'Glutes', image: glats },
-        { name: 'Abs', image: aps },
-        { name: 'Forearms', image: forearms },
-        { name: 'Adductors', image: adductors },
-        { name: 'Calves', image: calves },
-        { name: 'Lower Back', image: lawerBack },
-       
-      ];
-      
+  const muscleImages = [
+    { name: 'Triceps', image: tricps },
+    { name: 'Chest', image: chest },
+    { name: 'Biceps', image: Bicps },
+    { name: 'Hamstrings', image: leg },
+    { name: 'Back', image: back },
+    { name: 'Quads', image: qads },
+    { name: 'Trapezius', image: trapizes },
+    { name: 'Shoulders', image: sholder },
+    { name: 'Glutes', image: glats },
+    { name: 'Abs', image: aps },
+    { name: 'Forearms', image: forearms },
+    { name: 'Adductors', image: adductors },
+    { name: 'Calves', image: calves },
+    { name: 'Lower Back', image: lawerBack },
+
+  ];
+
   const navigate = useNavigate();
 
   const settings = {
@@ -46,7 +46,7 @@ export default function MuscleMap() {
     arrows: false,
     slidesToScroll: 2,
     slidesToShow: 6,
-  
+
     responsive: [
       {
         breakpoint: 1024,
@@ -77,25 +77,24 @@ export default function MuscleMap() {
       }
     ]
   };
-  
+
   const handleMuscleClick = (muscleName) => {
-    navigate(`/exercise/${muscleName}`); // التنقل إلى صفحة التمارين للعضلة
+    navigate(`/exercise/${muscleName}`);
   };
 
   return (
 
-  
-   
-      
-      <section className='bg-[rgb(102,102,102,.3)]'>
-   <div className="relative w-full h-screen overflow-hidden mb-12">
-  {/* الصورة */}
-  <img
-    src={bg}
-    alt="background"
-    className="absolute top-0 left-0 w-full h-full object-cover object-left"
-  />
-  <div className="absolute bottom-0 left-0 w-full">
+
+
+
+    <section className='bg-[rgb(102,102,102,.3)]'>
+      <div className="relative w-full h-screen overflow-hidden mb-12">
+        <img
+          src={bg}
+          alt="background"
+          className="absolute top-0 left-0 w-full h-full object-cover object-left"
+        />
+        <div className="absolute bottom-0 left-0 w-full">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#273036"
@@ -104,56 +103,43 @@ export default function MuscleMap() {
             ></path>
           </svg>
         </div>
-  {/* الـ Overlay للنص */}
-  <div className="absolute inset-0 bg-black/15 flex flex-col justify-center items-start px-8 sm:px-16 md:px-24">
-    <h1 className="lg:text-4xl text-3xl font-semibold text-white mb-4">
-      Exercise&nbsp;&nbsp;Guides And Videos
-    </h1>
-    <p className="text-xl sm:text-2xl text-white mb-6">
-      Explore by muscle groups
-    </p>
-    <h2 className="lg:text-5xl text-3xl font-extrabold text-white leading-tight tracking-wider">
-      BREATH,<br />
-      TRAIN,<br />
-      ACHIEVE.
-    </h2>
-  </div>
-</div>
-
-
-
-
-
-
-  <div className='container mx-auto '>
-  <div className="flex justify-center w-full">
-  <div className="w-full sm:w-11/12 px-2">
-    <Slider {...settings}>
-      {muscleImages.map((muscle, index) => (
-        <div key={index} className="flex justify-center">
-          <Link to="" onClick={() => handleMuscleClick(muscle.name)}>
-            <img
-              src={muscle.image}
-              alt=""
-              className="lg:w-44 lg:h-44 w-20 pb-3
-               object-cover rounded-full hover:scale-110 transition-transform duration-300"
-            />
-          </Link>
+        <div className="absolute inset-0 bg-black/15 flex flex-col justify-center items-start px-8 sm:px-16 md:px-24">
+          <h1 className="lg:text-4xl text-3xl font-semibold text-white mb-4">
+            Exercise&nbsp;&nbsp;Guides And Videos
+          </h1>
+          <p className="text-xl sm:text-2xl text-white mb-6">
+            Explore by muscle groups
+          </p>
+          <h2 className="lg:text-5xl text-3xl font-extrabold text-white leading-tight tracking-wider">
+            BREATH,<br />
+            TRAIN,<br />
+            ACHIEVE.
+          </h2>
         </div>
-      ))}
-    </Slider>
-  </div>
-</div>
+      </div>
+      <div className='container mx-auto '>
+        <div className="flex justify-center w-full">
+          <div className="w-full sm:w-11/12 px-2">
+            <Slider {...settings}>
+              {muscleImages.map((muscle, index) => (
+                <div key={index} className="flex justify-center">
+                  <Link to="" onClick={() => handleMuscleClick(muscle.name)}>
+                    <img
+                      src={muscle.image}
+                      alt=""
+                      className="lg:w-44 lg:h-44 w-20 pb-3
+               object-cover rounded-full hover:scale-110 transition-transform duration-300"
+                    />
+                  </Link>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
 
-<Top10exercise/>
-  </div>
+        <Top10exercise />
+      </div>
+    </section>
 
-  
-      
-      </section>
-
-
-    
-    
   );
 }

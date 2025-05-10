@@ -146,13 +146,11 @@ const Calculators = () => {
         onSubmit={formik.handleSubmit}
         className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10"
       >
-        {/* Left Column - Body Composition */}
         <div>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 mb-4 md:mb-6">
             Body Composition
           </h3>
 
-          {/* Gender */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Gender *</label>
             <div className="flex flex-wrap gap-2 md:gap-4">
@@ -186,7 +184,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Age */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Age *</label>
             <input
@@ -203,7 +200,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Weight */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Weight (kg) *</label>
             <input
@@ -220,7 +216,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Height */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Height (cm) *</label>
             <input
@@ -237,7 +232,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Body Fat */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Body Fat (%) *</label>
             <input
@@ -259,13 +253,11 @@ const Calculators = () => {
           </div>
         </div>
 
-        {/* Right Column - Your Goal */}
         <div>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-500 mb-4 md:mb-6">
             Your Goal
           </h3>
 
-          {/* Main Goal */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg mt-4 md:mt-24">Your Main Goal *</label>
             <div className="flex flex-wrap gap-2 md:gap-4">
@@ -291,7 +283,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Protein Quantity */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Protein Quantity *</label>
             <div className="flex flex-wrap gap-2 md:gap-4">
@@ -325,7 +316,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Activity Level */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Activity Level *</label>
             <div className="flex flex-wrap gap-2 md:gap-4">
@@ -370,7 +360,6 @@ const Calculators = () => {
             )}
           </div>
 
-          {/* Steps */}
           <div className="mb-4 md:mb-6">
             <label className="block mb-2 text-base md:text-lg">Steps per Day (Optional)</label>
             <input
@@ -383,14 +372,12 @@ const Calculators = () => {
           </div>
         </div>
 
-        {/* Error Message */}
         {error && (
           <div className="col-span-1 md:col-span-2 mt-4 md:mt-6 p-3 md:p-4 bg-red-200 text-red-700 rounded-lg text-base md:text-xl">
             {error}
           </div>
         )}
 
-        {/* Submit Button */}
         <div className="col-span-1 md:col-span-2 text-center mt-2 md:mt-4">
           <button
             type="submit"

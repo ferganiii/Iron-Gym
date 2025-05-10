@@ -7,14 +7,12 @@ export default function Footer() {
     <footer className="bg-[rgb(36,37,37,1)]  text-white ">
       <div className="container  pt-10 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
-          {/* العمود الأول */}
           <div className="text-center">
             <h2 className="mb-6 font-AlfaSlabOne text-3xl lg:text-5xl uppercase">IRON GYM</h2>
             <p className="pb-10 font-archivo text-gray-200 font-bold text-sm lg:text-lg">
               "At Iron Gym, we are committed to helping you achieve your fitness goals through expert guidance and continuous motivation. With specialized training programs, personalized nutrition tips, and unlimited support, we work together to achieve noticeable results and elevate your fitness to new heights."           </p>
           </div>
 
-          {/* العمود الثاني - الروابط */}
           <div className="text-center">
             <ul className="lg:text-2xl text-sm flex flex-col font-semibold items-center space-y-2">
               {[
@@ -33,13 +31,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* العمود الثالث - الصورة */}
           <div className="flex justify-end">
             <img className="lg:h-52 h-20 object-contain" src={logo} alt="Iron Gym Logo" />
           </div>
         </div>
 
-        {/* الحقوق */}
         <div className="flex justify-center sm:justify-between te bg-orange-600 text-center p-6 mt-10 text-gray-900 ">
           <span className="text-base">
             © {new Date().getFullYear()}{" "}

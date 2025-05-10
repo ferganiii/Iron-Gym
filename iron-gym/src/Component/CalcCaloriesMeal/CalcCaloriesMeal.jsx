@@ -77,7 +77,6 @@ export default function DailyMealPlanner() {
     setMeals(updatedMeals);
   };
 
-  // Calculate totals
   const totals = meals.reduce((acc, meal, mealIndex) => {
     meal.foods.forEach((food, foodIndex) => {
       const quantity = quantities[`${mealIndex}-${foodIndex}`] || 100;
@@ -108,7 +107,6 @@ export default function DailyMealPlanner() {
                 {meal.showSearch ? "Cancel" : "+ Add Food"}
               </button>
   
-              {/* Search Input */}
               {meal.showSearch && (
                 <div className="mt-4 relative">
                   <input
@@ -197,7 +195,6 @@ export default function DailyMealPlanner() {
           ))}
         </div>
   
-        {/* Totals */}
         <div className="bg-orange-500 border-gray-100 p-4 rounded-lg shadow-md mt-6">
           <h2 className="text-xl font-bold text-center text-black">Total Nutritional Values</h2>
           <div className="overflow-x-auto">

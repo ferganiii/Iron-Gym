@@ -1,4 +1,3 @@
-// MealPlan.jsx
 import React, { useContext, useEffect, useState } from 'react';
 import FatsProduc from "../../assets/FatsProduc.jpeg";
 import { Link } from 'react-router-dom';
@@ -20,7 +19,6 @@ export default function MealPlan() {
 
   const api = "https://gym-production-8217.up.railway.app/api/cutting";
 
-  // Fetch Meal Plans
   async function getMealPlans() {
     try {
       const { data } = await axios.get(api, {
@@ -40,7 +38,6 @@ export default function MealPlan() {
   const calculateTotalMealPlanCalories = (plan) =>
     plan.meals.reduce((acc, meal) => acc + calculateTotalCalories(meal), 0);
 
-  // Add Meal Plan
   async function AddMealPlan() {
     try {
       const { data } = await axios.post(api, newMealPlan, {
@@ -55,7 +52,6 @@ export default function MealPlan() {
     }
   }
 
-  // Delete Meal Plan
   async function DeleteMealPlan(id) {
     try {
       await axios.delete(`${api}/${id}`, {
@@ -67,7 +63,6 @@ export default function MealPlan() {
     }
   }
 
-  // Update Meal Plan
   async function UpdateMealPlan() {
     try {
       const { data } = await axios.put(`${api}/${editingPlan._id}`, editingPlan, {
@@ -166,7 +161,6 @@ export default function MealPlan() {
           )}
         </Accordion>
 
-        {/* Edit Section */}
         {editingPlan && (
           <div className="mt-10 p-6 bg-yellow-100 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4">✏️ Edit Meal Plan</h2>
@@ -203,7 +197,6 @@ export default function MealPlan() {
           </div>
         )}
 
-        {/* Add Section */}
         <div className="mt-10 p-6 bg-gray-500 rounded-lg shadow-md">
   <h2 className="text-2xl font-bold mb-4">➕ Add New Meal Plan</h2>
   <form onSubmit={(e) => { e.preventDefault(); AddMealPlan(); }}>

@@ -30,7 +30,7 @@ const EditSystemModal = ({ systemId, onClose }) => {
         exercises: exercises.split(','),
       });
       console.log('System updated:', res.data);
-      onClose(); // Close the modal after updating
+      onClose(); 
     } catch (error) {
       console.error('Error updating system:', error);
     }

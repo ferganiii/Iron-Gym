@@ -27,7 +27,7 @@ export default function ContactUs() {
 
   const sendToEmail = async (e) => {
     e.preventDefault();
-    
+
     if (!validateEmail(formData.email)) {
       setSubmitStatus({ type: 'error', message: 'Please enter a valid email address' });
       return;
@@ -84,7 +84,6 @@ export default function ContactUs() {
         </motion.p>
 
         <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-          {/* Form Section */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -146,7 +145,6 @@ export default function ContactUs() {
             </form>
           </motion.div>
 
-          {/* Contact Info Section */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -202,7 +200,6 @@ export default function ContactUs() {
         </div>
       </motion.div>
 
-      {/* Blog Section */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -219,7 +216,7 @@ export default function ContactUs() {
             <p className="text-gray-200 font-semibold text-sm sm:text-base">
               Learn about the best nutrition strategies to fuel muscle growth, including protein intake and meal timing.
             </p>
-            <Link to="/pdf/Nutrition Tips.pdf">
+            <Link to="/pdf/Nutrition-Tips.pdf" target="_blank">
               <button className="mt-3 sm:mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-1 sm:py-2 px-3 sm:px-4 rounded-md transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                 Read Article
               </button>
@@ -230,7 +227,7 @@ export default function ContactUs() {
             <p className="text-gray-200 font-semibold text-sm sm:text-base">
               Discover the top cardio exercises for fat loss and improving cardiovascular health, with tips on how to incorporate them into your routine.
             </p>
-            <Link to="/pdf/Cardio Exercises.pdf">
+            <Link to="/pdf/Cardio-Exercises.pdf" target="_blank">
               <button className="mt-3 sm:mt-4 bg-orange-600 hover:bg-orange-700 text-black font-bold py-1 sm:py-2 px-3 sm:px-4 rounded-md transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                 Read Article
               </button>
@@ -238,6 +235,8 @@ export default function ContactUs() {
           </div>
         </div>
       </motion.div>
+
+
     </div>
   );
 }

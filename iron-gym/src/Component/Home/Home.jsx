@@ -19,7 +19,6 @@ export default function Home() {
     <>
       <div className="bg-black text-white min-h-screen  "
         style={{ backgroundImage: `url(${bg})` }}>
-        {/* الصورة الرئيسية */}
         <div className="relative w-full h-screen bg-black overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
@@ -45,19 +44,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* القسم الأول */}
         <section className="bg-[rgb(102,102,102,.3)]  py-16">
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-28 md:gap-16 items-center relative">
 
-              {/* الدائرة تحت النص */}
               <div className={`absolute  transform  z-0 ${style.circle}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 150 150">
                   <circle cx="75" cy="75" r="75" fill="#666666" />
                 </svg>
               </div>
 
-              {/* النص */}
               <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
                 <h2 className="lg:text-4xl text-xl font-archivo font-bold">
                   BUILD YOUR BODY & <br />
@@ -71,7 +67,6 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* الصورة */}
               <div className="relative flex justify-center pl-24 me-11 mt-16">
                 <Link to="/exercise">
                   <img
@@ -85,11 +80,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* القسم الثاني */}
         <section className="py-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
           <div className="container mx-auto px-4 sm:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
-              {/* الصورة */}
               <div className="relative flex justify-center pt-36 overflow-hidden">
                 <img
                   src={man1Home}
@@ -101,7 +94,6 @@ export default function Home() {
                 <div className={style.dotedOrange}></div>
               </div>
 
-              {/* النص */}
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className={style.BgCircle}>
                   <Link to="/calculators" className="group inline-block">
@@ -132,11 +124,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* القسم الثالث */}
         <section className="py-16 sm:py-32 bg-[rgb(102,102,102,.3)]">
           <div className="container mx-auto px-4 sm:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
-              {/* النص */}
               <div className="md:w-1/2 space-y-6 md:space-y-8">
                 <h2 className="lg:text-4xl text-2xl font-bold font-archivo md:text-3xl">
                   STEP UP YOUR <br />
@@ -149,8 +139,6 @@ export default function Home() {
                   <Link to="/nutrition">NUTRITIONS</Link>
                 </button>
               </div>
-
-              {/* الصورة */}
               <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
                 <Link to="/nutrition">
                   <img

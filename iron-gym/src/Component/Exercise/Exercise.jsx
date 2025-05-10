@@ -12,12 +12,10 @@ export default function Exercise() {
   return (
     <>
       <section className='bg-[rgb(102,102,102,.3)] relative'>
-        {/* Hero Section */}
         <div
   className=" h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
   style={{ backgroundImage: `url(${background})` }}
 >
-  {/* BE FIT Animation */}
   <motion.h2
     className="text-3xl md:text-5xl font-[Montserrat] mb-5 ms-8"
     initial={{ opacity: 0, scale: 0.3, rotate: -90 }}
@@ -34,7 +32,6 @@ export default function Exercise() {
     BE FIT ,
   </motion.h2>
 
-  {/* BE STRONG Animation */}
   <motion.h2
     className="text-3xl md:text-5xl font-[Montserrat] text-orange-500 font-bold ms-8"
     style={{ textShadow: "6px 5px 1px rgba(249,115,22,0.5)" }}
@@ -55,7 +52,6 @@ export default function Exercise() {
 
         <div className='container mx-auto mt-20 relative overflow-hidden'> 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4'>
-            {/* القسم الأول */}
             <div>
               <div className="flex">
                 <div className="relative">
@@ -75,13 +71,12 @@ export default function Exercise() {
                 </div>
                 <Link to="/MuscleMap">
                 <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                  Explore Muscles group >>
+                  Explore Muscles group &gt;&gt;
                 </button>
                   </Link>
               </div>
             </div>
 
-            {/* القسم الثاني */}
             <div className="ms-auto w-auto rounded-lg shadow-sm py-8">
               <div className={`relative ${style['clip-msls']}`}>
                 <div className={`absolute -top-32 lg:-top-40 left-2/4 ${style.bord}`}>
@@ -93,9 +88,7 @@ export default function Exercise() {
             </div>
           </div>
 
-          {/* القسمين الإضافيين */}
           
-          {/* القسم الثالث */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 mt-20'>
             <div>
               <div className="flex">
@@ -116,7 +109,7 @@ export default function Exercise() {
                 </div>
                 <button className=" z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
                  <Link to="/ExerciseSystem">
-                 Explore System >>
+                 Explore System &gt;&gt;
                  </Link>   
                 </button>
               </div>
@@ -133,7 +126,6 @@ export default function Exercise() {
             </div>
           </div>
 
-          {/* القسم الرابع */}
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 mt-20'>
             <div>
               <div className="flex">
@@ -154,7 +146,7 @@ export default function Exercise() {
                 </div>
                 <Link to="/Cardio">
                 <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                Explore Cardio >>
+                Explore Cardio &gt;&gt;
                 </button>
                 </Link>
               </div>
@@ -192,7 +184,7 @@ export default function Exercise() {
                 </div>
                 <Link to="/Challenges">
                 <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                Explore Challenges >>
+                Explore Challenges &gt;&gt;
                 </button>
                 </Link>
               </div>

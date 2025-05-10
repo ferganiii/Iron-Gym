@@ -15,7 +15,7 @@ import ContactUs from './Component/ContactUs/ContactUs';
 import Login from './Component/Login/Login';
 import Signup from './Component/SignUp/SignUp';
 import NotFound from './Component/NotFound/NotFound';
-import Dashboard from './pages/Dashboard/Dashboard'; // ✅ إضافة الداشبورد
+import Dashboard from './pages/Dashboard/Dashboard'; 
 import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
 import UserContextProvider from './Context/UserContext';
 import ProteinsDash from './pages/Dashboard/ProteinsDash';
@@ -27,7 +27,7 @@ import ExerciseGuide from './Component/ExerciseGuide/ExerciseGuide';
 import MuscleMap from './Component/MuscleMap/MuscleMap';
 import { MuscleProvider } from './Context/MuscleContext';
 import ExerciseDetails from './Component/ExerciseDetails/ExerciseDetails';
-import CalorieResultPage from "./Component/CalorieResultPage/CalorieResultPage"; // تأكد من المسار الصحيح
+import CalorieResultPage from "./Component/CalorieResultPage/CalorieResultPage"; 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Cardio from './Component/Cardio/Cardio';  
 import ExercisePPL from './Component/ExercisePPL/ExercisePPL';
@@ -73,12 +73,11 @@ function App() {
       ],
     },
   
-    // ✅ تنظيم مسارات الداشبورد كـ Nested Routes
     {
       path: "/dashboard",
       element: <ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>,
       children: [
-        { index: true, element: < CarbDash/> }, // عنصر افتراضي
+        { index: true, element: < CarbDash/> }, 
         { path: "proteins", element: <ProteinsDash /> },       
       ]
     }

@@ -27,7 +27,6 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
   });
   const [isAdding, setIsAdding] = useState(false);
 
-  // Fetch data from API
   useEffect(() => {
     if (!token) {
       console.warn("⚠️ No token found! Skipping API request.");
@@ -51,7 +50,6 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
       .catch((err) => console.error("❌ Error fetching data:", err));
   }, [apiUrl, token]);
 
-  // Open edit window and fill data
   const handleEditClick = (item) => {
     setEditItem(item._id);
     setFormData({
@@ -70,7 +68,6 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
     });
   };
 
-  // Update data after editing
   const handleSave = async () => {
     if (!editItem) return;
 
@@ -97,7 +94,6 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
     }
   };
 
-  // Delete item
   const handleDelete = async (id) => {
     try {
       if (!token) {
@@ -123,12 +119,10 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
     }
   };
 
-  // Add new item
   const handleAdd = async () => {
     try {
       if (!token) throw new Error("No token found");
 
-      // التحقق من الحقول الفارغة
       const newErrors = {
         name: !formData.name,
         sthermal: !formData.sthermal,
