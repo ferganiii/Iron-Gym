@@ -8,7 +8,7 @@ import { Card } from "flowbite-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-
+import StatsSection from "./StatsSection";
 
 const AboutUs = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -68,7 +68,7 @@ const AboutUs = () => {
             className="relative z-10 px-6 sm:pl-10 md:pl-28"
           >
             <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-bold">
-              About Us 
+              About Us
             </h1>
             <motion.div
               initial={{ width: "0%" }}
@@ -139,7 +139,7 @@ const AboutUs = () => {
               </Card>
             </motion.div>
           </div>
-
+          <StatsSection />
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-20 px-4 sm:px-10 md:px-16 lg:px-20 py-16 pb-6 bg-[#1e1e1e] text-white">
             <motion.div
               {...useScrollAnimation()}
@@ -285,5 +285,3 @@ const AboutUs = () => {
   );
 };
 export default AboutUs;
-
-
