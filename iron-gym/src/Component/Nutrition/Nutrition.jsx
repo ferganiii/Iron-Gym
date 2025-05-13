@@ -101,7 +101,7 @@ export default function Nutrition() {
         </div>
       </section>
 
-      {/* <Supplements /> */}
+      <Supplements />
 
 
       <NutritionProgram/>
