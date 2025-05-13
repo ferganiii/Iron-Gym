@@ -30,7 +30,7 @@ export default function Nutrition() {
           style={{ backgroundImage: `url(${background})` }}
         >
           <motion.h1
-            className="lg:text-8xl max-md:text-4xl max-sm:text-3xl text-white font-Antic"
+            className="lg:text-8xl text-5xl  text-white font-Antic"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -101,7 +101,7 @@ export default function Nutrition() {
         </div>
       </section>
 
-      <Supplements />
+      {/* <Supplements /> */}
 
 
       <NutritionProgram/>

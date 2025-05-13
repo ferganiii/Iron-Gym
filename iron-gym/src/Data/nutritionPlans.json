@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Cutting Plan",
+    "meals": [
+      {
+        "name": "First Meal: Breakfast",
+        "items": [
+          { "name": "Whey Protein", "amount": "1 scoop", "protein": 24, "carb": 3, "fat": 1, "kcal": 120 },
+          { "name": "Oats", "amount": "125g", "protein": 15, "carb": 73.75, "fat": 8.63, "kcal": 433.75 },
+          { "name": "Walnut", "amount": "30g", "protein": 4.56, "carb": 4.08, "fat": 19, "kcal": 196 }
+        ],
+        "method": "Mix the oats with nuts and protein, then add water and stir."
+      },
+      {
+        "name": "Second Meal: Snack",
+        "items": [
+          { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 },
+          { "name": "Walnut", "amount": "30g", "protein": 4.56, "carb": 4.08, "fat": 19, "kcal": 196.8 },
+          { "name": "Boiled Egg", "amount": "2 eggs", "protein": 12, "carb": 2, "fat": 10, "kcal": 140 },
+          { "name": "Multivitamin", "amount": "1 tablet", "protein": 0, "carb": 0, "fat": 0, "kcal": 0 }
+        ]
+      },
+      {
+        "name": "Third Meal: Lunch",
+        "items": [
+          { "name": "Chicken Breast", "amount": "200g", "protein": 48, "carb": 0, "fat": 3.6, "kcal": 242 },
+          { "name": "Basmati Rice", "amount": "35g", "protein": 2.52, "carb": 26.95, "fat": 0.28, "kcal": 121 },
+          { "name": "Boiled Egg", "amount": "1 egg", "protein": 6, "carb": 1, "fat": 5, "kcal": 77 },
+          { "name": "Salad", "amount": "Medium bowl", "protein": 0, "carb": 5, "fat": 3, "kcal": 50 }
+        ]
+      },
+      {
+        "name": "Fourth Meal: Pre-workout Snack",
+        "items": [
+          { "name": "Coffee (no sugar)", "amount": "1 cup", "protein": 0, "carb": 0, "fat": 0, "kcal": 2 },
+          { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 }
+        ]
+      },
+      {
+        "name": "Fifth Meal: Post-workout",
+        "items": [
+          { "name": "Chicken Breast", "amount": "200g", "protein": 48, "carb": 0, "fat": 3.6, "kcal": 242 },
+          { "name": "Basmati Rice", "amount": "35g", "protein": 2.52, "carb": 26.95, "fat": 0.28, "kcal": 121 },
+          { "name": "Salad", "amount": "Medium bowl", "protein": 0, "carb": 5, "fat": 3, "kcal": 50 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bulking Plan",
+    "meals": [
+      {
+        "name": "First Meal: Breakfast",
+        "items": [
+          { "name": "Oats", "amount": "150g", "protein": 18, "carb": 88, "fat": 10, "kcal": 520 },
+          { "name": "Peanut Butter", "amount": "2 tbsp", "protein": 8, "carb": 6, "fat": 16, "kcal": 188 },
+          { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 }
+        ]
+      },
+      {
+        "name": "Second Meal: Snack",
+        "items": [
+          { "name": "Greek Yogurt", "amount": "200g", "protein": 20, "carb": 8, "fat": 6, "kcal": 146 },
+          { "name": "Honey", "amount": "1 tbsp", "protein": 0, "carb": 17, "fat": 0, "kcal": 64 },
+          { "name": "Walnuts", "amount": "30g", "protein": 4.56, "carb": 4, "fat": 19, "kcal": 196 }
+        ]
+      },
+      {
+        "name": "Third Meal: Lunch",
+        "items": [
+          { "name": "Beef Steak", "amount": "200g", "protein": 50, "carb": 0, "fat": 12, "kcal": 350 },
+          { "name": "Brown Rice", "amount": "50g", "protein": 4, "carb": 38, "fat": 1.5, "kcal": 180 },
+          { "name": "Avocado", "amount": "50g", "protein": 1, "carb": 4, "fat": 8, "kcal": 80 }
+        ]
+      },
+      {
+        "name": "Fourth Meal: Pre-workout",
+        "items": [
+          { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 },
+          { "name": "Dates", "amount": "3 pieces", "protein": 1.5, "carb": 20, "fat": 0, "kcal": 90 }
+        ]
+      },
+      {
+        "name": "Fifth Meal: Post-workout",
+        "items": [
+          { "name": "Whey Protein", "amount": "1 scoop", "protein": 24, "carb": 3, "fat": 1, "kcal": 120 },
+          { "name": "Sweet Potato", "amount": "100g", "protein": 2, "carb": 20, "fat": 0, "kcal": 90 }
+        ]
+      }
+    ]
+  },
+  {
+  "id": 3,
+  "name": "Cutting Plan 2",
+  "meals": [
+    {
+      "name": "First Meal: Breakfast",
+      "items": [
+        { "name": "Scrambled Eggs", "amount": "3 eggs", "protein": 18, "carb": 1, "fat": 15, "kcal": 210 },
+        { "name": "Spinach", "amount": "100g", "protein": 2.9, "carb": 3.6, "fat": 0.5, "kcal": 23 },
+        { "name": "Avocado", "amount": "50g", "protein": 1, "carb": 4, "fat": 8, "kcal": 80 }
+      ]
+    },
+    {
+      "name": "Second Meal: Snack",
+      "items": [
+        { "name": "Greek Yogurt", "amount": "150g", "protein": 15, "carb": 6, "fat": 5, "kcal": 130 },
+        { "name": "Almonds", "amount": "20g", "protein": 4, "carb": 3, "fat": 10, "kcal": 120 }
+      ]
+    },
+    {
+      "name": "Third Meal: Lunch",
+      "items": [
+        { "name": "Salmon", "amount": "200g", "protein": 40, "carb": 0, "fat": 22, "kcal": 280 },
+        { "name": "Quinoa", "amount": "50g", "protein": 8, "carb": 30, "fat": 2, "kcal": 222 },
+        { "name": "Salad", "amount": "Medium bowl", "protein": 2, "carb": 5, "fat": 5, "kcal": 50 }
+      ]
+    },
+    {
+      "name": "Fourth Meal: Pre-workout",
+      "items": [
+        { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 }
+      ]
+    },
+    {
+      "name": "Fifth Meal: Post-workout",
+      "items": [
+        { "name": "Whey Protein", "amount": "1 scoop", "protein": 24, "carb": 3, "fat": 1, "kcal": 120 },
+        { "name": "Sweet Potato", "amount": "100g", "protein": 2, "carb": 20, "fat": 0, "kcal": 90 }
+      ]
+    }
+  ]
+},
+{
+  "id": 4,
+  "name": "Bulking Plan 2",
+  "meals": [
+    {
+      "name": "First Meal: Breakfast",
+      "items": [
+        { "name": "Oats", "amount": "200g", "protein": 20, "carb": 90, "fat": 10, "kcal": 600 },
+        { "name": "Peanut Butter", "amount": "2 tbsp", "protein": 8, "carb": 6, "fat": 16, "kcal": 188 },
+        { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 }
+      ]
+    },
+    {
+      "name": "Second Meal: Snack",
+      "items": [
+        { "name": "Greek Yogurt", "amount": "200g", "protein": 20, "carb": 8, "fat": 6, "kcal": 146 },
+        { "name": "Honey", "amount": "1 tbsp", "protein": 0, "carb": 17, "fat": 0, "kcal": 64 },
+        { "name": "Walnuts", "amount": "30g", "protein": 4.56, "carb": 4, "fat": 19, "kcal": 196 }
+      ]
+    },
+    {
+      "name": "Third Meal: Lunch",
+      "items": [
+        { "name": "Beef Steak", "amount": "250g", "protein": 62.5, "carb": 0, "fat": 15, "kcal": 450 },
+        { "name": "Brown Rice", "amount": "70g", "protein": 5.6, "carb": 50, "fat": 2, "kcal": 225 },
+        { "name": "Avocado", "amount": "60g", "protein": 1.2, "carb": 5, "fat": 12, "kcal": 108 }
+      ]
+    },
+    {
+      "name": "Fourth Meal: Pre-workout",
+      "items": [
+        { "name": "Banana", "amount": "100g", "protein": 1.1, "carb": 23, "fat": 0, "kcal": 89 },
+        { "name": "Dates", "amount": "4 pieces", "protein": 2, "carb": 28, "fat": 0, "kcal": 120 }
+      ]
+    },
+    {
+      "name": "Fifth Meal: Post-workout",
+      "items": [
+        { "name": "Whey Protein", "amount": "2 scoops", "protein": 48, "carb": 6, "fat": 2, "kcal": 240 },
+        { "name": "Sweet Potato", "amount": "150g", "protein": 3, "carb": 30, "fat": 0, "kcal": 135 }
+      ]
+    }
+  ]
+},
+{
+  "id": 5,
+  "name": "Cutting Plan 3",
+  "meals": [
+    {
+      "name": "First Meal: Breakfast",
+      "items": [
+        { "name": "Egg Whites", "amount": "5 egg whites", "protein": 20, "carb": 0, "fat": 0, "kcal": 100 },
+        { "name": "Oats", "amount": "100g", "protein": 10, "carb": 60, "fat": 6, "kcal": 400 },
+        { "name": "Strawberries", "amount": "100g", "protein": 1, "carb": 7, "fat": 0.5, "kcal": 35 }
+      ]
+    },
+    {
+      "name": "Second Meal: Snack",
+      "items": [
+        { "name": "Greek Yogurt", "amount": "200g", "protein": 15, "carb": 5, "fat": 3, "kcal": 110 },
+        { "name": "Chia Seeds", "amount": "10g", "protein": 1.2, "carb": 1.5, "fat": 3.3, "kcal": 60 }
+      ]
+    },
+    {
+      "name": "Third Meal: Lunch",
+      "items": [
+        { "name": "Chicken Breast", "amount": "200g", "protein": 48, "carb": 0, "fat": 3, "kcal": 242 },
+        { "name": "Sweet Potato", "amount": "100g", "protein": 2, "carb": 20, "fat": 0, "kcal": 90 },
+        { "name": "Broccoli", "amount": "100g", "protein": 3.7, "carb": 7, "fat": 0.4, "kcal": 34 }
+      ]
+    },
+    {
+      "name": "Fourth Meal: Pre-workout",
+      "items": [
+        { "name": "Apple", "amount": "1 medium", "protein": 0.5, "carb": 25, "fat": 0, "kcal": 95 }
+      ]
+    },
+    {
+      "name": "Fifth Meal: Post-workout",
+      "items": [
+        { "name": "Whey Protein", "amount": "1 scoop", "protein": 24, "carb": 3, "fat": 1, "kcal": 120 },
+        { "name": "Brown Rice", "amount": "50g", "protein": 4, "carb": 38, "fat": 1.5, "kcal": 180 }
+      ]
+    }
+  ]
+}
+]

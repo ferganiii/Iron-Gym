@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import milk from "../../assets/milk.png";
-import nutritionData from "../../Data/nutritionData.json"; 
 import NutritionTable from "../NutritionTable/NutritionTable";
 
 export default function DairyEgg() {

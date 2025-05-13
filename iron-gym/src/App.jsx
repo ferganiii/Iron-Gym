@@ -35,6 +35,7 @@ import ExerciseSystem from './Component/ExerciseSystem/ExerciseSystem';
 import CreateSystemModal from './Component/CreateSystemModal/CreateSystemModal';
 import Questions from './Component/Questions/Questions';
 import Challenges from './Component/Challenges/Challenges';
+import ScrollToTop from './Component/ScrollToTop/ScrollToTop';
 
 
 function App() {
@@ -86,17 +87,16 @@ function App() {
   
 
   return(
-<QueryClientProvider client={myClinet}>
+    <QueryClientProvider client={myClinet}>
     <UserContextProvider>
-       <MuscleProvider>
-         <RouterProvider router={router} />
-       </MuscleProvider>
-        </UserContextProvider>
-       
-        <ReactQueryDevtools />
-</QueryClientProvider>
-      
-       
+      <MuscleProvider>
+        <RouterProvider router={router}>
+        </RouterProvider>
+      </MuscleProvider>
+    </UserContextProvider>
+
+    <ReactQueryDevtools />
+  </QueryClientProvider>
    
   )
   

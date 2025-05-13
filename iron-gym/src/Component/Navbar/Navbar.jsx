@@ -32,8 +32,10 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Navbar */}
       <nav className="bg-white border-gray-200 dark:bg-black fixed top-0 left-0 w-full z-50 shadow-md">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+          {/* Logo */}
           <img src={logo} className="h-20 w-20" alt="Logo" />
 
           <button
@@ -63,9 +65,9 @@ export default function Navbar() {
           </button>
 
           <div
-            className={`${
-              isOpen ? "block" : "hidden"
-            } w-full md:flex md:items-center md:justify-center md:w-auto`}
+            className={`w-full md:w-auto transition-all duration-300 ease-in-out overflow-hidden ${
+              isOpen ? "max-h-96" : "max-h-0"
+            } md:max-h-full md:block`}
             id="navbar-default"
           >
             {token && (
@@ -75,6 +77,7 @@ export default function Navbar() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) => getNavLinkClass(isActive)}
+                      onClick={() => setIsOpen(false)} 
                     >
                       {link.label}
                     </NavLink>
@@ -83,7 +86,10 @@ export default function Navbar() {
 
                 <li className="md:hidden mt-4">
                   <button
-                    onClick={handleLogout}
+                    onClick={() => {
+                      handleLogout();
+                      setIsOpen(false);
+                    }}
                     className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md text-center"
                   >
                     LOG OUT
