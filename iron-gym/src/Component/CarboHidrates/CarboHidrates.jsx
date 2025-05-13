@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import carbImage from "../../assets/CarbProduc.jpeg"; 
-import nutritionData from "../../Data/nutritionData.json"; 
 import NutritionTable from "../NutritionTable/NutritionTable";
 
 export default function Carbohydrates() {

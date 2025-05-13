@@ -91,22 +91,23 @@ export default function ContactUs() {
             className="w-full md:w-1/2"
           >
             <form className="space-y-3 sm:space-y-4" onSubmit={sendToEmail}>
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-2 sm:p-3 border border-gray-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
-                required
-              />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+             className="w-full p-2 sm:p-3 border-1 border-orange-500 focus:border-orange-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
+              required
+               />
+
               <input
                 type="email"
                 name="email"
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-2 sm:p-3 border border-gray-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
+                className="w-full p-2 sm:p-3 border-1 border-orange-500 focus:border-orange-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
                 required
               />
               <input
@@ -115,7 +116,7 @@ export default function ContactUs() {
                 placeholder="Subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full p-2 sm:p-3 border border-gray-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
+                className="w-full p-2 sm:p-3 border-1 border-orange-500 focus:border-orange-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
                 required
               />
               <textarea
@@ -123,7 +124,7 @@ export default function ContactUs() {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full p-2 sm:p-3 border border-gray-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
+                className="w-full p-2 sm:p-3 border-1 border-orange-500 focus:border-orange-700 rounded-md bg-black/50 text-white focus:ring-2 focus:ring-orange-600 transition-all duration-300"
                 rows={4}
                 required
               />

@@ -62,7 +62,7 @@ export default function Home() {
                 <p className="text-gray-200 text-sm font-bold">
                   "Achieve your fitness goals with powerful workouts and expert guidance. Start your transformation today!"
                 </p>
-                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+                <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
                   <Link to="/exercise">EXPLORE EXERCISES</Link>
                 </button>
               </div>
@@ -115,7 +115,7 @@ export default function Home() {
                   our smart tools."
                 </p>
 
-                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+                <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
                   <Link to="/Calculators">CALCULATORS</Link>
                 </button>
               </div>
@@ -135,7 +135,7 @@ export default function Home() {
                 <p className="text-gray-200 text-lg font-bold">
                   "Fuel your body with the right nutrition and unlock your full potential!"
                 </p>
-                <button className="border font-bold text-xl md:text-2xl border-orange-600 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-500 transition-colors duration-300">
+                <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
                   <Link to="/nutrition">NUTRITIONS</Link>
                 </button>
               </div>
