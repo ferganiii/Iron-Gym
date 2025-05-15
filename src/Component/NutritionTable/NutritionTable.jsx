@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { UserContext } from "../../context/UserContext";
 import { LifeLine } from "react-loading-indicators";
 import Loading from "../Loading/Loading";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { UserContext } from "../../Context/UserContext";
 
 export default function NutritionTable({ title, bgImage, apiUrl }) {
   const [data, setData] = useState([]);
