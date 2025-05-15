@@ -14,11 +14,9 @@ import ContactUs from './Component/ContactUs/ContactUs';
 import Login from './Component/Login/Login';
 import Signup from './Component/SignUp/SignUp';
 import NotFound from './Component/NotFound/NotFound';
-import Dashboard from './pages/Dashboard/Dashboard'; 
 import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
 import UserContextProvider from './Context/UserContext';
-import ProteinsDash from './pages/Dashboard/ProteinsDash';
-import CarbDash from './pages/Dashboard/CarbDash';
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SupplementDetails from './Component/SupplementsDetails/SupplementsDetails';
 import Calculators from './Component/Calculators/Calculators';
@@ -73,14 +71,6 @@ function App() {
       ],
     },
   
-    {
-      path: "/dashboard",
-      element: <ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>,
-      children: [
-        { index: true, element: < CarbDash/> }, 
-        { path: "proteins", element: <ProteinsDash /> },       
-      ]
-    }
   ]);
   
   
