@@ -3,7 +3,6 @@ import Layout from './Component/LayOut/LayOut';
 import LayOut2 from './Component/LayOut2/LayOut2';
 import Home from './Component/Home/Home';
 import Nutrition from './Component/Nutrition/Nutrition';
-import Protein from './Component/protein/protein';
 import CarboHidrates from './Component/CarboHidrates/CarboHidrates';
 import Fats from './Component/Fats/Fats';
 import DairyEgg from './Component/DairyEgg/DairyEgg';
@@ -35,6 +34,7 @@ import CreateSystemModal from './Component/CreateSystemModal/CreateSystemModal';
 import Questions from './Component/Questions/Questions';
 import Challenges from './Component/Challenges/Challenges';
 import ScrollToTop from './Component/ScrollToTop/ScrollToTop';
+import Proteins from './Component/protein/Protein';
 
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
       children: [
         { index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },
         { path: "nutrition", element: <ProtectedRoute> <Nutrition /> </ProtectedRoute> },
-        { path: "nutrition/protein", element: <Protein /> },
+        { path: "nutrition/protein", element: <Proteins /> },
         { path: "nutrition/carb", element: <CarboHidrates /> },
         { path: "nutrition/fat", element: <Fats /> },
         { path: "nutrition/dairyEgg", element: <DairyEgg /> },
