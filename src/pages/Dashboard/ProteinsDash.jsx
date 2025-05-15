@@ -1,9 +1,9 @@
 
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../context/UserContext"; 
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Protein from "../../Component/protein/Protein";
+import { UserContext } from "../../Context/UserContext";
 
 const ProteinsDash = () => {
   const { token } = useContext(UserContext);
