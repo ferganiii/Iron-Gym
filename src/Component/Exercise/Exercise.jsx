@@ -13,44 +13,44 @@ export default function Exercise() {
     <>
       <section className='bg-[rgb(102,102,102,.3)] relative'>
         <div
-  className=" h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
-  style={{ backgroundImage: `url(${background})` }}
->
-  <motion.h2
-    className="text-3xl md:text-5xl font-[Montserrat] mb-5 ms-8"
-    initial={{ opacity: 0, scale: 0.3, rotate: -90 }}
-    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-    transition={{
-      duration: 1,
-      ease: "easeOut",
-      delay: 0.3,
-      type: "spring",
-      stiffness: 300,
-      damping: 20,
-    }}
-  >
-    BE FIT ,
-  </motion.h2>
+          className=" h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
+          style={{ backgroundImage: `url(${background})` }}
+        >
+          <motion.h2
+            className="text-3xl md:text-5xl font-[Montserrat] mb-5 ms-8"
+            initial={{ opacity: 0, scale: 0.3, rotate: -90 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+              delay: 0.3,
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+            }}
+          >
+            BE FIT ,
+          </motion.h2>
 
-  <motion.h2
-    className="text-3xl md:text-5xl font-[Montserrat] text-orange-500 font-bold ms-8"
-    style={{ textShadow: "6px 5px 1px rgba(249,115,22,0.5)" }}
-    initial={{ x: -500, opacity: 0, skew: 20 }}
-    animate={{ x: 0, opacity: 1, skew: 0 }}
-    transition={{
-      duration: 1.3,
-      ease: "easeOut",
-      delay: 1,
-      type: "spring",
-      stiffness: 400,
-      damping: 15,
-    }}
-  >
-    BE STRONG
-  </motion.h2>
-</div>
+          <motion.h2
+            className="text-3xl md:text-5xl font-[Montserrat] text-orange-500 font-bold ms-8"
+            style={{ textShadow: "6px 5px 1px rgba(249,115,22,0.5)" }}
+            initial={{ x: -500, opacity: 0, skew: 20 }}
+            animate={{ x: 0, opacity: 1, skew: 0 }}
+            transition={{
+              duration: 1.3,
+              ease: "easeOut",
+              delay: 1,
+              type: "spring",
+              stiffness: 400,
+              damping: 15,
+            }}
+          >
+            BE STRONG
+          </motion.h2>
+        </div>
 
-        <div className='container mx-auto mt-20 relative overflow-hidden'> 
+        <div className='container mx-auto mt-20 relative overflow-hidden'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4'>
             <div>
               <div className="flex">
@@ -70,10 +70,10 @@ export default function Exercise() {
                   <img src={man1Exercise} alt="" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/MuscleMap">
-                <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                  Explore Muscles group &gt;&gt;
-                </button>
-                  </Link>
+                  <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                    Explore Muscles group &gt;&gt;
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -88,14 +88,14 @@ export default function Exercise() {
             </div>
           </div>
 
-          
+
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 mt-20'>
             <div>
               <div className="flex">
                 <div className="relative">
                   <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
                   <div className="text-orange-500 ms-20 lg:ms-60 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold  ">
-                  Exercise System
+                    Exercise System
                   </div>
                 </div>
                 <div className="relative w-[200px] h-[200px]">
@@ -108,9 +108,9 @@ export default function Exercise() {
                   <img src={img2Exercise} alt="Nutrition" className="object-cover w-full h-full" />
                 </div>
                 <button className=" z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                 <Link to="/ExercisePPL">
-                 Explore System &gt;&gt;
-                 </Link>   
+                  <Link to="/ExercisePPL">
+                    Explore System &gt;&gt;
+                  </Link>
                 </button>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function Exercise() {
                 <div className="relative">
                   <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
                   <div className="text-orange-500 ms-36 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold  ">
-                  Cardio
+                    Cardio
                   </div>
                 </div>
                 <div className="relative w-[200px] h-[200px]">
@@ -145,9 +145,9 @@ export default function Exercise() {
                   <img src={image3Cardio} alt="Workout" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/Cardio">
-                <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                Explore Cardio &gt;&gt;
-                </button>
+                  <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                    Explore Cardio &gt;&gt;
+                  </button>
                 </Link>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function Exercise() {
                 <div className="relative">
                   <div className={`w-48 h-48 ${style['clip-custom-1']}`}></div>
                   <div className="text-orange-500 ms-36 whitespace-nowrap z-10 absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:text-5xl text-3xl font-bold  ">
-               Challenges
+                    Challenges
                   </div>
                 </div>
                 <div className="relative w-[200px] h-[200px]">
@@ -180,12 +180,12 @@ export default function Exercise() {
 
               <div className="flex items-center gap-4 mt-4">
                 <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
-                  <img src={image3Cardio} alt="Workout" className="object-cover w-full h-full" />
+                  <img src={man1Exercise} alt="Workout" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/Challenges">
-                <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                Explore Challenges &gt;&gt;
-                </button>
+                  <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                    Explore Challenges &gt;&gt;
+                  </button>
                 </Link>
               </div>
             </div>
