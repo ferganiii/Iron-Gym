@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../Loading/Loading";
+import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
 
 export default function SupplementDetails() {
