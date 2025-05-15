@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { UserContext } from "../../context/UserContext";
 import Loading from "../Loading/Loading";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import styles from "./Supplements.module.css";
 import { useQuery } from "@tanstack/react-query";
+import { UserContext } from "../../Context/UserContext";
 
 export default function Supplements() {
   const { token } = useContext(UserContext);
