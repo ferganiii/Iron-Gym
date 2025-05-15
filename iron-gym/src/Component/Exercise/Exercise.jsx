@@ -108,7 +108,7 @@ export default function Exercise() {
                   <img src={img2Exercise} alt="Nutrition" className="object-cover w-full h-full" />
                 </div>
                 <button className=" z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
-                 <Link to="/ExerciseSystem">
+                 <Link to="/ExercisePPL">
                  Explore System &gt;&gt;
                  </Link>   
                 </button>

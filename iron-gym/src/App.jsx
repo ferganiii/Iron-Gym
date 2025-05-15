@@ -31,7 +31,6 @@ import CalorieResultPage from "./Component/CalorieResultPage/CalorieResultPage";
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Cardio from './Component/Cardio/Cardio';  
 import ExercisePPL from './Component/ExercisePPL/ExercisePPL';
-import ExerciseSystem from './Component/ExerciseSystem/ExerciseSystem';
 import CreateSystemModal from './Component/CreateSystemModal/CreateSystemModal';
 import Questions from './Component/Questions/Questions';
 import Challenges from './Component/Challenges/Challenges';
@@ -56,8 +55,8 @@ function App() {
         { path: "exercise", element: <Exercise /> },
         { path: "exercise/:muscleName", element: <ExerciseGuide /> },
         { path: 'exercise/details/:id', element: <ExerciseDetails /> },
-        { path: 'ExerciseSystem', element: <ExerciseSystem /> },
-        { path: 'ExerciseSystem/ExercisePPL', element: <ExercisePPL /> },
+       
+        { path: 'ExercisePPL', element: <ExercisePPL /> },
         { path: 'CreateSystemModal', element: <CreateSystemModal /> },
         { path: "MuscleMap", element: <MuscleMap /> },
         { path: "SupplementDetails/:id", element: <SupplementDetails /> },
