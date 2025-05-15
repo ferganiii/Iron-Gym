@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { UserContext } from "../../context/UserContext";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../Loading/Loading";
+import { UserContext } from "../../Context/UserContext";
 
 export default function SupplementDetails() {
   const { id } = useParams();

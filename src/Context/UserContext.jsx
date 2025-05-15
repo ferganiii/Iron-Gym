@@ -9,8 +9,7 @@ export default function UserContextProvider({ children }) {
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
-  const role = user?.role || "User"; // تحديد الدور بناءً على بيانات المستخدم
-
+  const role = user?.role || "User"; 
   useEffect(() => {
     if (token) {
       localStorage.setItem("token", token);
