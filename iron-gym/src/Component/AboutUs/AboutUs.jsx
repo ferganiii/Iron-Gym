@@ -254,6 +254,8 @@ const AboutUs = () => {
             >
               Join Our Fitness Community
             </motion.h2>
+
+        
             <motion.p
               {...useScrollAnimation()}
               className="text-sm sm:text-md md:text-lg max-w-xl mb-8"

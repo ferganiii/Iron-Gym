@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true, // This makes your project accessible from other devices on the same network
+    host: true, 
     port: 5173,
-    cors: true, // Allow cross-origin requests
+    cors: true, 
   },
 });
