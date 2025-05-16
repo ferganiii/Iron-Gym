@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import FatsProduc from "../../assets/FatsProduc.jpeg";
 import { Link } from 'react-router-dom';
 import { Accordion } from 'flowbite-react';
-import { UserContext } from '../../Context/UserContext';
 import mealPlans from '../../Data/nutritionPlans.json';
+import { UserContext } from '../../Context/UserContext';
 
 export default function MealPlan() {
   const { token } = useContext(UserContext);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { UserContext } from '../../Context/UserContext';
 import Loading from '../Loading/Loading';
+import { UserContext } from '../../Context/UserContext';
 
 export default function ExerciseDetails() {
   const { id } = useParams();

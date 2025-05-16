@@ -4,13 +4,10 @@ import carb from "../../assets/CarbProduc.jpeg";
 import protein from "../../assets/ProtienProduc.jpeg";
 import fats from "../../assets/FatsProduc.jpeg";
 import milks from "../../assets/MilkProduc.jpeg";
-import systemNut from "../../assets/systemNut.jpeg";
-import calcClories from "../../assets/cardCalories.webp";
 import { Link } from "react-router-dom";
 import Supplements from "../Supplements/Supplements";
 import { motion } from "framer-motion";
 import NutritionProgram from "../NutritionProgram/NutritionProgram";
-import NutritionTable from "../NutritionTable/NutritionTable";
   
 
 

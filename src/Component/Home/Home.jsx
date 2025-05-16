@@ -7,9 +7,9 @@ import FatsProduc from '../../assets/FatsProduc.jpeg';
 import style from './Home.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
-import { UserContext } from '../../Context/UserContext';
 import calcClories from "../../assets/cardCalories.webp";
 import bg from '../../assets/bg1111.jpg';
+import { UserContext } from '../../Context/UserContext';
 
 export default function Home() {
 

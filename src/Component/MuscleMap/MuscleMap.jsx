@@ -16,7 +16,6 @@ import trapizes from '../../assets/trapizes.png';
 import tricps from '../../assets/tricps.png';
 import forearms from '../../assets/forearms.jpeg';
 import bg from '../../assets/bg1111.jpg';
-import MuchaTseBle from '../../assets/MuchaTseBle.jpg';
 import Top10exercise from '../Top10exercise/Top10exercise';
 export default function MuscleMap() {
   const muscleImages = [

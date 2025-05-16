@@ -1,6 +1,5 @@
 import React from 'react'
 import background from '../../assets/bg_exercise.png'
-import shape5 from '../../assets/shape-5.png'
 import man1Exercise from '../../assets/man1Exercise.png'
 import image3Cardio from '../../assets/image3Cardio.png'
 import img2Exercise from '../../assets/img2Exercise.png'

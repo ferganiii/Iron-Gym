@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import axios from 'axios';
-import { UserContext } from '../../Context/UserContext';
 import Loading from '../Loading/Loading';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-import ExercisePPL from '../ExercisePPL/ExercisePPL';
-
+import { UserContext } from '../../Context/UserContext';
 export default function Top10exercise() {
   const { token } = useContext(UserContext);
 
