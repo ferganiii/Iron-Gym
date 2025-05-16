@@ -12,7 +12,7 @@ export default function Exercise() {
     <>
       <section className='bg-[rgb(102,102,102,.3)] relative'>
         <div
-          className=" h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
+          className=" lg:h-[60vh] h-[50vh] bg-cover bg-center relative flex flex-col justify-center items-start text-center"
           style={{ backgroundImage: `url(${background})` }}
         >
           <motion.h2
@@ -49,7 +49,7 @@ export default function Exercise() {
           </motion.h2>
         </div>
 
-        <div className='container mx-auto mt-20 relative overflow-hidden'>
+        <div className='lg:container mx-auto mt-20 relative overflow-hidden'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 py-4'>
             <div>
               <div className="flex">
@@ -69,7 +69,7 @@ export default function Exercise() {
                   <img src={man1Exercise} alt="" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/MuscleMap">
-                  <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                  <button className="z-10 text-xl bg-orange-500 text-white lg:py-4 px-6 rounded hover:bg-orange-600 transition">
                     Explore Muscles group &gt;&gt;
                   </button>
                 </Link>
@@ -106,7 +106,7 @@ export default function Exercise() {
                 <div className={`w-48 h-48 bg-[#666666] ${style['clip-custom-1']}`}>
                   <img src={img2Exercise} alt="Nutrition" className="object-cover w-full h-full" />
                 </div>
-                <button className=" z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                <button className=" z-10 text-xl bg-orange-500 text-white lg:py-4 px-6 rounded hover:bg-orange-600 transition">
                   <Link to="/ExercisePPL">
                     Explore System &gt;&gt;
                   </Link>
@@ -144,7 +144,7 @@ export default function Exercise() {
                   <img src={image3Cardio} alt="Workout" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/Cardio">
-                  <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                  <button className="z-10 text-xl bg-orange-500 text-white lg:py-4 px-6 rounded hover:bg-orange-600 transition">
                     Explore Cardio &gt;&gt;
                   </button>
                 </Link>
@@ -182,7 +182,7 @@ export default function Exercise() {
                   <img src={man1Exercise} alt="Workout" className="object-cover w-full h-full" />
                 </div>
                 <Link to="/Challenges">
-                  <button className="z-10 text-xl bg-orange-500 text-white py-4 px-6 rounded hover:bg-orange-600 transition">
+                  <button className="z-10 text-xl bg-orange-500 text-white lg:py-4 px-6 rounded hover:bg-orange-600 transition">
                     Explore Challenges &gt;&gt;
                   </button>
                 </Link>
@@ -193,7 +193,7 @@ export default function Exercise() {
               <div className={`relative ${style['clip-msls']}`}>
                 <div className={`absolute -top-20 lg:-top-40 left-2/4 ${style.bord}`}>
                   <p className="ms-16 uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
-                    ELEVANTE YOUR WORKOUT WITH SOME CARDIO
+                    ELEVANTE YOUR WORKOUT WITH SOME Challenges
                   </p>
                 </div>
               </div>

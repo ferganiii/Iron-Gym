@@ -178,7 +178,7 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
       />
 
       <div
-        className="h-screen bg-cover bg-center relative"
+        className="lg:h-screen h-[60vh] bg-cover bg-center relative"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div className="absolute bottom-0 left-0 w-full">

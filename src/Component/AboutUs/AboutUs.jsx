@@ -51,7 +51,7 @@ const AboutUs = () => {
     <>
       <section className="bg-[#1e1e1e] overflow-hidden">
         <div
-          className="relative flex items-center justify-start h-[80vh] sm:h-[50vh] md:h-[90vh] bg-cover bg-center"
+          className="relative flex items-center justify-start lg:h-[60vh] h-[50vh]  bg-cover bg-center"
           style={{ backgroundImage: `url(${aboutBg})` }}
         >
           <motion.div

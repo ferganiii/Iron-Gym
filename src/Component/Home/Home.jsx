@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <div className="bg-black text-white min-h-screen  ">
-        <div className="relative w-full h-screen bg-black overflow-hidden">
+        <div className="relative w-full lg:h-screen h-[50vh] bg-black overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
           <div className="absolute inset-0 m-4 sm:m-8 md:m-16 overflow-hidden rounded-xl">
@@ -48,16 +48,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-28 md:gap-16 items-center relative">
 
-              {/* <div className={`absolute  transform  z-0 ${style.circle}`}>
-                 <img
-                  src={imgeHome}
-                alt="background"
-                 className=" w-60 h-60 absolute top-0 -right-3  object-cover rounded-full lg:hidden"
-                   />
-                <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 150 150" className='hidden lg:block'>
-                  <circle cx="75" cy="75" r="75" fill="#666666" />
-                </svg>
-              </div> */}
+             
 
               <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
                 <h2 className="lg:text-4xl text-xl font-archivo font-bold">
@@ -135,9 +126,9 @@ export default function Home() {
         </section>
 
 
-        <section className="py-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
+        <section className="ms-auto py-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
           <div className="container mx-auto px-4 sm:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
+            <div className=" grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
                     <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className='lg:ms-10 p-3 z-10'>
                   <div className="md:w-1/2 space-y-6 md:space-y-8">
@@ -153,16 +144,7 @@ export default function Home() {
                 </button>
                 
               </div>
-                 {/* <div className={`lg:hidden ${style.BgCircle}  `}>
-                       <Link to="/nutrition" className="inline-block">
-                   <img
-                      src={FatsProduc}
-                     alt="Fitness Challenge"
-                     className="lg:ms-0 ms-32 lg:w-96 lg:h-96 w-60 h-60 object-cover rounded-full shadow-lg
-                       transition-transform duration-500 hover:scale-105"
-                   />
-                        </Link>
-                        </div> */}
+            
               </div>
                    
 
@@ -186,38 +168,6 @@ export default function Home() {
         </section>
 
      
-
-        {/* <section className="py-16 sm:py-32 bg-[rgb(102,102,102,.3)]">
-          <div className="container mx-auto px-4 sm:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
-               
-              <div className="md:w-1/2 space-y-6 md:space-y-8">
-                <h2 className="lg:text-4xl text-2xl font-bold font-archivo md:text-3xl">
-                  STEP UP YOUR <br />
-                  FITNESS CHALLENGE
-                </h2>
-                <p className="text-gray-200 text-lg font-bold">
-                  "Fuel your body with the right nutrition and unlock your full potential!"
-                </p>
-                <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
-                  <Link to="/nutrition">NUTRITIONS</Link>
-                </button>
-                
-              </div>
-                    
-              <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-                <Link to="/nutrition">
-                  <img
-                    src={FatsProduc}
-                    alt="Fitness Challenge"
-                    className="hidden lg:block hover:scale-105 transition-all duration-500 lg:w-96 rounded-full lg:h-96 w-60 h-60 object-cover shadow-lg"
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
 
 
 

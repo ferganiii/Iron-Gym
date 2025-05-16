@@ -23,7 +23,7 @@ export default function Nutrition() {
     <>
       <section className="relative bg-[rgb(102,102,102,.3)]">
         <div
-          className="h-screen bg-cover bg-center relative flex flex-col justify-center items-center text-center"
+          className="lg:h-screen h-[60vh] bg-cover bg-center relative flex flex-col justify-center items-center text-center"
           style={{ backgroundImage: `url(${background})` }}
         >
           <motion.h1
