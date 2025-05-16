@@ -16,7 +16,6 @@ import Signup from './Component/SignUp/SignUp';
 import NotFound from './Component/NotFound/NotFound';
 import ProtectedRoute from './Component/ProtectedRoute/ProtectedRoute';
 import UserContextProvider from './Context/UserContext';
-
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SupplementDetails from './Component/SupplementsDetails/SupplementsDetails';
 import Calculators from './Component/Calculators/Calculators';
