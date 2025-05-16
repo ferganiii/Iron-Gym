@@ -30,8 +30,8 @@ import ExercisePPL from './Component/ExercisePPL/ExercisePPL';
 import CreateSystemModal from './Component/CreateSystemModal/CreateSystemModal';
 import Questions from './Component/Questions/Questions';
 import Challenges from './Component/Challenges/Challenges';
-import ScrollToTop from './Component/ScrollToTop/ScrollToTop';
 import Proteins from './Component/protein/Protein';
+import ScrollToTop from './Component/ScrollToTop/ScrollToTop';
 
 
 function App() {

@@ -29,7 +29,6 @@ const EditSystemModal = ({ systemId, onClose }) => {
         muscles: muscles.split(','),
         exercises: exercises.split(','),
       });
-      console.log('System updated:', res.data);
       onClose(); 
     } catch (error) {
       console.error('Error updating system:', error);

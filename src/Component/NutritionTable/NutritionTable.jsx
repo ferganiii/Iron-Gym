@@ -40,7 +40,6 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
       },
     })
       .then((res) => {
-        console.log("✅ API Response:", res.data.docs);
         if (Array.isArray(res.data.docs)) {
           setData(res.data.docs);
         } else {
@@ -157,7 +156,6 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
         fat: "",
       });
     } catch (err) {
-      console.error("❌ Error adding data:", err);
       toast.error("حدث خطأ أثناء الإضافة!");
     } finally {
       setIsloading(false);
@@ -209,7 +207,7 @@ export default function NutritionTable({ title, bgImage, apiUrl }) {
       </div>
 
       <div className="container mx-auto px-4 py-10">
-        <h2 className="text-4xl font-archivo">
+        <h2 className="text-xl lg:text-4xl font-archivo">
           The richest sources of {title} <br /> and the average values and nutrients per 100g
         </h2>
 

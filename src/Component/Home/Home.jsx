@@ -10,15 +10,15 @@ import axios from 'axios';
 import calcClories from "../../assets/cardCalories.webp";
 import bg from '../../assets/bg1111.jpg';
 import { UserContext } from '../../Context/UserContext';
-
+import test2 from '../../assets/test2.jpeg';
+import testimg from '../../assets/testimg.jpeg';
 export default function Home() {
 
   const { user } = useContext(UserContext);
 
   return (
     <>
-      <div className="bg-black text-white min-h-screen  "
-        style={{ backgroundImage: `url(${bg})` }}>
+      <div className="bg-black text-white min-h-screen  ">
         <div className="relative w-full h-screen bg-black overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
@@ -44,11 +44,11 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="bg-[rgb(102,102,102,.3)]  py-16">
+        <section className=" bg-[rgb(102,102,102,.3)]  pt-16">
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-28 md:gap-16 items-center relative">
 
-              <div className={`absolute  transform  z-0 ${style.circle}`}>
+              {/* <div className={`absolute  transform  z-0 ${style.circle}`}>
                  <img
                   src={imgeHome}
                 alt="background"
@@ -57,7 +57,7 @@ export default function Home() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 150 150" className='hidden lg:block'>
                   <circle cx="75" cy="75" r="75" fill="#666666" />
                 </svg>
-              </div>
+              </div> */}
 
               <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
                 <h2 className="lg:text-4xl text-xl font-archivo font-bold">
@@ -75,9 +75,9 @@ export default function Home() {
               <div className="relative flex justify-center pl-24 me-11 mt-16">
                 <Link to="/exercise">
                   <img
-                    src={imgeHome}
+                    src={testimg}
                     alt="Workout"
-                    className={`hidden lg:block hover:scale-105 transition-all duration-500 z-10 rounded-full lg:w-80 max-w-md lg:h-80  w-60 h-60 object-cover shadow-lg `}
+                    className={`hidden lg:block hover:scale-105 transition-all duration-500 z-10 rounded-ful lg:w-80 max-w-md lg:h-80  w-60 h-60 object-cover shadow-lg `}
                   />
                 </Link>
               </div>
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
+        <section className="pb-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
           <div className="container mx-auto px-4 sm:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
               <div className="hidden lg:block relative flex justify-center pt-36 overflow-hidden">
@@ -101,7 +101,7 @@ export default function Home() {
 
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className='lg:ms-10 p-3 z-10'>
-                  <h2 className="lg:text-4xl text-2xl lg:text-gray-200 text-orange-500 font-alkalami">
+                  <h2 className="lg:text-4xl text-xl lg:text-gray-200 text-orange-500 font-alkalami">
                   Calculate Your Daily <br /> Calorie & Water Needs
                 </h2>
 
@@ -120,7 +120,7 @@ export default function Home() {
                    <img
                       src={calcClories}
                      alt="Fitness Challenge"
-                     className="lg:ms-0 ms-32 lg:w-96 lg:h-96 w-60 h-60 object-cover rounded-full shadow-lg
+                     className="hidden lg:block lg:ms-0 ms-32 lg:w-96 lg:h-96 w-60 h-60 object-cover rounded-ful shadow-lg
                        transition-transform duration-500 hover:scale-105"
                    />
                         </Link>
@@ -141,7 +141,7 @@ export default function Home() {
                     <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className='lg:ms-10 p-3 z-10'>
                   <div className="md:w-1/2 space-y-6 md:space-y-8">
-                <h2 className="lg:text-4xl text-2xl font-bold font-archivo md:text-3xl">
+                <h2 className="lg:text-4xl text-xl font-bold font-archivo md:text-3xl">
                   STEP UP YOUR <br />
                   FITNESS CHALLENGE
                 </h2>
@@ -153,7 +153,7 @@ export default function Home() {
                 </button>
                 
               </div>
-                 <div className={`lg:hidden ${style.BgCircle}  `}>
+                 {/* <div className={`lg:hidden ${style.BgCircle}  `}>
                        <Link to="/nutrition" className="inline-block">
                    <img
                       src={FatsProduc}
@@ -162,7 +162,7 @@ export default function Home() {
                        transition-transform duration-500 hover:scale-105"
                    />
                         </Link>
-                        </div>
+                        </div> */}
               </div>
                    
 
@@ -170,9 +170,9 @@ export default function Home() {
               <div className="hidden lg:block ms-auto  relative flex justify-center pt-36 overflow-hidden">
                 <Link to="/nutrition">
                   <img
-                    src={FatsProduc}
+                    src={test2}
                     alt="Fitness Challenge"
-                    className="z-10 hover:scale-105 transition-all duration-500 lg:w-96 rounded-full lg:h-96 w-60 h-60 object-cover shadow-lg"
+                    className="z-10 hover:scale-105 transition-all duration-500 lg:w-96 rounded-ful lg:h-96 w-60 h-60 object-cover shadow-lg"
                   />
                 </Link>
                 <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full `}></div>
