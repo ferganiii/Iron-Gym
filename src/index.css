@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 
+::selection {
+  background-color: #c96522; /* لون الخلفية عند التحديد */
+  color: white;              /* لون النص أثناء التحديد */
+}
 
 
 body,
