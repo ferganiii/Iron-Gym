@@ -48,15 +48,15 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-8 relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-28 md:gap-16 items-center relative">
 
-             
+
 
               <div className="space-y-6 md:space-y-8 z-10 text-center md:text-left relative">
                 <h2 className="lg:text-4xl text-xl font-archivo font-bold">
                   BUILD YOUR BODY & <br />
                   <span className="text-orange-500">SHAPE YOURSELF!</span>
                 </h2>
-                <p className="text-gray-200 text-sm font-bold">
-                  "Achieve your fitness goals with powerful workouts and expert guidance. Start your transformation today!"
+                <p className="text-gray-200 text-base font-bold">
+                  "Achieve your fitness goals with powerful workouts and expert <br /> guidance. Start your transformation today!"
                 </p>
                 <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
                   <Link to="/exercise">EXPLORE EXERCISES</Link>
@@ -79,11 +79,13 @@ export default function Home() {
         <section className="pb-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
           <div className="container mx-auto px-4 sm:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
-              <div className="hidden lg:block relative flex justify-center pt-36 overflow-hidden">
+              <div className="lg:block relative flex justify-center pt-36 overflow-hidden">
+
                 <img
                   src={man1Home}
                   alt="Calorie Calculator"
-                  className=" z-10 rounded-lg w-full max-w-md h-64 sm:h-96 object-cover shadow-lg"
+                  className="z-10 rounded-full w-64 h-64 sm:w-80 sm:h-80 object-cover shadow-lg 
+                    transition-transform duration-500 hover:scale-110"
                 />
                 <div className={`absolute bg-gray-700 bg-opacity-40 rounded-full ${style.manCircle}`}></div>
                 <div className={`absolute bg-orange-400 bg-opacity-30 rounded-full ${style.manCircleOrange}`}></div>
@@ -93,34 +95,30 @@ export default function Home() {
               <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className='lg:ms-10 p-3 z-10'>
                   <h2 className="lg:text-4xl text-xl lg:text-gray-200 text-orange-500 font-alkalami">
-                  Calculate Your Daily <br /> Calorie & Water Needs
-                </h2>
+                    Calculate Your Daily <br /> Calorie & Water Needs
+                  </h2>
 
-                <p className="text-gray-200 lg:text-lg font-bold">
-                  "Stay on track! Calculate your daily calorie <br />
-                  intake and hydration needs with <br />
-                  our smart tools."
-                </p>
+                  <p className="text-gray-200 lg:text-lg font-bold">
+                    "Stay on track! Calculate your daily <br />
+                    calorie intake and hydration needs <br />
+                    with our smart tools."
+                  </p>
 
-                <button className="mt-5 border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
-                  <Link to="/Calculators">CALCULATORS</Link>
-                </button>
-              </div>
-                    <div className={`-z-10 ${style.BgCircle}  `}>
-                       <Link to="/calculators" className="inline-block">
-                   <img
+                  <button className="mt-5 border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
+                    <Link to="/Calculators">CALCULATORS</Link>
+                  </button>
+                </div>
+                <div className={`-z-10 ${style.BgCircle}`}>
+                  <Link to="/calculators" className="inline-block">
+                    <img
                       src={calcClories}
-                     alt="Fitness Challenge"
-                     className="hidden lg:block lg:ms-0 ms-32 lg:w-96 lg:h-96 w-60 h-60 object-cover rounded-ful shadow-lg
-                       transition-transform duration-500 hover:scale-105"
-                   />
-                        </Link>
-                        </div>
-
-              
-
+                      alt="Fitness Challenge"
+                      className="hidden lg:block lg:ms-0 ms-32 rounded-full lg:w-80 lg:h-80 w-60 h-60 object-cover shadow-lg
+                      transition-transform duration-500 hover:scale-110"
+                    />
+                  </Link>
+                </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -129,27 +127,27 @@ export default function Home() {
         <section className="ms-auto py-16 sm:py-32 overflow-hidden bg-[rgb(102,102,102,.3)]">
           <div className="container mx-auto px-4 sm:px-8">
             <div className=" grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-16">
-                    <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
+              <div className="space-y-6 md:space-y-8 relative z-10 sm:mb-16">
                 <div className='lg:ms-10 p-3 z-10'>
                   <div className="md:w-1/2 space-y-6 md:space-y-8">
-                <h2 className="lg:text-4xl text-xl font-bold font-archivo md:text-3xl">
-                  STEP UP YOUR <br />
-                  FITNESS CHALLENGE
-                </h2>
-                <p className="text-gray-200 text-lg font-bold">
-                  "Fuel your body with the right nutrition and unlock your full potential!"
-                </p>
-                <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
-                  <Link to="/nutrition">NUTRITIONS</Link>
-                </button>
-                
-              </div>
-            
-              </div>
-                   
+                    <h2 className="lg:text-4xl text-xl font-bold font-archivo md:text-3xl">
+                      STEP UP YOUR <br />
+                      FITNESS CHALLENGE
+                    </h2>
+                    <p className="text-gray-200 text-lg font-bold">
+                      "Fuel your body with the right nutrition and unlock your full potential!"
+                    </p>
+                    <button className="border font-bold text-xl md:text-2xl bg-orange-400 border-orange-400 px-6 md:px-8 py-2 rounded-2xl hover:bg-orange-600 transition-colors duration-300">
+                      <Link to="/nutrition">NUTRITIONS</Link>
+                    </button>
+
+                  </div>
+
+                </div>
+
 
               </div>
-              <div className="hidden lg:block ms-auto  relative flex justify-center pt-36 overflow-hidden">
+              <div className=" lg:block ms-auto  relative flex justify-center pt-36 overflow-hidden">
                 <Link to="/nutrition">
                   <img
                     src={test2}
@@ -161,18 +159,18 @@ export default function Home() {
                 <div className={`absolute bg-orange-400 bg-opacity-30 rounded-full `}></div>
               </div>
 
-            
+
 
             </div>
           </div>
         </section>
 
-     
 
 
 
 
-    
+
+
       </div>
     </>
   );
