@@ -150,7 +150,7 @@ export default function Challenges() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="mt-10 bg-gradient-to-r from-gray-800 to-gray-900 p-6 rounded-lg"
+              className="mt-10 bg-gradient-to-r from-gray-800  to-gray-900 p-6 rounded-lg"
             >
               <h4 className="text-2xl font-bold text-center text-orange-500 mb-4">Featured Challenges</h4>
               <p className="text-gray-200 text-center mb-6">
