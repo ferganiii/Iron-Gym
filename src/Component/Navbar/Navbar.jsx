@@ -21,7 +21,6 @@ export default function Navbar() {
       setToken(null);
       navigate("/login");
     } catch (error) {
-      console.error("Error during logout:", error);
     }
   };
 
