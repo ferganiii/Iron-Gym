@@ -98,20 +98,3 @@ export default function ExerciseDetails() {
   );
 }
 
-
-//*******************************    أنا سايبلك ده عشان لو عزته يا فرجاني  --------------------------------@####@#$@#$##@ */
-
-{/* <div className="p-4">
-      <h2 className="text-3xl font-bold mb-4">{exercise.name}</h2>
-      <img 
-        src={exercise.image} 
-        alt={exercise.name} 
-        className="w-full h-64 object-cover rounded mb-4"
-      />
-      <p><strong>Muscle Group:</strong> {exercise.muscleGroup?.name}</p>
-      <p><strong>mistakes:</strong> {exercise.mistakes?.join(', ')}</p>
-      <p><strong>Secondary Muscles:</strong> {exercise.secondaryMuscle?.join(', ')}</p>
-      <p><strong>Target Muscles:</strong> {exercise.targetMuscle?.join(', ')}</p>
-      <p><strong>Description:</strong> {exercise.description}</p>
-      <video src={exercise.video}></video>
-    </div> */}

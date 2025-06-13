@@ -17,16 +17,16 @@ export default function DailyMealPlanner() {
     async function getFoodData() {
       try {
         const [healthyRes, proteinsRes, dairyRes, carbRes] = await Promise.all([
-          axios.get("https://gym-production-8217.up.railway.app/api/healthy", {
+          axios.get("https://gym-production-4dd6.up.railway.app/api/healthy", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("https://gym-production-8217.up.railway.app/api/protiens", {
+          axios.get("https://gym-production-4dd6.up.railway.app/api/protiens", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("https://gym-production-8217.up.railway.app/api/diary", {
+          axios.get("https://gym-production-4dd6.up.railway.app/api/diary", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("https://gym-production-8217.up.railway.app/api/carb", {
+          axios.get("https://gym-production-4dd6.up.railway.app/api/carb", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);

@@ -6,6 +6,6 @@ export default function Carbohydrates() {
 
 
   return (
-    <NutritionTable title="Carbohydrates" bgImage={carbImage} apiUrl="https://gym-production-8217.up.railway.app/api/carb" />
+    <NutritionTable title="Carbohydrates" bgImage={carbImage} apiUrl="https://gym-production-4dd6.up.railway.app/api/carb" />
   );
 }

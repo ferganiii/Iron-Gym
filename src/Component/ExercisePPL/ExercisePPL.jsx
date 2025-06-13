@@ -81,7 +81,7 @@ export default function ExercisePPL() {
     queryKey: ['systems', 'arnoldsplit'],
     queryFn: async () => {
       try {
-        const res = await axios.get('https://gym-production-8217.up.railway.app/api/arnoldsplit', {
+        const res = await axios.get('https://gym-production-4dd6.up.railway.app/api/arnoldsplit', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -90,7 +90,7 @@ export default function ExercisePPL() {
       } catch (error) {
         if (error.response && error.response.status === 404) {
           try {
-            const alternativeRes = await axios.get('https://gym-production-8217.up.railway.app/api/arnold-split', {
+            const alternativeRes = await axios.get('https://gym-production-4dd6.up.railway.app/api/arnold-split', {
               headers: {
                 Authorization: `Bearer ${token}`,
               },

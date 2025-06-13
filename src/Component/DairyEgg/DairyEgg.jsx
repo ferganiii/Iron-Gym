@@ -8,6 +8,6 @@ export default function DairyEgg() {
 
 
   return (
-    <NutritionTable title='DairyEgg'  bgImage = {milk} apiUrl="https://gym-production-8217.up.railway.app/api/diary"/>
+    <NutritionTable title='DairyEgg'  bgImage = {milk} apiUrl="https://gym-production-4dd6.up.railway.app/api/diary"/>
   );
 }
