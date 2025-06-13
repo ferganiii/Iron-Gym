@@ -46,7 +46,7 @@ export default function ExercisePPL() {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['systems'],
     queryFn: async () => {
-      const res = await axios.get('https://gym-production-8217.up.railway.app/api/brosplit', {
+      const res = await axios.get('https://gym-production-4dd6.up.railway.app/api/brosplit', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -64,7 +64,7 @@ export default function ExercisePPL() {
     queryKey: ['systems', 'ppl'],
     queryFn: async () => {
       try {
-        const res = await axios.get('https://gym-production-8217.up.railway.app/api/pushpull', {
+        const res = await axios.get('https://gym-production-4dd6.up.railway.app/api/pushpull', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

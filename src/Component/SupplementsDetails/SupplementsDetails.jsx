@@ -13,7 +13,7 @@ export default function SupplementDetails() {
     queryKey: ["supplementDetails", id],
     queryFn: async () => {
       const res = await axios.get(
-        `https://gym-production-8217.up.railway.app/api/supplement/${id}`,
+        `https://gym-production-4dd6.up.railway.app/api/supplement/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

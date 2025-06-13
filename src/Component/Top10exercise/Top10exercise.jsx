@@ -15,7 +15,7 @@ export default function Top10exercise() {
   } = useQuery({
     queryKey: ['top-exercises'],
     queryFn: async () => {
-      const res = await axios.get('https://gym-production-8217.up.railway.app/api/exercise', {
+      const res = await axios.get('https://gym-production-4dd6.up.railway.app/api/exercise', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

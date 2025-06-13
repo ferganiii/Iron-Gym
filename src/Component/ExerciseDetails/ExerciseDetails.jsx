@@ -12,7 +12,7 @@ export default function ExerciseDetails() {
 
   async function fetchExercise() {
     try {
-      const res = await axios.get(`https://gym-production-8217.up.railway.app/api/exercise/${id}`, {
+      const res = await axios.get(`https://gym-production-4dd6.up.railway.app/api/exercise/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

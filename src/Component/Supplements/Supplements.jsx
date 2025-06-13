@@ -20,7 +20,7 @@ export default function Supplements() {
   } = useQuery({
     queryKey: ['supplement'],
     queryFn: async () => {
-      const res = await axios.get("https://gym-production-8217.up.railway.app/api/supplement", {
+      const res = await axios.get("https://gym-production-4dd6.up.railway.app/api/supplement", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -4,6 +4,6 @@ import NutritionTable from "../NutritionTable/NutritionTable";
 
 export default function Proteins() {
   return (
-    <NutritionTable title="Proteins" bgImage={proteinsImage} apiUrl="https://gym-production-8217.up.railway.app/api/protiens" />
+    <NutritionTable title="Proteins" bgImage={proteinsImage} apiUrl="https://gym-production-4dd6.up.railway.app/api/protiens" />
   );
 }

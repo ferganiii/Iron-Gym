@@ -34,7 +34,7 @@ export default function Login() {
     setIsloading(true);
 
     try {
-      const res = await axios.post("https://gym-production-8217.up.railway.app/api/auth/login", values);
+      const res = await axios.post("https://gym-production-4dd6.up.railway.app/api/auth/login", values);
 
 
       if (res.data.message === "login success") {

@@ -54,7 +54,7 @@ export default function Signup() {
     setIsloading(true);
 
     try {
-      const res = await axios.post("https://gym-production-8217.up.railway.app/api/auth/signup", values);
+      const res = await axios.post("https://gym-production-4dd6.up.railway.app/api/auth/signup", values);
       console.log(res, "tmmm");
 
       if (res.data.message === "sign up successfully") {

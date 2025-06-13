@@ -91,7 +91,7 @@ const Calculators = () => {
         const token = localStorage.getItem("token");
 
         const res = await fetch(
-          "https://gym-production-8217.up.railway.app/api/calculate",
+          "https://gym-production-4dd6.up.railway.app/api/calculate",
           {
             method: "POST",
             headers: {
