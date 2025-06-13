@@ -209,7 +209,6 @@ export default function Challenges() {
                   <p className="text-gray-300">Achieved Goals</p>
                 </div>
               </div>
-
               <div className="mt-8 text-center">
                 <h5 className="text-xl font-bold text-white mb-4">Challenge Calendar</h5>
                 <div className="overflow-x-auto">
