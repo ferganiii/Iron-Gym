@@ -194,7 +194,6 @@ export default function Challenges() {
                   </div>
                 </div>
               </div>
-
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-gray-700 p-4 rounded-lg text-center">
                   <div className="text-orange-500 text-4xl font-bold mb-2">12K+</div>
