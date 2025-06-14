@@ -49,7 +49,7 @@ export default function ExerciseDetails() {
 
             <div className=''>
 
-              <div className='bg-[rgb(102,102,102,.4)] p-6 rounded-3xl'>
+              <div className='bg-[rgb(102,102,102,.4)] p-6 rounded-3xl lg:h-[140px]'>
                 <h2 className='text-2xl md:text-4xl font-alkalami '>Target Muscle:</h2>
                 <h3 className='font-alkalami text-2xl text-green-400'>
                   <span className='text-orange-400'>
@@ -71,7 +71,7 @@ export default function ExerciseDetails() {
             </div>
 
 
-            <div className=''>
+            <div className='lg:h-[140px]'>
               <div className='bg-[rgb(102,102,102,.4)] p-6 rounded-3xl'>
                 <p className='text-xl m-3'>
                   <span className=''><i className="fa-solid fa-circle" style={{ color: '#e68519' }} /></span>  primaryMuscle

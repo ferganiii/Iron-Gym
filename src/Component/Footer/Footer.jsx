@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/logoFooter.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { UserContext } from "../../Context/UserContext";
+import { toast } from "react-hot-toast"; 
 
 export default function Footer() {
+  const { token } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const handleLinkClick = (e, to) => {
+    if (!token) {
+      e.preventDefault();
+      toast.error("يرجى تسجيل الدخول أولاً"); 
+      navigate("/login"); 
+    }
+  };
+
   return (
     <footer className="bg-[rgb(36,37,37,1)] text-white">
       <div className="container pt-6 sm:pt-10 px-4 mx-auto">
@@ -30,25 +43,27 @@ export default function Footer() {
           >
             <ul className="text-xs sm:text-sm lg:text-xl flex flex-col font-semibold items-center space-y-1 sm:space-y-2">
               {[
-                { to: "/exercise", label: "Exercises" },
-                { to: "/nutrition", label: "Nutrition" },
-                { to: "/Calculators", label: "Calculators" },
-                { to: "/aboutus", label: "About" },
-                { to: "/ContactUs", label: "Contact Us" },
-              ].map(({ to, label }, index) => (
-                <motion.li
-                  key={to}
-                  className="w-32 sm:w-40"
-                  whileHover={{ scale: 1.05, color: "#f97316" }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Link
-                    to={to}
-                    className="hover:text-orange-500 uppercase transition-all duration-300 flex items-center"
+                { label: "Exercises", path: "/exercise" },
+                { label: "Nutrition", path: "/nutrition" },
+                { label: "Calculators", path: "/Calculators" },
+                { label: "About", path: "/aboutus" },
+                { label: "Contact Us", path: "/ContactUs" },
+              ].map((item, index) => (
+                <li key={index}>
+                  <motion.div
+                    className="w-32 sm:w-40"
+                    whileHover={{ scale: 1.05, color: "#f97316" }}
+                    transition={{ duration: 0.2 }}
                   >
-                    <span className="font-bold w-4 text-center text-orange-500">•</span> {label}
-                  </Link>
-                </motion.li>
+                    <Link
+                      to={item.path}
+                      onClick={(e) => handleLinkClick(e, item.path)}
+                      className="hover:text-orange-500 uppercase transition-all duration-300 flex items-center"
+                    >
+                      <span className="font-bold w-4 text-center text-orange-500">•</span> {item.label}
+                    </Link>
+                  </motion.div>
+                </li>
               ))}
             </ul>
           </motion.div>
@@ -98,11 +113,15 @@ export default function Footer() {
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               href="https://www.facebook.com/share/g/12BzL5xEDqV/"
-              className="text-gray-900 hover:text-white transition-colors duration-300"
+              className="text-blue-600 hover:text-blue-400 transition-colors duration-300"
               aria-label="Facebook"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd"></path>
+                <path
+                  fillRule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clipRule="evenodd"
+                />
               </svg>
             </motion.a>
           </div>
@@ -111,4 +130,3 @@ export default function Footer() {
     </footer>
   );
 }
-

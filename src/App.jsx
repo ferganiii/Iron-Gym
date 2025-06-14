@@ -32,6 +32,7 @@ import Questions from './Component/Questions/Questions';
 import Challenges from './Component/Challenges/Challenges';
 import Proteins from './Component/protein/Protein';
 import ScrollToTop from './Component/ScrollToTop/ScrollToTop';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -78,6 +79,8 @@ function App() {
     <QueryClientProvider client={myClinet}>
     <UserContextProvider>
       <MuscleProvider>
+                <Toaster position="top-center" reverseOrder={false} />
+
         <RouterProvider router={router}>
         </RouterProvider>
       </MuscleProvider>
