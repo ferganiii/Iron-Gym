@@ -80,8 +80,8 @@ const Calculators = () => {
           values.goal === "lose"
             ? "lose weight"
             : values.goal === "gain"
-            ? "gain weight"
-            : "maintain weight",
+              ? "gain weight"
+              : "maintain weight",
         proteinQuantity: values.proteinQuantity,
         activityLevel: values.activityLevel,
         stepsNumber: values.steps ? Number(values.steps) : 0,
@@ -157,22 +157,20 @@ const Calculators = () => {
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("gender", "male")}
-                className={`px-4 sm:px-10 md:px-20 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.gender === "male"
+                className={`px-4 sm:px-10 md:px-20 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.gender === "male"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 Male
               </button>
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("gender", "female")}
-                className={`px-4 sm:px-10 md:px-20 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.gender === "female"
+                className={`px-4 sm:px-10 md:px-20 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.gender === "female"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 Female
               </button>
@@ -266,11 +264,10 @@ const Calculators = () => {
                   key={g}
                   type="button"
                   onClick={() => formik.setFieldValue("goal", g)}
-                  className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                    formik.values.goal === g
+                  className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.goal === g
                       ? "bg-orange-500"
                       : "bg-[rgb(102,102,102,.7)]"
-                  }`}
+                    }`}
                 >
                   {g}
                 </button>
@@ -289,22 +286,20 @@ const Calculators = () => {
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("proteinQuantity", "high")}
-                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.proteinQuantity === "high"
+                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.proteinQuantity === "high"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 High
               </button>
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("proteinQuantity", "low")}
-                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.proteinQuantity === "low"
+                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.proteinQuantity === "low"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 Low
               </button>
@@ -322,33 +317,30 @@ const Calculators = () => {
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("activityLevel", "high")}
-                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.activityLevel === "high"
+                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.activityLevel === "high"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 High
               </button>
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("activityLevel", "medium")}
-                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.activityLevel === "medium"
+                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.activityLevel === "medium"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 Medium
               </button>
               <button
                 type="button"
                 onClick={() => formik.setFieldValue("activityLevel", "low")}
-                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${
-                  formik.values.activityLevel === "low"
+                className={`px-4 sm:px-6 md:px-12 py-3 md:py-4 rounded-2xl text-sm md:text-base ${formik.values.activityLevel === "low"
                     ? "bg-orange-500"
                     : "bg-[rgb(102,102,102,.7)]"
-                }`}
+                  }`}
               >
                 Low
               </button>

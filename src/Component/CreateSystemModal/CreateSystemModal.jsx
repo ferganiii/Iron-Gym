@@ -19,7 +19,7 @@ const CreateSystemModal = () => {
   } = useQuery({
     queryKey: ['all-exercises'],
     queryFn: async () => {
-      const res = await axios.get('https://gym-production-8217.up.railway.app/api/exercise', {
+      const res = await axios.get('https://gym-production-4dd6.up.railway.app/api/exercise', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -50,7 +50,7 @@ const CreateSystemModal = () => {
     e.preventDefault();
     try {
     const {data} = await axios.post(
-        'https://gym-production-8217.up.railway.app/api/brosplit',
+        'https://gym-production-4dd6.up.railway.app/api/brosplit',
         {
           name,
           day,

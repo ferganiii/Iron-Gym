@@ -9,7 +9,7 @@ const EditSystemModal = ({ systemId, onClose }) => {
 
   useEffect(() => {
     const fetchSystem = async () => {
-      const res = await axios.get(`https://your-api-url.com/api/systems/${systemId}`);
+      const res = await axios.get(`https://gym-production-4dd6.up.railway.app/api/systems/${systemId}`);
       const system = res.data;
       setName(system.name);
       setDay(system.day);
@@ -23,7 +23,7 @@ const EditSystemModal = ({ systemId, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`https://your-api-url.com/api/systems/${systemId}`, {
+      const res = await axios.put(`https://gym-production-4dd6.up.railway.app/api/systems/${systemId}`, {
         name,
         day,
         muscles: muscles.split(','),
