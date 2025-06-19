@@ -38,40 +38,42 @@ import { Toaster } from 'react-hot-toast';
 function App() {
   const myClinet=new QueryClient();
   const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },
-        { path: "nutrition", element: <ProtectedRoute> <Nutrition /> </ProtectedRoute> },
-        { path: "nutrition/protein", element: <Proteins /> },
-        { path: "nutrition/carb", element: <CarboHidrates /> },
-        { path: "nutrition/fat", element: <Fats /> },
-        { path: "nutrition/dairyEgg", element: <DairyEgg /> },
-        { path: "nutrition/CalcCaloriesMeal", element: <CalcCaloriesMeal /> },
-        { path: "nutrition/MealPlan", element: <MealPlan /> },
-        { path: "exercise", element: <Exercise /> },
-        { path: "exercise/:muscleName", element: <ExerciseGuide /> },
-        { path: 'exercise/details/:id', element: <ExerciseDetails /> },
-       
-        { path: 'ExercisePPL', element: <ExercisePPL /> },
-        { path: 'CreateSystemModal', element: <CreateSystemModal /> },
-        { path: "MuscleMap", element: <MuscleMap /> },
-        { path: "SupplementDetails/:id", element: <SupplementDetails /> },
-        { path: "aboutus", element: <AboutUs /> },
-        { path: "ContactUs", element: <ContactUs /> },
-        { path: "Calculators", element: <Calculators /> },
-        { path: "/result", element: <CalorieResultPage /> },
-        { path: "login", element: <Login /> },
-        { path: "signup", element: <Signup /> },
-        { path: "cardio", element: <Cardio /> },
-        { path: "Questions", element: <Questions /> },
-        { path: "Challenges", element: <Challenges /> },
-        { path: "*", element: <NotFound /> },
-      ],
-    },
-  
-  ]);
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { index: true, element: <ProtectedRoute><Home /></ProtectedRoute> },
+      { path: "nutrition", element: <ProtectedRoute><Nutrition /></ProtectedRoute> },
+      { path: "nutrition/protein", element: <ProtectedRoute><Proteins /></ProtectedRoute> },
+      { path: "nutrition/carb", element: <ProtectedRoute><CarboHidrates /></ProtectedRoute> },
+      { path: "nutrition/fat", element: <ProtectedRoute><Fats /></ProtectedRoute> },
+      { path: "nutrition/dairyEgg", element: <ProtectedRoute><DairyEgg /></ProtectedRoute> },
+      { path: "nutrition/CalcCaloriesMeal", element: <ProtectedRoute><CalcCaloriesMeal /></ProtectedRoute> },
+      { path: "nutrition/MealPlan", element: <ProtectedRoute><MealPlan /></ProtectedRoute> },
+
+      { path: "exercise", element: <ProtectedRoute><Exercise /></ProtectedRoute> },
+      { path: "exercise/:muscleName", element: <ProtectedRoute><ExerciseGuide /></ProtectedRoute> },
+      { path: "exercise/details/:id", element: <ProtectedRoute><ExerciseDetails /></ProtectedRoute> },
+
+      { path: "ExercisePPL", element: <ProtectedRoute><ExercisePPL /></ProtectedRoute> },
+      { path: "CreateSystemModal", element: <ProtectedRoute><CreateSystemModal /></ProtectedRoute> },
+      { path: "MuscleMap", element: <ProtectedRoute><MuscleMap /></ProtectedRoute> },
+      { path: "SupplementDetails/:id", element: <ProtectedRoute><SupplementDetails /></ProtectedRoute> },
+      { path: "aboutus", element: <ProtectedRoute><AboutUs /></ProtectedRoute> },
+      { path: "ContactUs", element: <ProtectedRoute><ContactUs /></ProtectedRoute> },
+      { path: "Calculators", element: <ProtectedRoute><Calculators /></ProtectedRoute> },
+      { path: "result", element: <ProtectedRoute><CalorieResultPage /></ProtectedRoute> },
+      { path: "cardio", element: <ProtectedRoute><Cardio /></ProtectedRoute> },
+      { path: "Questions", element: <ProtectedRoute><Questions /></ProtectedRoute> },
+      { path: "Challenges", element: <ProtectedRoute><Challenges /></ProtectedRoute> },
+
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <Signup /> },
+      { path: "*", element: <NotFound /> },
+    ],
+  },
+]);
+
   
   
 
