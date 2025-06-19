@@ -193,7 +193,7 @@ export default function Exercise() {
               <div className={`relative ${style['clip-msls']}`}>
                 <div className={`absolute -top-20 lg:-top-40 left-2/4 ${style.bord}`}>
                   <p className="ms-16 uppercase mb-3 font-Angkor text-center lg:text-4xl text-2xl text-gray-700 dark:text-white">
-                    ELEVANTE YOUR WORKOUT WITH SOME Challenges
+                    Join the Challenge and push your limits
                   </p>
                 </div>
               </div>

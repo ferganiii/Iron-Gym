@@ -80,6 +80,7 @@ export default function Supplements() {
                           alt={sup.name || "Supplement"}
                           className="w-56 h-56 object-cover rounded-full hover:scale-110 transition-transform duration-300"
                         />
+                        <h2 className="text-center font-bold mt-2 text-orange-500">{sup.name}</h2>
                       </div>
                     </Link>
                   ))}

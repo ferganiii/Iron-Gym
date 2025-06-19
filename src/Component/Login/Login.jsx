@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
 import bacKGROUND from "../../assets/bacKGROUND.jpeg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -11,7 +11,11 @@ export default function Login() {
   const [errorMSG, seterrorMSG] = useState("");
   const [isloading, setIsloading] = useState(false);
   const navigate = useNavigate();
-  const { setToken, setUser } = useContext(UserContext);
+  const { setToken, setUser ,token } = useContext(UserContext);
+
+if (token) {
+  return <Navigate to="/" />;
+}
 
   const Schema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is not valid"),
