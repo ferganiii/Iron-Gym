@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import bg from '../../assets/bg.jpg'; 
+import bg from "../../assets/bg1111.jpg";
 
 const CalorieResultPage = () => {
   const { state: result } = useLocation();

@@ -1,4 +1,4 @@
-import bg from "../../assets/bg.jpg";
+import bg from "../../assets/bg1111.jpg";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
