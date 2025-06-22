@@ -74,9 +74,6 @@ function App() {
   },
 ]);
 
-  
-  
-
   return(
     <QueryClientProvider client={myClinet}>
     <UserContextProvider>
